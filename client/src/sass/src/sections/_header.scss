@@ -123,3 +123,22 @@
 		}
 	}
 }
+
+@media (max-width: 576px) {
+	.header__top {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.header__top {
+		.contact-ctn {
+			justify-content: center;
+			margin-top: 5px;
+		}
+		.top-right-ctn {
+			justify-content: center;
+			margin-top: 5px;
+		}
+		font-size: 15px;
+	}
+}

@@ -4,8 +4,8 @@ import { BiChevronDown } from "react-icons/bi";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
-import Mail from "../components/header/Mail";
-import Telephone from "../components/header/Telephone";
+import Mail from "../components/upperBar/Mail";
+import Telephone from "../components/upperBar/Telephone";
 
 function HeaderNav() {
 	return (
