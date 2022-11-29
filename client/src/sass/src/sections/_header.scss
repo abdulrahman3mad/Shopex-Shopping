@@ -7,6 +7,7 @@
 			transition: all 0.4s ease;
 			svg {
 				margin-right: 3px;
+				font-size: 19px;
 			}
 		}
 		:hover {
@@ -121,5 +122,85 @@
 				}
 			}
 		}
+	}
+}
+// Navbar
+.nav-ctn {
+	background-color: #fff;
+	.nav-item {
+		.nav-link {
+			color: #1f176d;
+			line-height: 28.2px;
+			padding: 17.5px 16px;
+			&:hover {
+				color: #fb2e86;
+			}
+		}
+	}
+	.navbar-nav {
+		.active-home {
+			a {
+				color: #fb2e86;
+				i {
+					font: 10px;
+				}
+			}
+		}
+	}
+	.form-control {
+		border-color: #cfcddf;
+		border-radius: 0;
+	}
+	.form-inline {
+		input {
+			&::placeholder {
+				color: #cfcddf;
+			}
+		}
+		.btn-outline-success {
+			border-color: #cfcddf;
+			border-radius: 0;
+			transition: all 0.4s ease;
+			.search-icon {
+				color: #0d0e43;
+				font-size: 20px;
+				transition: all 0.4s ease;
+			}
+			&:hover {
+				background-color: #fb2e86;
+				.search-icon {
+					color: #fff;
+				}
+			}
+		}
+	}
+	.navbar {
+		.navbar-brand {
+			color: #0d0e43;
+			font-family: "Josefin Sans", sans-serif;
+			font-size: 32px;
+			font-weight: bold;
+			line-height: 41.6px;
+			margin-right: 89px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.header__top {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.header__top {
+		.contact-ctn {
+			justify-content: center;
+			margin-top: 5px;
+		}
+		.top-right-ctn {
+			justify-content: center;
+			margin-top: 5px;
+		}
+		font-size: 15px;
 	}
 }

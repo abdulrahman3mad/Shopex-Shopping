@@ -1,4 +1,4 @@
-import HeaderShop from "./sections/HeaderShop";
+import HeaderNav from "./sections/HeaderNav";
 
 function App() {
   return (
