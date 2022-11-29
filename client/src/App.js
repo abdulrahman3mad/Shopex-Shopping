@@ -8,10 +8,10 @@ function App() {
       <p className="fw-semibold">fdfds</p>
       <p className="fw-bold">fdfds</p>
       <p className="fw-regular">fdfds</p>
-      <p className="bg-primary">fdfds</p>
-      <p className="bg-accent">fdfds</p>
-      <p className="bg-primary-light">fdfds</p>
-      <p className="bg-primary-light">fdfds</p>
+      <p className="bg-clr-primary">fdfds</p>
+      <p className="bg-clr-accent">fdfds</p>
+      <p className="bg-clr-primary-light">fdfds</p>
+      <p className="bg-clr-primary-light">fdfds</p>
       <section className="section-spacing">
         <h2 className="heading-box-spacing">Hello World</h2>
         <p>dsfdsdakfdsakjfldskahfksldfjhsdkaljfhjhflkdj</p>
