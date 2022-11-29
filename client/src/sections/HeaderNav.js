@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
-import { TbPhoneCall } from "react-icons/tb";
-import { CiMail } from "react-icons/ci";
+
 import { BiChevronDown } from "react-icons/bi";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
+import Mail from "../components/header/Mail";
+import Telephone from "../components/header/Telephone";
 
-
-function HeaderShop() {
+function HeaderNav() {
 	return (
 		<Fragment>
 			<header>
@@ -19,21 +19,9 @@ function HeaderShop() {
 							<div className="col-xl-6 col-lg-6 col-md-6">
 								<div className="top-left-ctn contact-ctn d-flex">
 									{/* <!-- mail --> */}
-									<a
-										href="mailto:xyz@abc.com"
-										className="mail-ctn  algin-items-center"
-									>
-										<CiMail className="icon mail-icon" />
-										<span>Hishamk1999@gmail.com</span>
-									</a>
+									<Mail />
 									{/* <!-- Phone --> */}
-									<a
-										href="tel:+201011303410"
-										className="tel-ctn  algin-items-center ms-4"
-									>
-										<TbPhoneCall className="icon telephone-icon " />
-										<span>(+20) 1011 3034 10</span>
-									</a>
+									<Telephone />
 								</div>
 							</div>
 							{/* right top  ->>*/}
@@ -179,6 +167,4 @@ function HeaderShop() {
 	);
 }
 
-export default HeaderShop;
-
-//
+export default HeaderNav;

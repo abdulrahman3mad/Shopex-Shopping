@@ -1,9 +1,9 @@
-import HeaderShop from "./sections/HeaderShop";
+import HeaderNav from "./sections/HeaderNav";
 
 function App() {
 	return (
 		<div className="App">
-			<HeaderShop />
+			<HeaderNav />
 			<h1 className="text-clr-primary ff-primary">Hello World</h1>
 			<h2 className="text-clr-primary ff-secondary">Hello World 2</h2>
 			<h3 className="text-clr-primary ff-secondary">Hello World 2</h3>
