@@ -1,3 +1,5 @@
+import HeaderShop from "./sections/HeaderShop";
+
 function App() {
   return (
     <div className="App">
@@ -16,13 +18,12 @@ function App() {
         <h2 className="heading-box-spacing">Hello World</h2>
         <p>dsfdsdakfdsakjfldskahfksldfjhsdkaljfhjhflkdj</p>
       </section>
-
-      <section className="section-spacing">
-        <h2 className="heading-box-spacing">Hello World</h2>
-        <p>dsfdsdakfdsakjfldskahfksldfjhsdkaljfhjhflkdj</p>
-      </section>
-    </div>
-  );
+			<section className="section-spacing">
+				<h2 className="heading-box-spacing">Hello World</h2>
+				<p>dsfdsdakfdsakjfldskahfksldfjhsdkaljfhjhflkdj</p>
+			</section>
+		</div>
+	);
 }
 
 export default App;
