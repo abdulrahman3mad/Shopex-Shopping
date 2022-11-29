@@ -7,6 +7,7 @@
 			transition: all 0.4s ease;
 			svg {
 				margin-right: 3px;
+				font-size: 19px;
 			}
 		}
 		:hover {
@@ -160,27 +161,28 @@
 			border-color: #cfcddf;
 			border-radius: 0;
 			transition: all 0.4s ease;
+			.search-icon {
+				color: #0d0e43;
+				font-size: 20px;
+				transition: all 0.4s ease;
+			}
 			&:hover {
 				background-color: #fb2e86;
-				i {
+				.search-icon {
 					color: #fff;
 				}
 			}
-			i {
-				color: #0d0e43;
-				transition: all 0.4s ease;
-			}
 		}
 	}
-}
-.navbar {
-	.navbar-brand {
-		color: #0d0e43;
-		font-family: "Josefin Sans", sans-serif;
-		font-size: 32px;
-		font-weight: bold;
-		line-height: 41.6px;
-		margin-right: 89px;
+	.navbar {
+		.navbar-brand {
+			color: #0d0e43;
+			font-family: "Josefin Sans", sans-serif;
+			font-size: 32px;
+			font-weight: bold;
+			line-height: 41.6px;
+			margin-right: 89px;
+		}
 	}
 }
 
