@@ -1,4 +1,10 @@
-@import "./base/general.scss";
 @import "./base/variables.scss";
+@import "./base/general.scss";
 @import "./base/utilities.scss";
-@import "./src/sections/_header.scss";
+
+@import "./sections/header.scss";
+@import "./sections/AuthForm.scss";
+
+@import "./components/PageHeading.scss";
+@import "./components/Input.scss";
+@import "./components/Button.scss";
