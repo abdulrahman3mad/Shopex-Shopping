@@ -3,7 +3,10 @@ import React, { Fragment } from "react";
 function Telephone() {
 	return (
 		<Fragment>
-			<a href="tel:+201011303410" className="tel-ctn  algin-items-center ms-4">
+			<a
+				href="tel:+201011303410"
+				className="tel-ctn  algin-items-center ms-4 text-white"
+			>
 				<TbPhoneCall className="icon telephone-icon " />
 				<span>(+20) 1011 3034 10</span>
 			</a>
