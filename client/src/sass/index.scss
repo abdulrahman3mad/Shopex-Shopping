@@ -1,5 +1,10 @@
-@import "./base/general.scss";
-@import "./base/variables.scss";
-@import "./base/utilities.scss";
-@import "./src/sections/_header.scss";
-@import "./src/sections/HomeSection-1";
+@import "./base/variables";
+@import "./base/general";
+@import "./base/utilities";
+
+@import "./components/Input";
+
+@import "./sections/Header";
+@import "./sections/PageHeading";
+@import "./sections/AuthForm";
+@import "./sections/WelcomeSE";

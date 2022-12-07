@@ -17,7 +17,7 @@ function LogIn() {
     let [password, setPassword] = useState("");
 
     const navigate = useNavigate();
-    const { user: { auth }, authMessage:{message} } = useSelector((state) => state);
+    const { user: { auth }, authMessage: { message } } = useSelector((state) => state);
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -35,7 +35,6 @@ function LogIn() {
 
     return (
         <>
-        <p className="h1">Hellos</p>
             <PageHeading heading="My Account" pages={["Home", "Pages", "Login"]} />
             <AuthForm onSubmit={submitHandler}>
                 {
