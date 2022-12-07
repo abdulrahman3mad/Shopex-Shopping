@@ -1,24 +1,57 @@
-import { useState } from "react"
-import {Link} from "react-router-dom"
+import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom"
 
+import { clearMessage } from "../../redux-toolkit/features/authMessage";
 import PageHeading from "../../components/PageHeading/PageHeading";
 import FormHeading from "../../components/FormHeading/FormHeading";
 import AuthForm from "../../sections/AuthForm/AuthForm";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
+import { login, logout } from "../../redux-toolkit/features/authSlice";
+import { store } from "../../redux-toolkit/store";
 
 function LogIn() {
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
 
+    const navigate = useNavigate();
+    const { user: { auth }, authMessage:{message} } = useSelector((state) => state);
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(clearMessage());
+        dispatch(logout());
+    }, [])
+
+
+    function submitHandler(e) {
+        e.preventDefault()
+        const user = { email, password };
+        dispatch(login(user))
+    }
+
+    useEffect(() => {
+        auth && Object.keys(auth).length && navigate("/")
+    }, [auth, message])
+
     return (
         <>
             <PageHeading heading="My Account" pages={["Home", "Pages", "Login"]} />
-            <AuthForm>
+            <AuthForm onSubmit={submitHandler}>
+                {
+                    message &&
+                    (
+                        <div className="alert alert-danger mb-4" role="alert">
+                            {message}
+                        </div>
+                    )
+                }
                 <FormHeading heading="Login" subHeading="Please Login using account detail bellow." />
                 <div className="mt-5">
-                    <Input type="email" name="email" value={email} placeholder="Abdo@gmail.com" onChange={setEmail} />
-                    <Input type="password" name="password" value={password} placeholder="12345" onChange={setPassword} />
+                    <Input type="email" name="email" value={email} placeholder="Abdo@gmail.com" onChange={setEmail} required={true} />
+                    <Input type="password" name="password" value={password} placeholder="12345" onChange={setPassword} required={true} />
                 </div>
                 <a href="#" className="text-black-50 text-start d-block fs-9 accent-clr-hover">Forget your password?</a>
                 <Button val="Log In" />

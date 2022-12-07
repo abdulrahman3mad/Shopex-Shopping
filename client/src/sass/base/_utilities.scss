@@ -13,6 +13,32 @@
 .bg-clr-accent {
   background-color: $accent-clr;
 }
+
+.border-accent {
+  border: 1px solid $accent-clr !important;
+}
+
+.border-primary {
+  border: 1px solid $primary-clr !important;
+}
+
+.accent-border-hover:hover{
+  border:1px solid $accent-clr
+}
+
+.primary-border-hover:hover{
+  border:1px solid $primary-clr;
+}
+
+.accent-border-focus:focus{
+  border:1px solid $accent-clr
+}
+
+.primary-border-focus:focus{
+  border:1px solid $primary-clr !important;
+}
+
+
 .ff-primary {
   font-family: $ff-primary;
 }
@@ -36,15 +62,27 @@
   padding-bottom: 60px;
 }
 
-.accent-clr-hover{transition: color $trans-duration}
-.primary-clr-hover{transition: color $trans-duration}
-.accent-clr-hover:hover{color:$accent-clr !important}
-.primary-clr-hover:hover{color:$primary-clr !important}
-.primary-bg-hover:hover{background-color: $primary-clr;}
-.accent-bg-hover:hover{background-color: $accent-clr;}
+.accent-clr-hover {
+  transition: color $trans-duration;
+}
+.primary-clr-hover {
+  transition: color $trans-duration;
+}
+.accent-clr-hover:hover {
+  color: $accent-clr !important;
+}
+.primary-clr-hover:hover {
+  color: $primary-clr !important;
+}
+.primary-bg-hover:hover {
+  background-color: $primary-clr;
+}
+.accent-bg-hover:hover {
+  background-color: $accent-clr;
+}
 
 @for $i from 6 to 10 {
   .fs-#{$i} {
-    font-size: 1rem * 8/$i;
+    font-size: 1rem * 8 / $i;
   }
 }
