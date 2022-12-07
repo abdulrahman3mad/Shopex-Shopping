@@ -1,29 +1,18 @@
+import { Routes, Route } from "react-router-dom";
+import SignUp from "./pages/SignUp/SignUp";
+import LogIn from "./pages/LogIn/LogIn";
 import HeaderNav from "./sections/HeaderNav";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-clr-primary ff-primary">Hello World</h1>
-      <h2 className="text-clr-primary ff-secondary">Hello World 2</h2>
-      <h3 className="text-clr-primary ff-secondary">Hello World 2</h3>
-      <h4 className="text-clr-primary  ff-primary">Hello World 2</h4>
-      <p className="fw-semibold">fdfds</p>
-      <p className="fw-bold">fdfds</p>
-      <p className="fw-regular">fdfds</p>
-      <p className="bg-clr-primary">fdfds</p>
-      <p className="bg-clr-accent">fdfds</p>
-      <p className="bg-clr-primary-light">fdfds</p>
-      <p className="bg-clr-primary-light">fdfds</p>
-      <section className="section-spacing">
-        <h2 className="heading-box-spacing">Hello World</h2>
-        <p>dsfdsdakfdsakjfldskahfksldfjhsdkaljfhjhflkdj</p>
-      </section>
-			<section className="section-spacing">
-				<h2 className="heading-box-spacing">Hello World</h2>
-				<p>dsfdsdakfdsakjfldskahfksldfjhsdkaljfhjhflkdj</p>
-			</section>
-		</div>
-	);
+      <HeaderNav/>
+        <Routes>
+          <Route path="/login" element={<LogIn />}></Route>
+          <Route path="/signup" element={<SignUp />}></Route>
+        </Routes >
+    </div >
+  );
 }
 
 export default App;
