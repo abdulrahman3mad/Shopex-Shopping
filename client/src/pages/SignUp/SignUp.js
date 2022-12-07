@@ -22,19 +22,16 @@ function SignUp() {
 
     useEffect(() => {
         dispatch(clearMessage());
-        dispatch(logout());
     }, [])
+
+    useEffect(() => {
+        auth && Object.keys(auth).length && navigate("/login")
+    }, [auth, message])
 
     function submitHandler(e) {
         e.preventDefault()
-        const toRegisterUser = { name, email, password };
-        dispatch(register(toRegisterUser))
+        dispatch(register({ name, email, password }))
     }
-
-    useEffect(() => {
-        console.log(auth, message)
-        auth && Object.keys(auth).length && navigate("/login")
-    }, [auth, message])
 
     return (
         <>

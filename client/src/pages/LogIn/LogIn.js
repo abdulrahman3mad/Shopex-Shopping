@@ -22,22 +22,20 @@ function LogIn() {
 
     useEffect(() => {
         dispatch(clearMessage());
-        dispatch(logout());
     }, [])
-
-
-    function submitHandler(e) {
-        e.preventDefault()
-        const user = { email, password };
-        dispatch(login(user))
-    }
 
     useEffect(() => {
         auth && Object.keys(auth).length && navigate("/")
     }, [auth, message])
 
+    function submitHandler(e) {
+        e.preventDefault()
+        dispatch(login({ email, password }))
+    }
+
     return (
         <>
+        <p className="h1">Hellos</p>
             <PageHeading heading="My Account" pages={["Home", "Pages", "Login"]} />
             <AuthForm onSubmit={submitHandler}>
                 {
