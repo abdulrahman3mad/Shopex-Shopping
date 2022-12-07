@@ -23,6 +23,12 @@
       "email": "selim@gmail.com",
       "password": "123",
       "id": 4
+    },
+    {
+      "name": "emad",
+      "email": "abdoemadselim@gmail.com",
+      "password": "123",
+      "id": 5
     }
   ],
   "welcome": [
