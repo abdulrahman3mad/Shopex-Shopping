@@ -1,20 +1,97 @@
-import React, { Fragment } from "react";
-import { useDispatch } from "react-redux";
+import React, { Fragment, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchHomeData } from "../redux-toolkit/features/homeDataSlice";
+import { getData } from "../redux-toolkit/features/homeDataSlice";
 
 function HomeSection() {
 	const dispatch = useDispatch();
+	const data = useSelector((state) => state.homeData);
+
+	console.log(data.data ? data.data[0] : null);
 
 	useEffect(() => {
-		dispatch(fetchHomeData);
-	});
+		dispatch(getData());
+	}, [dispatch]);
 
 	return (
 		<Fragment>
 			{/* <!-- Home section --> */}
-			<section className="home pl-sm-3">
-				<div className="home__container">
+			<section className="home-section1">
+				<div className="container h-100">
+					<div
+						id="carouselExampleIndicators"
+						class="carousel slide h-100"
+						data-bs-ride="true"
+					>
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="2"
+								aria-label="Slide 3"
+							></button>
+						</div>
+
+						<div class="carousel-inner h-100">
+							<div class="carousel-item active h-100">
+								<div className="row h-100">
+									{/* left */}
+									<div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+										<div className="left-card d-flex flex-column justify-content-center h-100">
+											<span>
+												<small className="text-clr-accent">
+													Best Furniture For Your Castle.....
+												</small>
+											</span>
+											<h1 className="text-clr-primary">
+												New Furniture Collection Trends in 2020
+											</h1>
+											<p className="">
+												When it comes to searching for first-rate interior
+												design tips, tricks, and all-around inspiration it's all
+												too easy to get sucked down the rabbit hole of sub-par
+												sites.
+											</p>
+											<button></button>
+										</div>
+									</div>
+									{/* right */}
+									<div className="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="/images/Home_img/Grey-Armchair.png"
+									class="d-block w-100"
+									alt="Grey-Armchair"
+								/>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="/images/Home_img/Grey-Armchair.png"
+									class="d-block w-100"
+									alt="Grey-Armchair"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{/* <div className="home__container">
 					<div className="chandeliers d-sm-none d-md-block">
 						<img
 							src="../IMG/Home_img/Chandelier-Light-Lamp-PNG-Transparent-Image.png"
@@ -118,7 +195,7 @@ function HomeSection() {
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</section>
 			{/* <!-- End Home section --> */}
 		</Fragment>

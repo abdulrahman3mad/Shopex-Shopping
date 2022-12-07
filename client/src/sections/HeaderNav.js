@@ -12,7 +12,7 @@ function HeaderNav() {
 		<Fragment>
 			<header>
 				{/* top header */}
-				<div className="header__top bg-primary">
+				<div className="header__top bg-clr-primary">
 					<div className="container">
 						<div className="row main-row align-items-center">
 							{/* left top <<-*/}
