@@ -1,10 +1,9 @@
 {
 	"welcome": [
 		{
-			"welcome-Chandelier": {
-				"id": 1,
-				"image": "images/Home_img/Chandelier.png"
-			},
+			"welcome-Chandelier": [
+				{ "id": 1, "image": "images/Home_img/Chandelier.png" }
+			],
 			"welcome-data": [
 				{
 					"id": 1,
