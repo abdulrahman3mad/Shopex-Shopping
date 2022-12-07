@@ -1,10 +1,14 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { url_API } from "../../config/index";
 import axios from "axios";
 
-export const fetchHomeData = createAsyncThunk("homeData",
-async()=>{
-	const response = await axios.get("")
-})
+export const fetchHomeData = createAsyncThunk(
+	"homeData/fetchData",
+	async () => {
+		const res = await axios.get(`${url_API}/welcome`);
+		console.log(res);
+	}
+);
 
 const initialState = {
 	data: [],
