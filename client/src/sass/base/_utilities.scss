@@ -1,14 +1,151 @@
-.text-clr-primary{color:$primary-clr}
-.text-clr-accent{color:$accent-clr}
-.bg-clr-primary{background-color: $primary-clr}
-.bg-clr-primary-light{background-color: $primary-clr-light}
-.bg-clr-accent{background-color: $accent-clr}
-.ff-primary{font-family: $ff-primary}
-.ff-secondary{font-family: $ff-secondary}
-.fw-regular{font-weight: $fw-regular}
-.fw-semibold{font-weight: $fw-semibold}
-.fw-bold{font-weight: $fw-bold}
+.text-clr-primary {
+  color: $primary-clr;
+}
 
-.section-spacing{padding:70px 0}
-.heading-box-spacing{padding-bottom: 60px}
+.text-clr-accent {
+  color: $accent-clr;
+}
 
+.text-clr-heading {
+  color: $heading-clr;
+}
+
+.bg-clr-primary {
+  background-color: $primary-clr;
+}
+
+.bg-clr-primary-light {
+  background-color: $primary-clr-light;
+}
+
+.bg-clr-accent {
+  background-color: $accent-clr;
+}
+
+.border-accent {
+  border: 1px solid $accent-clr !important;
+}
+
+.border-primary {
+  border: 1px solid $primary-clr !important;
+}
+
+.accent-border-hover:hover {
+  border: 1px solid $accent-clr;
+}
+
+.primary-border-hover:hover {
+  border: 1px solid $primary-clr;
+}
+
+.accent-border-focus:focus {
+  border: 1px solid $accent-clr;
+}
+
+.primary-border-focus:focus {
+  border: 1px solid $primary-clr !important;
+}
+
+.ff-primary {
+  font-family: $ff-primary;
+}
+.ff-secondary {
+  font-family: $ff-secondary;
+}
+.fw-regular {
+  font-weight: $fw-regular;
+}
+
+.fw-medium {
+  font-weight: $fw-medium;
+}
+
+.fw-semibold {
+  font-weight: $fw-semibold;
+}
+.fw-bold {
+  font-weight: $fw-bold;
+}
+
+.section-spacing {
+  padding: 70px 0;
+}
+.heading-box-spacing {
+  padding-bottom: 60px;
+}
+
+.accent-clr-hover {
+  transition: color $trans-duration;
+}
+.primary-clr-hover {
+  transition: color $trans-duration;
+}
+.accent-clr-hover:hover {
+  color: $accent-clr !important;
+}
+.primary-clr-hover:hover {
+  color: $primary-clr !important;
+}
+.primary-bg-hover:hover {
+  background-color: $primary-clr;
+}
+.accent-bg-hover:hover {
+  background-color: $accent-clr;
+}
+
+@for $i from 6 to 10 {
+  .fs-#{$i} {
+    font-size: 1rem * 8 / $i;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+  .section-padding {
+    padding: 1.5rem 0;
+  }
+}
