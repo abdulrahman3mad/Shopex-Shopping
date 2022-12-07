@@ -4,7 +4,10 @@ import { HiOutlineMail } from "react-icons/hi";
 function Mail() {
 	return (
 		<Fragment>
-			<a href="mailto:xyz@abc.com" className="mail-ctn  algin-items-center text-white">
+			<a
+				href="mailto:xyz@abc.com"
+				className="mail-ctn  algin-items-center text-white"
+			>
 				<HiOutlineMail className="icon mail-icon" />
 				<span>Hishamk1999@gmail.com</span>
 			</a>

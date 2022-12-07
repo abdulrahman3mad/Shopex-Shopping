@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiChevronDown } from "react-icons/bi";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
-import Mail from "../components/upperBar/Mail";
-import Telephone from "../components/upperBar/Telephone";
-import Navbar from "../components/navBar/Navbar";
+import Mail from "../../components/Mail/Mail";
+import Telephone from "../../components/Telephone/Telephone";
+import Navbar from "../NavBar/Navbar";
 
 function HeaderNav() {
 	return (

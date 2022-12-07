@@ -6,10 +6,8 @@ export const getData = createAsyncThunk(
 	"homeData/fetchData",
 	async (arg, thunkAPI) => {
 		try {
-			const res = await fetch(`${url_API}/welcome`);
-			const data = await res.json();
-			return data;
-			// const res = await axios.get(`${url_API}/welcome`);
+			const res = await axios.get(`${url_API}/welcome`);
+			return res.data;
 		} catch (error) {
 			console.log(error);
 		}

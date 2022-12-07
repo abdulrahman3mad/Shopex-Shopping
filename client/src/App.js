@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./pages/SignUp/SignUp";
 import LogIn from "./pages/LogIn/LogIn";
-import HeaderNav from "./sections/HeaderNav";
-import WelcomeSE from "./sections/WelcomeSE.jsx";
+import HeaderNav from "./sections/UpperBar/UpperBar";
+import WelcomeSE from "./sections/Welcome/WelcomeSE.jsx";
 
 function App() {
 	return (

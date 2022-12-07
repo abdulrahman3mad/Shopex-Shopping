@@ -1,144 +1,150 @@
 {
-  "users": [
-    {
-      "name": "emad",
-      "email": "emad@gmail.com",
-      "password": "123",
-      "id": 1
-    },
-    {
-      "name": "said",
-      "email": "said@gmail.com",
-      "password": "123",
-      "id": 2
-    },
-    {
-      "name": "emad",
-      "email": "abdoemad@gmail.com",
-      "password": "123",
-      "id": 3
-    },
-    {
-      "name": "selim",
-      "email": "selim@gmail.com",
-      "password": "123",
-      "id": 4
-    },
-    {
-      "name": "emad",
-      "email": "abdoemadselim@gmail.com",
-      "password": "123",
-      "id": 5
-    }
-  ],
-  "welcome": [
-    {
-      "welcome-Chandelier": [
-        {
-          "id": 1,
-          "image": "images/Home_img/Chandelier.png"
-        }
-      ],
-      "welcome-data": [
-        {
-          "id": 1,
-          "subtitle": "Best Furniture For Your Castle.....",
-          "title": "New Furniture Collection Trends in 2020",
-          "description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
-          "image": "images/Home_img/Grey-Armchair.png",
-          "shapeBg": "images/Home_img/shape.png",
-          "shapeDis": "images/Home_img/Path-16826.png"
-        },
-        {
-          "id": 2,
-          "subtitle": "Best Furniture For Your Castle.....",
-          "title": "New Furniture Collection Trends in 2020",
-          "description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
-          "image": "images/Home_img/Grey-Armchair.png",
-          "shapeBg": "images/Home_img/shape.png",
-          "shapeDis": "images/Home_img/Path-16826.png"
-        }
-      ]
-    }
-  ],
-  "featured-products": [
-    {
-      "id": 1,
-      "title": "Plywood arm chair",
-      "code": "D45201",
-      "price": "32.00",
-      "img": "images/Featured-Products-img/plywood-2.webp"
-    },
-    {
-      "id": 2,
-      "title": "Plywood arm chair",
-      "code": "D45201",
-      "price": "45.00",
-      "img": "images/Featured-Products-img/plywood-3.webp"
-    },
-    {
-      "id": 3,
-      "title": "Plywood arm chair",
-      "code": "D45201",
-      "price": "59.00",
-      "img": "images/Featured-Products-img/plywood-4.webp"
-    },
-    {
-      "id": 4,
-      "title": "Plywood arm chair",
-      "code": "D45201",
-      "price": "39.90",
-      "img": "images/Featured-Products-img/plywood-5.webp"
-    }
-  ],
-  "latest-products": [
-    {
-      "id": 1,
-      "title": "Winder chair Sofa",
-      "price": "32.00",
-      "discount": "58.00",
-      "img": "images/Latest-Products/chair-1.jpg",
-      "icon": "images/Featured-Products/sale.png"
-    },
-    {
-      "id": 2,
-      "title": "Winder chair Sofa",
-      "price": "38.00",
-      "discount": "45.00",
-      "img": "images/Latest-Products/chair-2.jpg",
-      "icon": "images/Latest-Products/sale.png"
-    },
-    {
-      "id": 3,
-      "title": "Winder chair Sofa",
-      "price": "42.00",
-      "discount": "65.00",
-      "img": "images/Latest-Products/chair-3.jpg",
-      "icon": "images/Latest-Products/sale.png"
-    },
-    {
-      "id": 4,
-      "title": "Winder chair Sofa",
-      "price": "48.00",
-      "discount": "53.00",
-      "img": "images/Latest-Products/chair-4.jpg",
-      "icon": "images/Latest-Products/sale.png"
-    },
-    {
-      "id": 5,
-      "title": "Winder chair Sofa",
-      "price": "52.00",
-      "discount": "72.00",
-      "img": "images/Latest-Products/chair-5.jpg",
-      "icon": "images/Latest-Products/sale.png"
-    },
-    {
-      "id": 6,
-      "title": "Winder chair Sofa",
-      "price": "65.00",
-      "discount": "38.00",
-      "img": "images/Latest-Products/chair-6.jpg",
-      "icon": "images/Latest-Products/sale.png"
-    }
-  ]
+	"users": [
+		{
+			"name": "emad",
+			"email": "emad@gmail.com",
+			"password": "123",
+			"id": 1
+		},
+		{
+			"name": "said",
+			"email": "said@gmail.com",
+			"password": "123",
+			"id": 2
+		},
+		{
+			"name": "emad",
+			"email": "abdoemad@gmail.com",
+			"password": "123",
+			"id": 3
+		},
+		{
+			"name": "selim",
+			"email": "selim@gmail.com",
+			"password": "123",
+			"id": 4
+		},
+		{
+			"name": "emad",
+			"email": "abdoemadselim@gmail.com",
+			"password": "123",
+			"id": 5
+		},
+		{
+			"name": "Hisham",
+			"email": "hishamk1999@gmail.com",
+			"password": "01155307281",
+			"id": 6
+		}
+	],
+	"welcome": [
+		{
+			"welcome-Chandelier": [
+				{
+					"id": 1,
+					"image": "images/Home_img/Chandelier.png"
+				}
+			],
+			"welcome-data": [
+				{
+					"id": 1,
+					"subtitle": "Best Furniture For Your Castle.....",
+					"title": "New Furniture Collection Trends in 2020",
+					"description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
+					"image": "images/Home_img/Grey-Armchair.png",
+					"shapeBg": "images/Home_img/shape.png",
+					"shapeDis": "images/Home_img/Path-16826.png"
+				},
+				{
+					"id": 2,
+					"subtitle": "Best Furniture For Your Castle.....",
+					"title": "New Furniture Collection Trends in 2020",
+					"description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
+					"image": "images/Home_img/Grey-Armchair.png",
+					"shapeBg": "images/Home_img/shape.png",
+					"shapeDis": "images/Home_img/Path-16826.png"
+				}
+			]
+		}
+	],
+	"featured-products": [
+		{
+			"id": 1,
+			"title": "Plywood arm chair",
+			"code": "D45201",
+			"price": "32.00",
+			"img": "images/Featured-Products-img/plywood-2.webp"
+		},
+		{
+			"id": 2,
+			"title": "Plywood arm chair",
+			"code": "D45201",
+			"price": "45.00",
+			"img": "images/Featured-Products-img/plywood-3.webp"
+		},
+		{
+			"id": 3,
+			"title": "Plywood arm chair",
+			"code": "D45201",
+			"price": "59.00",
+			"img": "images/Featured-Products-img/plywood-4.webp"
+		},
+		{
+			"id": 4,
+			"title": "Plywood arm chair",
+			"code": "D45201",
+			"price": "39.90",
+			"img": "images/Featured-Products-img/plywood-5.webp"
+		}
+	],
+	"latest-products": [
+		{
+			"id": 1,
+			"title": "Winder chair Sofa",
+			"price": "32.00",
+			"discount": "58.00",
+			"img": "images/Latest-Products/chair-1.jpg",
+			"icon": "images/Featured-Products/sale.png"
+		},
+		{
+			"id": 2,
+			"title": "Winder chair Sofa",
+			"price": "38.00",
+			"discount": "45.00",
+			"img": "images/Latest-Products/chair-2.jpg",
+			"icon": "images/Latest-Products/sale.png"
+		},
+		{
+			"id": 3,
+			"title": "Winder chair Sofa",
+			"price": "42.00",
+			"discount": "65.00",
+			"img": "images/Latest-Products/chair-3.jpg",
+			"icon": "images/Latest-Products/sale.png"
+		},
+		{
+			"id": 4,
+			"title": "Winder chair Sofa",
+			"price": "48.00",
+			"discount": "53.00",
+			"img": "images/Latest-Products/chair-4.jpg",
+			"icon": "images/Latest-Products/sale.png"
+		},
+		{
+			"id": 5,
+			"title": "Winder chair Sofa",
+			"price": "52.00",
+			"discount": "72.00",
+			"img": "images/Latest-Products/chair-5.jpg",
+			"icon": "images/Latest-Products/sale.png"
+		},
+		{
+			"id": 6,
+			"title": "Winder chair Sofa",
+			"price": "65.00",
+			"discount": "38.00",
+			"img": "images/Latest-Products/chair-6.jpg",
+			"icon": "images/Latest-Products/sale.png"
+		}
+	]
 }
