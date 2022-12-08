@@ -1,0 +1,8 @@
+.btnLink {
+	font-size: 18px;
+	padding: 0.5rem 2.5rem;
+	&:hover {
+		color: #ffffff;
+		background-color: $heading-clr;
+	}
+}

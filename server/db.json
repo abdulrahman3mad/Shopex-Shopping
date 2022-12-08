@@ -37,36 +37,39 @@
 			"id": 6
 		}
 	],
-	"welcome": [
-		{
-			"welcome-Chandelier": [
-				{
-					"id": 1,
-					"image": "images/Home_img/Chandelier.png"
-				}
-			],
-			"welcome-data": [
-				{
-					"id": 1,
-					"subtitle": "Best Furniture For Your Castle.....",
-					"title": "New Furniture Collection Trends in 2020",
-					"description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
-					"image": "images/Home_img/Grey-Armchair.png",
-					"shapeBg": "images/Home_img/shape.png",
-					"shapeDis": "images/Home_img/Path-16826.png"
-				},
-				{
-					"id": 2,
-					"subtitle": "Best Furniture For Your Castle.....",
-					"title": "New Furniture Collection Trends in 2020",
-					"description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
-					"image": "images/Home_img/Grey-Armchair.png",
-					"shapeBg": "images/Home_img/shape.png",
-					"shapeDis": "images/Home_img/Path-16826.png"
-				}
-			]
-		}
-	],
+	"welcome": {
+		"welcome_Chandelier": {
+			"id": 1,
+			"image": "images/Home_img/Chandelier.png"
+		},
+		"welcome_data": [
+			{
+				"id": 1,
+				"active": "active",
+				"subtitle": "Best Furniture For Your Castle.....",
+				"title": "New Furniture Collection Trends in 2020",
+				"description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
+				"image": "/images/Home_img/Grey-Armchair.png",
+				"className": "carousel-item active h-100 "
+			},
+			{
+				"id": 2,
+				"subtitle": "Best Furniture For Your Castle.....",
+				"title": "New Furniture Collection Trends in 2020",
+				"description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
+				"image": "/images/Home_img/Grey-Armchair.png",
+				"className": "carousel-item h-100 "
+			},
+			{
+				"id": 3,
+				"subtitle": "Best Furniture For Your Castle.....",
+				"title": "New Furniture Collection Trends in 2020",
+				"description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
+				"image": "/images/Home_img/Grey-Armchair.png",
+				"className": "carousel-item h-100 "
+			}
+		]
+	},
 	"featured-products": [
 		{
 			"id": 1,
