@@ -28,7 +28,7 @@ function HomeSection() {
 						data-bs-ride="true"
 					>
 						{/* Carousal Buttons */}
-						<div className="carousel-indicators">
+						<div className="carousel-indicators mb-5">
 							<button
 								type="button"
 								data-bs-target="#carouselExampleIndicators"
@@ -97,7 +97,7 @@ function HomeSection() {
 	return (
 		<Fragment>
 			{/* <!-- Home section --> */}
-			<section className="home-section1 position-relative">
+			<section className="home-section1 position-relative overflow-hidden">
 				{WelcomeUI()}
 			</section>
 			{/* <!-- End Home section --> */}
