@@ -1,0 +1,86 @@
+$text-white: #ffffff;
+$transition-color: color 0.5s ease;
+.FeaProCard {
+	box-shadow: 0px 2px 21px rgba(125, 125, 217, 0.425);
+	margin:  19px;
+	.card-img {
+		a {
+			padding: 8px 14px;
+			background-color: #08d15f;
+			font-size: 0.875rem;
+			border-radius: 3px;
+			bottom: -70px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			transition: bottom 0.5s ease;
+		}
+	}
+	.card-body {
+		transition: background-color 0.5s ease;
+		h4 {
+			color: #0d134e;
+			font-size: 1.125rem;
+			letter-spacing: 0.5px;
+			transition: $transition-color;
+		}
+		.code {
+			p {
+				color: #0d134e;
+				transition: $transition-color;
+				.hyphen {
+					display: block;
+					width: 10px;
+					border: 0.5px solid #0d134e;
+					transition: border-color 0.5s ease;
+				}
+				a {
+					color: #f3b72a;
+					transition: inherit;
+				}
+			}
+		}
+	}
+	&:hover {
+		.card-img {
+			a {
+				bottom: 0px;
+			}
+		}
+		.card-body {
+			background-color: #2711c2;
+			h4 {
+				color: $text-white;
+			}
+			.color-palette {
+				.color {
+					&.A {
+						background-color: #ffd5f0;
+					}
+					&.B {
+						background-color: #fe916f;
+					}
+					&.C {
+						background-color: #39bbff;
+					}
+				}
+			}
+			.code {
+				p {
+					color: $text-white;
+					.hyphen {
+						border-color: $text-white;
+					}
+					a {
+						color: $text-white;
+					}
+				}
+			}
+			.price {
+				h5 {
+					color: $text-white;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.featured {
+	.slick-dots {
+		bottom: -50px;
+		li {
+			&.slick-active {
+				button {
+					&::before {
+						background-color: #fb2e86;
+						width: 23px;
+					}
+				}
+			}
+			button {
+				&::before {
+					content: " ";
+					height: 4px;
+					width: 15px;
+					background-color: #fb2e86;
+					border-radius: 2px;
+				}
+			}
+		}
+	}
+}
