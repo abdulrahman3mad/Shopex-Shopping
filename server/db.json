@@ -136,14 +136,16 @@
 			"alt": "plywood armchair"
 		}
 	],
-	"latest-products": [
+	"latest_products": [
 		{
 			"id": 1,
 			"title": "Winder chair Sofa",
 			"price": "32.00",
 			"discount": "58.00",
 			"img": "images/Latest-Products/chair-1.jpg",
-			"icon": "images/Featured-Products/sale.png"
+			"alt": "Latest Product winder chair sofa",
+			"icon": "images/Latest-Products/sale.png",
+			"altIcon": "Sale product icon"
 		},
 		{
 			"id": 2,
@@ -151,7 +153,9 @@
 			"price": "38.00",
 			"discount": "45.00",
 			"img": "images/Latest-Products/chair-2.jpg",
-			"icon": "images/Latest-Products/sale.png"
+			"alt": "Latest Product winder chair sofa",
+			"icon": "images/Latest-Products/sale.png",
+			"altIcon": "Sale product icon"
 		},
 		{
 			"id": 3,
@@ -159,7 +163,9 @@
 			"price": "42.00",
 			"discount": "65.00",
 			"img": "images/Latest-Products/chair-3.jpg",
-			"icon": "images/Latest-Products/sale.png"
+			"alt": "Latest Product winder chair sofa",
+			"icon": "images/Latest-Products/sale.png",
+			"altIcon": "Sale product icon"
 		},
 		{
 			"id": 4,
@@ -167,7 +173,9 @@
 			"price": "48.00",
 			"discount": "53.00",
 			"img": "images/Latest-Products/chair-4.jpg",
-			"icon": "images/Latest-Products/sale.png"
+			"alt": "Latest Product winder chair sofa",
+			"icon": "images/Latest-Products/sale.png",
+			"altIcon": "Sale product icon"
 		},
 		{
 			"id": 5,
@@ -175,7 +183,9 @@
 			"price": "52.00",
 			"discount": "72.00",
 			"img": "images/Latest-Products/chair-5.jpg",
-			"icon": "images/Latest-Products/sale.png"
+			"alt": "Latest Product winder chair sofa",
+			"icon": "images/Latest-Products/sale.png",
+			"altIcon": "Sale product icon"
 		},
 		{
 			"id": 6,
@@ -183,7 +193,9 @@
 			"price": "65.00",
 			"discount": "38.00",
 			"img": "images/Latest-Products/chair-6.jpg",
-			"icon": "images/Latest-Products/sale.png"
+			"alt": "Latest Product winder chair sofa",
+			"icon": "images/Latest-Products/sale.png",
+			"altIcon": "Sale product icon"
 		}
 	]
 }
