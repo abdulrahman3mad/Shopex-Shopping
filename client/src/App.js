@@ -13,6 +13,7 @@ function App() {
 			<WelcomeSE />
 			<FeaturedSE />
 			<LatestSE />
+
 			<Routes>
 				<Route path="/login" element={<LogIn />}></Route>
 				<Route path="/signup" element={<SignUp />}></Route>
