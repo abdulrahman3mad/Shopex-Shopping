@@ -21,8 +21,9 @@ function LogIn() {
     })
 
     const navigate = useNavigate();
-    const { user: { user }, authMessage: { message } } = useSelector((state) => state);
     const dispatch = useDispatch()
+    
+    const { user: { user }, authMessage: { message } } = useSelector((state) => state);
 
     useEffect(() => {
         dispatch(clearMessage());
