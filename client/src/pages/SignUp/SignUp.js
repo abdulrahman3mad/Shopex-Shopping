@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react"
-import { Link, Navigate, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { register, login, logout } from "../../redux-toolkit/features/authSlice";
-import { state, store } from "../../redux-toolkit/store"
+import { register } from "../../redux-toolkit/features/authSlice";
 
 import PageHeading from "../../components/PageHeading/PageHeading";
 import FormHeading from "../../components/FormHeading/FormHeading";
 import AuthForm from "../../sections/AuthForm/AuthForm";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
-import { clearMessage, setMessage } from "../../redux-toolkit/features/authMessage";
+import { clearMessage } from "../../redux-toolkit/features/authMessage";
 import validation from "../../services/validationService";
 
 function SignUp() {

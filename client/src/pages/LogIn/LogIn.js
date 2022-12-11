@@ -9,7 +9,7 @@ import FormHeading from "../../components/FormHeading/FormHeading";
 import AuthForm from "../../sections/AuthForm/AuthForm";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
-import { login, logout } from "../../redux-toolkit/features/authSlice";
+import { login } from "../../redux-toolkit/features/authSlice";
 import validation from "../../services/validationService";
 
 function LogIn() {
