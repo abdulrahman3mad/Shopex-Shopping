@@ -9,15 +9,12 @@ function OfferSE() {
 	useEffect(() => {
 		dispatch(getShopexOffer());
 	}, [dispatch]);
-
-	console.log(state.data ? state.data : null);
-
 	const ShopexOfferUI = () => {
 		return state.data
 			? state.data.map((ele) => {
 					return (
 						<OfferCard
-							key={ele.key}
+							key={ele.id}
 							title={ele.title}
 							img={ele.img}
 							alt={ele.alt}
