@@ -1,0 +1,17 @@
+.latest-products {
+	.nav-link {
+		color: $heading-clr;
+		font-size: 1.125rem;
+    transition: all 0.4s ease;
+	}
+	.nav-pills {
+		color: $heading-clr;
+    $--bs-nav-pills-link-active-color: $heading-clr;
+	}
+	.nav-pills .nav-link.active {
+		color: $accent-clr;
+		background-color: transparent;
+		text-decoration: underline;
+		text-underline-offset: 7px;
+	}
+}
