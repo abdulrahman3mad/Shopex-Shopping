@@ -5,6 +5,12 @@
       "email": "abdo@gmail.com",
       "password": "Abdo3mad012..",
       "id": 1
+    },
+    {
+      "name": "abdo3mad",
+      "email": "abdo3mad@gmail.com",
+      "password": "12345678",
+      "id": 2
     }
   ],
   "welcome": {
