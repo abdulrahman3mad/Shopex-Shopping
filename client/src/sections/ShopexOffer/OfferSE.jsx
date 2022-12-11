@@ -17,7 +17,7 @@ function OfferSE() {
 			? state.data.map((ele) => {
 					return (
 						<OfferCard
-							key={ele.key}
+							key={ele.id}
 							title={ele.title}
 							img={ele.img}
 							alt={ele.alt}
