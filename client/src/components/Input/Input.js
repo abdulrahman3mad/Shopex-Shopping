@@ -7,7 +7,7 @@ function Input({ type, name, id, value, placeholder, onChange, err, required}) {
             value={value}
             placeholder={placeholder}
             className={`primary-border-focus border w-100 px-2 py-2 mb-3 ${err?.message && "border-accent"}`}
-            onChange={(e) => onChange(e.target.value)}
+            onChange={(e) => onChange(e.target)}
             required={required}
         />
     )
