@@ -36,13 +36,13 @@ function LatestSE() {
 					Latest Products
 				</h2>
 				<ul
-					class="nav nav-pills mb-3 justify-content-center"
+					className="nav nav-pills mb-3 justify-content-center"
 					id="pills-tab"
 					role="tablist"
 				>
-					<li class="nav-item" role="presentation">
+					<li className="nav-item" role="presentation">
 						<button
-							class="nav-link active"
+							className="nav-link active"
 							id="pills-New-Arrival-tab"
 							data-bs-toggle="pill"
 							data-bs-target="#pills-New-Arrival"
@@ -54,9 +54,9 @@ function LatestSE() {
 							New Arrival
 						</button>
 					</li>
-					<li class="nav-item" role="presentation">
+					<li className="nav-item" role="presentation">
 						<button
-							class="nav-link"
+							className="nav-link"
 							id="pills-Best-Seller-tab"
 							data-bs-toggle="pill"
 							data-bs-target="#pills-Best-Seller"
@@ -68,9 +68,9 @@ function LatestSE() {
 							Best Seller
 						</button>
 					</li>
-					<li class="nav-item" role="presentation">
+					<li className="nav-item" role="presentation">
 						<button
-							class="nav-link"
+							className="nav-link"
 							id="pills-Featured-tab"
 							data-bs-toggle="pill"
 							data-bs-target="#pills-Featured"
@@ -82,9 +82,9 @@ function LatestSE() {
 							Featured
 						</button>
 					</li>
-					<li class="nav-item" role="presentation">
+					<li className="nav-item" role="presentation">
 						<button
-							class="nav-link"
+							className="nav-link"
 							id="pills-Special-Offer-tab"
 							data-bs-toggle="pill"
 							data-bs-target="#pills-Special-Offer"
@@ -97,40 +97,40 @@ function LatestSE() {
 						</button>
 					</li>
 				</ul>
-				<div class="tab-content" id="pills-tabContent">
+				<div className="tab-content" id="pills-tabContent">
 					<div
-						class="tab-pane fade show active"
+						className="tab-pane fade show active"
 						id="pills-New-Arrival"
 						role="tabpanel"
 						aria-labelledby="pills-New-Arrival-tab"
-						tabindex="0"
+						tabIndex="0"
 					>
 						<div className="row">{latestProUI()}</div>
 					</div>
 					<div
-						class="tab-pane fade"
+						className="tab-pane fade"
 						id="pills-Best-Seller"
 						role="tabpanel"
 						aria-labelledby="pills-Best-Seller-tab"
-						tabindex="0"
+						tabIndex="0"
 					>
 						<div className="row">{latestProUI()}</div>
 					</div>
 					<div
-						class="tab-pane fade"
+						className="tab-pane fade"
 						id="pills-Featured"
 						role="tabpanel"
 						aria-labelledby="pills-Featured-tab"
-						tabindex="0"
+						tabIndex="0"
 					>
 						<div className="row">{latestProUI()}</div>
 					</div>
 					<div
-						class="tab-pane fade"
+						className="tab-pane fade"
 						id="pills-Special-Offer"
 						role="tabpanel"
 						aria-labelledby="pills-Special-Offer-tab"
-						tabindex="0"
+						tabIndex="0"
 					>
 						<div className="row">{latestProUI()}</div>
 					</div>

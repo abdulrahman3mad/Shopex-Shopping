@@ -5,6 +5,7 @@ import HeaderNav from "./sections/UpperBar/UpperBar";
 import WelcomeSE from "./sections/Welcome/WelcomeSE.jsx";
 import FeaturedSE from "./sections/FeaturedProducts/FeaturedSE";
 import LatestSE from "./sections/LeatestProducts/LatestSE";
+import OfferSE from "./sections/ShopexOffer/OfferSE";
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 			<WelcomeSE />
 			<FeaturedSE />
 			<LatestSE />
+			<OfferSE />
 			<Routes>
 				<Route path="/login" element={<LogIn />}></Route>
 				<Route path="/signup" element={<SignUp />}></Route>

@@ -4,6 +4,7 @@ import authMessage from "./features/authMessage";
 import homeSlice from "./features/homeDataSlice";
 import featuredSlice from "./features/featuredDataSlice";
 import latestProSlice from "./features/latestProSlice";
+import shopexOfferSlice from "./features/shopexOfferSlice";
 
 export const store = configureStore({
 	reducer: {
@@ -12,5 +13,6 @@ export const store = configureStore({
 		authMessage: authMessage,
 		featuredData: featuredSlice,
 		latestPro: latestProSlice,
+		shopexOffer: shopexOfferSlice,
 	},
 });
