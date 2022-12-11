@@ -9,9 +9,6 @@ function OfferSE() {
 	useEffect(() => {
 		dispatch(getShopexOffer());
 	}, [dispatch]);
-
-	console.log(state.data ? state.data : null);
-
 	const ShopexOfferUI = () => {
 		return state.data
 			? state.data.map((ele) => {
