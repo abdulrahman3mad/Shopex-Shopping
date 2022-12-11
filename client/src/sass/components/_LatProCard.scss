@@ -1,0 +1,54 @@
+.latProCard {
+	transition: box-shadow 0.4s ease;
+	.overlay-icons {
+		top: 65px;
+		bottom: 118px;
+		left: -150px;
+		transform: translate(50px, -50px);
+		transition: left 0.5s ease;
+
+		.icon-btn {
+			border: none;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			line-height: 30px;
+			background-color: #cdccdb;
+			transition: background-color 0.4s ease;
+			svg {
+				transition: color 0.4s ease;
+			}
+			&:hover {
+				background-color: $accent-clr;
+				svg {
+					color: #ffff;
+				}
+			}
+		}
+	}
+	.card-body {
+		.price h5 {
+			font-weight: 700;
+		}
+		a {
+			color: #101968;
+			text-underline-offset: 7px;
+			text-decoration: underline #30387d23;
+			transition: text-decoration-color 0.3s ease, color 0.3s ease;
+		}
+	}
+
+	// hover
+	&:hover {
+		box-shadow: 0px 3px 23px 0px #4124d41a;
+		.overlay-icons {
+			left: -32px;
+		}
+		.card-body {
+			a {
+				color: #282932;
+				text-decoration-color: #fe2080;
+			}
+		}
+	}
+}

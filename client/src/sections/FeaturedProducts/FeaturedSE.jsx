@@ -5,7 +5,7 @@ import FeaProCard from "../../components/FeaturedProCard/FeaProCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { getFeaturedData } from "../../redux-toolkit/features/FeaturedDataSlice";
+import { getFeaturedData } from "../../redux-toolkit/features/featuredDataSlice";
 
 function FeaturedSE() {
 	const state = useSelector((state) => state.featuredData);
