@@ -197,5 +197,35 @@
 			"icon": "images/Latest-Products/sale.png",
 			"altIcon": "Sale product icon"
 		}
+	],
+	"shopex-offer": [
+		{
+			"id": 1,
+			"title": "Quality Products",
+			"img": "images/Shopex-Offer/icon-1.png",
+			"alt": "Quality Products icon",
+			"description": "Lorem Ipsum is simply dummy of the printings and typesetting industry. Simply Dummy"
+		},
+		{
+			"id": 2,
+			"title": "Quick Delivery",
+			"img": "images/Shopex-Offer/icon-2.png",
+			"alt": "Quick Delivery icon",
+			"description": "Lorem Ipsum is simply dummy of the printings and typesetting industry. Simply Dummy"
+		},
+		{
+			"id": 3,
+			"title": "Reasonable Pricing",
+			"img": "images/Shopex-Offer/icon-3.png",
+			"alt": "Reasonable Pricing icon",
+			"description": "Lorem Ipsum is simply dummy of the printings and typesetting industry. Simply Dummy"
+		},
+		{
+			"id": 4,
+			"title": "24/7 Support",
+			"img": "images/Shopex-Offer/icon-4.png",
+			"alt": "24/7 Support icon",
+			"description": "Lorem Ipsum is simply dummy of the printings and typesetting industry. Simply Dummy"
+		}
 	]
 }

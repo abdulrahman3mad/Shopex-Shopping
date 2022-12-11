@@ -14,10 +14,6 @@ const register = async (payload) => {
     return data.data;
 }
 
-const logout = () => {
-    
-}
-
 export default {
     login,
     register,

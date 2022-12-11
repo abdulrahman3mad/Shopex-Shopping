@@ -4,9 +4,7 @@ import { setMessage } from "./authMessage";
 
 export const register = createAsyncThunk("auth-slice/register", async (payload, thunkAPI) => {
     let user = await AuthServices.register(payload);
-    if (!user) {
-        thunkAPI.dispatch(setMessage("This Email is taken. Try another"));
-    }
+    if (!user) thunkAPI.dispatch(setMessage("This Email is taken. Try another"));
     else thunkAPI.dispatch(setMessage(""))
     return user;
 })
@@ -18,9 +16,8 @@ export const login = createAsyncThunk("auth-slice/login", async (payload, thunkA
     return user[0];
 })
 
-
 const initialState = {
-    auth: {}
+    user: {}
 }
 
 export const authSlice = createSlice({
@@ -28,23 +25,23 @@ export const authSlice = createSlice({
     initialState,
     reducers: {
         logout: (state, action) => {
-            state.auth = {}
+            state.user = {}
         }
     },
 
     extraReducers: {
         [register.pending]: (state) => { },
         [register.fulfilled]: (state, action) => {
-            state.auth = action.payload;
+            state.user = action.payload;
         },
         [register.rejected]: (state) => { },
 
         [login.pending]: (state) => { },
         [login.fulfilled]: (state, action) => {
-            state.auth = action.payload;
+            state.user = action.payload;
         },
         [login.rejected]: (state) => {
-            state.auth = {};
+            state.user = {};
          },
     }
 })
