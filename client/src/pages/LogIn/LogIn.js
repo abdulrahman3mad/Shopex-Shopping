@@ -10,14 +10,21 @@ import AuthForm from "../../sections/AuthForm/AuthForm";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import { login, logout } from "../../redux-toolkit/features/authSlice";
-import { store } from "../../redux-toolkit/store";
+import validation from "../../services/validationService";
 
 function LogIn() {
-    let [email, setEmail] = useState("");
-    let [password, setPassword] = useState("");
+    const [formState, setFormState] = useState({
+        email: "",
+        password: "",
+    })
+
+    const [validationState, setValidationState] = useState({
+        email: "",
+        password: "",
+    })
 
     const navigate = useNavigate();
-    const { user: { auth }, authMessage: { message } } = useSelector((state) => state);
+    const { user: { user }, authMessage: { message } } = useSelector((state) => state);
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -25,12 +32,21 @@ function LogIn() {
     }, [])
 
     useEffect(() => {
-        auth && Object.keys(auth).length && navigate("/")
-    }, [auth, message])
+        user && Object.keys(user).length && navigate("/")
+    }, [user, message])
 
     function submitHandler(e) {
         e.preventDefault()
-        dispatch(login({ email, password }))
+        const [isValid, errors] = validation(formState, { password: "", email: "" })
+        setValidationState(errors);
+        isValid && dispatch(login(formState))
+    }
+
+    function changeHandler(input) {
+        setFormState({
+            ...formState,
+            [input.name]: input.value
+        })
     }
 
     return (
@@ -47,8 +63,10 @@ function LogIn() {
                 }
                 <FormHeading heading="Login" subHeading="Please Login using account detail bellow." />
                 <div className="mt-5">
-                    <Input type="email" name="email" value={email} placeholder="Abdo@gmail.com" onChange={setEmail} required={true} />
-                    <Input type="password" name="password" value={password} placeholder="12345" onChange={setPassword} required={true} />
+                    <Input type="text" name="email" value={formState.email} placeholder="Abdo@gmail.com" onChange={changeHandler}/>
+                    {validationState?.email && <p className="text-danger text-start mb-4">{validationState?.email}</p>}
+                    <Input type="password" name="password" value={formState.password} placeholder="12345" onChange={changeHandler}/>
+                    {validationState?.password && <p className="text-danger text-start mb-4">{validationState?.password}</p>}
                 </div>
                 <a href="#" className="text-black-50 text-start d-block fs-9 accent-clr-hover">Forget your password?</a>
                 <Button val="Log In" />
