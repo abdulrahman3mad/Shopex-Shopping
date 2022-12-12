@@ -1,0 +1,11 @@
+.footer-tab {
+	color: #9196aa;
+	text-decoration: underline;
+	text-underline-offset: 7px;
+	text-decoration-color: transparent;
+	transition: all 0.4s ease-in-out;
+	&:hover {
+		color: #9196aa;
+		text-decoration-color: $accent-clr;
+	}
+}
