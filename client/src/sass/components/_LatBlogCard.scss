@@ -1,0 +1,45 @@
+.latBlogCard {
+	box-shadow: 0px 2px 22px #edeff5;
+	transition: box-shadow 0.4s ease;
+	.card-body {
+		.publisher {
+			img {
+				height: 20px;
+				width: 20px;
+				border-radius: 50%;
+				transition: box-shadow 0.4s ease;
+			}
+
+			p {
+				color: #afb0c6;
+			}
+		}
+		.card-title {
+			color: #252857;
+			transition: color 0.4s ease;
+		}
+		p {
+			color: #72718f;
+		}
+		.read-more {
+			color: #252857;
+			text-underline-offset: 5px;
+			transition: all 0.4s ease;
+		}
+	}
+	// hover
+	&:hover {
+		box-shadow: 0px 2px 22px #d4d4dd;
+		.publisher {
+			img {
+				box-shadow: -1px 0px 0px 1px $accent-clr;
+			}
+		}
+		.card-title {
+			color: $accent-clr;
+		}
+		.read-more {
+			color: $accent-clr;
+		}
+	}
+}
