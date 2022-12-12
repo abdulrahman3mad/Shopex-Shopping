@@ -93,6 +93,10 @@
   background-color: $accent-clr;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 @for $i from 6 to 10 {
   .fs-#{$i} {
     font-size: 1rem * 8 / $i;

@@ -5,7 +5,6 @@ import Price from "../Price/Price";
 import LinkComp from "../Link/LinkComp";
 
 function FeaProCard({ title, code, price, img, alt, classNames }) {
-  console.log(code);
   return (
     <>
       <div
