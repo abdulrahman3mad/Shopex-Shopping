@@ -227,5 +227,43 @@
 			"alt": "24/7 Support icon",
 			"description": "Lorem Ipsum is simply dummy of the printings and typesetting industry. Simply Dummy"
 		}
+	],
+	"latest_blog": [
+		{
+			"id": 1,
+			"to": "#",
+			"img": "images/Latest-Blog/Interior-1.jpg",
+			"alt": "Room interior with sofa floor lamps",
+			"authorName": "Mehedii.H",
+			"authorImg": "images/Latest-Blog/publisher-1-1.webp",
+			"authorAlt": "publisher img",
+			"time ": "24 August,2022",
+			"title": "Room interior with sofa floor lamps",
+			"description": "More off this less hello salamander lied much over tightly circa horse taped mightily"
+		},
+		{
+			"id": 2,
+			"to": "#",
+			"img": "images/Latest-Blog/Interior-2.jpg",
+			"alt": "Room interior with sofa floor lamps",
+			"authorName": "Nayeim.J",
+			"authorImg": "images/Latest-Blog/publisher-2-2.jpg",
+			"authorAlt": "publisher img",
+			"time ": "10 August,2022",
+			"title": "Gray sofa combination with flower",
+			"description": "More off this less hello salamander lied much over tightly circa horse taped mightily"
+		},
+		{
+			"id": 3,
+			"to": "#",
+			"img": "images/Latest-Blog/Interior-3.jpg",
+			"alt": "Room interior with sofa floor lamps",
+			"authorName": "Saidsajid.H",
+			"authorImg": "images/Latest-Blog/publisher-3-3.jpg",
+			"authorAlt": "publisher img",
+			"time ": "21 August,2022",
+			"title": "Top essential dress trends in 2022",
+			"description": "More off this less hello salamander lied much over tightly circa horse taped mightily"
+		}
 	]
 }

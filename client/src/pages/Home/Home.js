@@ -4,7 +4,7 @@ import HeaderNav from "../../sections/UpperBar/UpperBar";
 import LatestSE from "../../sections/LatestProducts/LatestSE";
 import OfferSE from "../../sections/ShopexOffer/OfferSE";
 import FooterSE from "../../sections/Footer/FooterSE";
-
+import LatestBlogSE from "../../sections/LatestBlog/LatestBlogSE";
 function Home() {
 	return (
 		<>
@@ -14,7 +14,8 @@ function Home() {
 			<LatestSE />
 			<OfferSE />
 
-			<FooterSE/>
+			<LatestBlogSE />
+			<FooterSE />
 		</>
 	);
 }
