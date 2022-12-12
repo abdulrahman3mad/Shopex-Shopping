@@ -26,15 +26,15 @@ function SignUp() {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { user: { auth }, authMessage: { message } } = useSelector((state) => state);
+    const { user: { user }, authMessage: { message } } = useSelector((state) => state);
 
     useEffect(() => {
         dispatch(clearMessage());
     }, [])
 
     useEffect(() => {
-        auth && Object.keys(auth).length && navigate("/login")
-    }, [auth, message])
+        user && Object.keys(user).length && navigate("/login")
+    }, [user, message])
 
     function submitHandler(e) {
         e.preventDefault()

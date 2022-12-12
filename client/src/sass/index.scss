@@ -1,15 +1,20 @@
+// General
 @import "./base/variables";
 @import "./base/general";
 @import "./base/utilities";
 
+// Components
 @import "./components/Input";
 @import "./components/Link";
-@import "./components/_FeaProCard";
+@import "./components/FeaProCard";
 @import "./components/Price";
 @import "./components/ColorPalette";
+@import "./components/SelectInput";
 
+// Sections
 @import "./sections/Header";
 @import "./sections/PageHeading";
 @import "./sections/AuthForm";
 @import "./sections/WelcomeSE";
-@import "./sections/_FeaturedSE";
+@import "./sections/FeaturedSE";
+@import "./sections/product";

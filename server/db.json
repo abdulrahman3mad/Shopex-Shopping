@@ -7,6 +7,80 @@
       "id": 1
     }
   ],
+  "products":[
+    {
+      "id": 1,
+      "title": "Plywood arm chair",
+      "code": "D45201",
+      "price": "32.00",
+      "oldprice":"50.00",
+      "img": "images/Featured-Products-img/plywood-2.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 2,
+      "title": "Plywood arm chair",
+      "code": "C45382",
+      "price": "45.00",
+      "oldprice":"50.00",
+      "img": "images/Featured-Products-img/plywood-3.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 3,
+      "title": "Plywood arm chair",
+      "code": "Y53201",
+      "price": "59.00",
+      "oldprice":"50.00",
+      "img": "images/Featured-Products-img/plywood-4.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 4,
+      "title": "Plywood arm chair",
+      "code": "F45681",
+      "price": "39.90",
+      "oldprice":"50.00",
+      "img": "images/Featured-Products-img/plywood-5.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 5,
+      "title": "Plywood arm chair",
+      "code": "Y53201",
+      "price": "59.00",
+      "oldprice":"50.00",
+      "img": "images/Featured-Products-img/plywood-4.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 6,
+      "title": "Plywood arm chair",
+      "code": "D45201",
+      "price": "32.00",
+      "oldprice":"50.00",
+      "img": "images/Featured-Products-img/plywood-2.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 7,
+      "title": "Plywood arm chair",
+      "code": "C45382",
+      "price": "45.00",
+      "oldprice":"50.00",
+      "img": "images/Featured-Products-img/plywood-3.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 8,
+      "title": "Plywood arm chair",
+      "code": "F45681",
+      "price": "39.90",
+      "oldprice":"50.00",
+      "img": "images/Featured-Products-img/plywood-5.webp",
+      "alt": "plywood armchair"
+    }
+  ],
   "welcome": {
     "welcome_Chandelier": {
       "id": 1,
