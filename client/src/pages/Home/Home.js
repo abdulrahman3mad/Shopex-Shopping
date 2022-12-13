@@ -8,12 +8,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getBrands } from "../../redux-toolkit/features/brandsSlice";
 import NewsletterSE from "../../sections/Newsletter/NewsletterSE";
+import TopCatagoriesSE from "../../sections/TopCatagories/TopCatagoriesSE";
+import { getTopCatagories } from "../../redux-toolkit/features/topCatagoriesSlice";
 
 function Home() {
 	const dispatch = useDispatch();
-	const state = useSelector((state) => state.brands);
+	const state = useSelector((state) => state);
 	useEffect(() => {
 		dispatch(getBrands());
+		dispatch(getTopCatagories());
 	}, [dispatch]);
 
 	return (
@@ -23,8 +26,11 @@ function Home() {
 			<LatestSE />
 			<OfferSE />
 
+			<TopCatagoriesSE
+				data={state.topCatagories.data ? state.topCatagories.data : null}
+			/>
 			<NewsletterSE />
-			<BrandsSE data={state.data ? state.data : null} />
+			<BrandsSE data={state.brands.data ? state.brands.data : null} />
 			<LatestBlogSE />
 		</>
 	);
