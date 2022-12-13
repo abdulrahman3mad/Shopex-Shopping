@@ -28,28 +28,49 @@ function FooterSE() {
 						</div>
 						<div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-xs-0">
 							<h4 className="text-clr-heading mb-5">Catagories</h4>
-							<FooterTab title={"Laptops & Computers"} to={"#"} />
-							<FooterTab title={"Cameras & Photography"} to={"#"} />
-							<FooterTab title={"Smart Phones & Tablets"} to={"#"} />
-							<FooterTab title={"Video Games & Consoles"} to={"#"} />
-							<FooterTab title={"Waterproof Headphones"} to={"#"} />
+							<FooterTab
+								title={"Laptops & Computers"}
+								to={"/Laptops&Computers"}
+							/>
+							<FooterTab
+								title={"Cameras & Photography"}
+								to={"/Cameras&Photography"}
+							/>
+							<FooterTab
+								title={"Smart Phones & Tablets"}
+								to={"/Smart-Phones&Tablets"}
+							/>
+							<FooterTab
+								title={"Video Games & Consoles"}
+								to={"/Video-Games&Consoles"}
+							/>
+							<FooterTab
+								title={"Waterproof Headphones"}
+								to={"Waterproof-Headphones"}
+							/>
 						</div>
 						<div className="col-xl-3 col-lg-2 col-md-6 col-sm-12 mb-4 mb-xs-0">
 							<h4 className="text-clr-heading mb-5">Customer Care</h4>
-							<FooterTab title={"My Account"} to={"#"} />
-							<FooterTab title={"Discount"} to={"#"} />
-							<FooterTab title={"Returns"} to={"#"} />
-							<FooterTab title={"Orders History"} to={"#"} />
-							<FooterTab title={"Order Tracking"} to={"#"} />
+							<FooterTab title={"My Account"} to={"/My-Account"} />
+							<FooterTab title={"Discount"} to={"/Discount"} />
+							<FooterTab title={"Returns"} to={"/Returns"} />
+							<FooterTab title={"Orders History"} to={"/Orders-History"} />
+							<FooterTab title={"Order Tracking"} to={"Order-Tracking"} />
 						</div>
 						<div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-xs-0">
 							<h4 className="text-clr-heading mb-5">Pages</h4>
-							<FooterTab title={"Blog"} to={"#"} />
-							<FooterTab title={"Browse the Shop"} to={"#"} />
-							<FooterTab title={"category"} to={"#"} />
-							<FooterTab title={"Pre-Built Pages"} to={"#"} />
-							<FooterTab title={"Visual Composer Elements"} to={"#"} />
-							<FooterTab title={"WooCommerce Pages"} to={"#"} />
+							<FooterTab title={"Blog"} to={"/Blog"} />
+							<FooterTab title={"Browse the Shop"} to={"/Browse-the-Shop"} />
+							<FooterTab title={"category"} to={"/category"} />
+							<FooterTab title={"Pre-Built Pages"} to={"/Pre-Built-Pages"} />
+							<FooterTab
+								title={"Visual Composer Elements"}
+								to={"/Visual-Composer-Elements"}
+							/>
+							<FooterTab
+								title={"WooCommerce Pages"}
+								to={"/WooCommerce-Pages"}
+							/>
 						</div>
 					</div>
 				</div>
