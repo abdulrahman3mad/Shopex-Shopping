@@ -1,0 +1,24 @@
+.top-catagories {
+	.slick-dots {
+		bottom: -50px;
+		li {
+			&.slick-active {
+				button {
+					&::before {
+						background-color: #fb2e86;
+					}
+				}
+			}
+			button {
+				&::before {
+					content: " ";
+					height: 12px;
+					width: 12px;
+					background-color: transparent;
+					border: 1px solid #fb2e86;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}

@@ -46,21 +46,22 @@ function FeaturedSE() {
 		pauseOnHover: true,
 		responsive: [
 			{
-				breakpoint: 1024,
+				breakpoint: 1200,
 				settings: {
 					slidesToShow: 3,
 				},
 			},
 			{
-				breakpoint: 600,
+				breakpoint: 991,
 				settings: {
 					slidesToShow: 2,
 				},
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 502,
 				settings: {
 					slidesToShow: 1,
+					slidesToScroll: 1,
 				},
 			},
 		],

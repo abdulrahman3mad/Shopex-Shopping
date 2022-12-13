@@ -276,5 +276,49 @@
 			"alt": "Hello Sunshine brand icon"
 		},
 		{ "id": 5, "img": "images/brands/5.png", "alt": "Pure brand icon" }
+	],
+	"top_catagories": [
+		{
+			"id": 1,
+			"img": "images/Top-Catagories/Plywood-Arm-Chair.png",
+			"alt": "plywood armchair",
+			"title": "Plywood Arm Chair",
+			"price": "56.00"
+		},
+		{
+			"id": 2,
+			"img": "images/Top-Catagories/Modern-coffe-chair.png",
+			"alt": "Modern coffee chair",
+			"title": "Coffee Wood Chair",
+			"price": "56.00"
+		},
+		{
+			"id": 3,
+			"img": "images/Top-Catagories/High-Bar-Stool-Chair.png",
+			"alt": "High Bar Stool Chair",
+			"title": "High Bar Stool Chair",
+			"price": "56.00"
+		},
+		{
+			"id": 4,
+			"img": "images/Top-Catagories/Mini-LCW-Chair-2.png",
+			"alt": "Mini LCW Chair",
+			"title": "Mini LCW Chair",
+			"price": "56.00"
+		},
+		{
+			"id": 5,
+			"img": "images/Top-Catagories/Plywood-Arm-Chair.png",
+			"alt": "plywood armchair",
+			"title": "Plywood Arm Chair",
+			"price": "56.00"
+		},
+		{
+			"id": 6,
+			"img": "images/Top-Catagories/Modern-coffe-chair.png",
+			"alt": "Modern coffee chair",
+			"title": "Coffee Wood Chair",
+			"price": "56.00"
+		}
 	]
 }
