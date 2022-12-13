@@ -9,11 +9,11 @@ export const loadProducts = createAsyncThunk("products/loadProducts", async (pay
 
 const initialState = {
     products: [],
-    filteredProducts: undefined,
-    loading: null,
+    filteredProducts: null,
+    loading: false,
     err: null,
     ItemsPerPage: 10,
-    curPage:1,
+    curPage: 1,
 }
 
 const productsSlice = createSlice({
@@ -21,7 +21,7 @@ const productsSlice = createSlice({
     initialState,
     reducers: {
         filterProducts: (state, action) => {
-            if (action.payload === "") state.filteredProducts = undefined
+            if (action.payload === "") state.filteredProducts = null
             else state.filteredProducts = state.products.filter((product) => {
                 return product.title.trim().toLowerCase().includes(action.payload.toLowerCase().trim());
             })
@@ -31,7 +31,7 @@ const productsSlice = createSlice({
             state.ItemsPerPage = action.payload
         },
 
-        setCurPage:(state, action)=>{
+        setCurPage: (state, action) => {
             state.curPage = action.payload
         }
     },

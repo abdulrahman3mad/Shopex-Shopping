@@ -1,4 +1,4 @@
-function Input({ type, name, id, value, placeholder, onChange, err, required, classNames}) {
+function Input({ type, name, id, value, placeholder, onChange, err, required, classNames, autoFocus}) {
     return (
         <input
             type={type}
@@ -9,6 +9,7 @@ function Input({ type, name, id, value, placeholder, onChange, err, required, cl
             className={`primary-border-focus border w-100 ${!classNames && "px-2 py-2 mb-3"} ${err?.message && "border-accent"} ${classNames}`}
             onChange={(e) => onChange(e.target)}
             required={required}
+            autoFocus={autoFocus}
         />
     )
 }

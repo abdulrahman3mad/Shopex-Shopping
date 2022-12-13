@@ -7,46 +7,63 @@ export function Page({ pageNum, active }) {
     return <p className={`page accent-bg-hover fw-bold shadow  border-0 mx-2 ${active && "bg-clr-accent text-white"}`}>{pageNum}</p>
 }
 
-export default function Pagination({ maxNumOfitems, ItemsPerPage, handleChangeInPagi }) {
-    const dispatch = useDispatch()
+export default function Pagination({ maxNumOfitems, ItemsPerPage, handleSliding }) {
     const [window, setWindow] = useState([1]);
-    const [numOfPages, setNumOfPages] = useState(1);
-    const { products: { curPage } } = useSelector((state) => state)
-
-    const isThereMoreItems = (page) => (page <= numOfPages);
-
-    const checkOverFrame = (direction) => {
-        return (direction == "right") ? curPage > window.at(-1) : curPage < window[0];
-    }
+    const curPage = useSelector((state) => state.products.curPage);
 
     const shiftWindowLeft = () => {
-        dispatch(setCurPage(curPage - 1));
+        if (!(curPage <= 1)) handleSliding(curPage - 1);
     }
 
     const shiftWindowRight = () => {
-        dispatch(setCurPage(curPage + 1));
+        if (curPage < getNumOfPages()) handleSliding(curPage + 1);
     }
 
-    const checkOverPages = () => curPage <= 1;
+    useEffect(() => {
+        if (checkOverFrame("right")) {
+            let updatedWindow = window.slice(1);
+            updatedWindow.push(curPage);
+            setWindow(updatedWindow);
+        }
 
-    let range = (start, end) => {
+        else if (checkOverFrame("left")) {
+            let updatedWindow = window;
+            updatedWindow.pop();
+            updatedWindow.unshift(curPage);
+            setWindow(updatedWindow)
+        }
+    }, [curPage])
+
+    const checkOverFrame = (direction) => {
+        return (direction === "right") ? curPage > window.at(-1) : curPage < window[0];
+    }
+
+    const getNumOfPages = () => {
+        return Math.ceil(maxNumOfitems / ItemsPerPage) || 1;
+    }
+
+    const range = (start, end) => {
         let arr = [];
         for (let x = start; x <= end; x++) arr.push(x);
         return arr;
     }
 
-
     const setPaginationWindow = () => {
-        (numOfPages >= 3) ? setWindow([1, 2, 3]) : setWindow(range(1, Math.ceil(maxNumOfitems / ItemsPerPage)));
+        let numOfPages = getNumOfPages();
+        setWindow(range(1, numOfPages > 3 ? 3 : numOfPages))
     }
+
     const ArrowClickHandler = (target) => {
         if (target.id === "back-arrow") shiftWindowLeft();
         else if (target.id === "forward-arrow") shiftWindowRight();
     }
 
     useEffect(() => {
+        console.log(Math.ceil(maxNumOfitems / ItemsPerPage) || 1);
         setPaginationWindow();
-    }, [])
+    }, [ItemsPerPage, maxNumOfitems])
+
+
 
     return (
         <div className="pagination | d-flex align-items-center justify-content-center">
@@ -54,7 +71,7 @@ export default function Pagination({ maxNumOfitems, ItemsPerPage, handleChangeIn
             <div
                 className="pages-container d-flex mx-2"
                 id="pages-container">
-                {window.map((item, index) => <Page key={item} pageNum={item} active={curPage - 1 === index} />)}
+                {window.map((item) => <Page key={item} pageNum={item} active={curPage === item} />)}
             </div>
             <div className="forward-arrow arrow pointer" id="forward-arrow" onClick={(e) => ArrowClickHandler(e.target.closest(".arrow"))}><BsArrowRight className="forward-arrow" /></div>
         </div>
