@@ -1,0 +1,32 @@
+.cart {
+  .product-img {
+    width: 150px;
+    
+    img{
+        max-width: 100%;
+    }
+  }
+
+  .product-desc {
+    .product-name{
+        font-size:clamp(0.8rem, 2vw, 1rem)
+    }
+
+    .clr, .size{
+        font-size:clamp(0.6rem, 2.4vw, 0.8rem)
+    }
+  }
+  
+  .add-remove-box{
+    overflow: hidden;
+    height:30px;
+  }
+
+  input[type=checkbox]{
+    accent-color:#19D16F 
+  }
+
+  .cheack-btn{
+    background-color: #19D16F
+  }
+}
