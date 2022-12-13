@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 function PageHeading({ heading, pages }) {
     const Pages = pages.map((page, index) => {
-        return <a href="#" key={index} className={`page-link ${index == pages.length - 1 && "active"}`}>{page}</a>
+        return <Link to={`/${page.toLowerCase() !== "home" ? page : ""}`} key={index} className={`page-link ${index == pages.length - 1 && "active"}`}>{page}</Link>
     });
 
     return (
