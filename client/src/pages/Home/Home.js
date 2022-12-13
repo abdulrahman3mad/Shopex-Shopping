@@ -5,7 +5,18 @@ import LatestSE from "../../sections/LatestProducts/LatestSE";
 import OfferSE from "../../sections/ShopexOffer/OfferSE";
 import FooterSE from "../../sections/Footer/FooterSE";
 import LatestBlogSE from "../../sections/LatestBlog/LatestBlogSE";
+import BrandsSE from "../../sections/Brands/BrandsSE";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getBrands } from "../../redux-toolkit/features/brandsSlice";
+
 function Home() {
+	const dispatch = useDispatch();
+	const state = useSelector((state) => state.brands);
+	useEffect(() => {
+		dispatch(getBrands());
+	}, [dispatch]);
+
 	return (
 		<>
 			<HeaderNav />
@@ -14,6 +25,7 @@ function Home() {
 			<LatestSE />
 			<OfferSE />
 
+			<BrandsSE data={state.data ? state.data : null} />
 			<LatestBlogSE />
 			<FooterSE />
 		</>

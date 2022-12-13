@@ -265,5 +265,16 @@
 			"title": "Top essential dress trends in 2022",
 			"description": "More off this less hello salamander lied much over tightly circa horse taped mightily"
 		}
+	],
+	"brands": [
+		{ "id": 1, "img": "images/brands/1.png", "alt": "live brand icon" },
+		{ "id": 2, "img": "images/brands/2.png", "alt": "Hand Crafted brand icon" },
+		{ "id": 3, "img": "images/brands/3.png", "alt": "Mestonix brand icon" },
+		{
+			"id": 4,
+			"img": "images/brands/4.png",
+			"alt": "Hello Sunshine brand icon"
+		},
+		{ "id": 5, "img": "images/brands/5.png", "alt": "Pure brand icon" }
 	]
 }
