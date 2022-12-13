@@ -3,11 +3,12 @@ import SelectInput from "../SelectInput/SelectInput";
 import { AiOutlineSearch } from "react-icons/ai"
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { filterProducts, changeNumOfItems, loadProducts, changeItemsPerPage } from "../../redux-toolkit/features/productsSlice";
+import { filterProducts, changeItemsPerPage } from "../../redux-toolkit/features/shopSlice";
 
 function ProductsSearchForm() {
+
     const [searchValue, SetSearchValue] = useState("");
-    const { products: { ItemsPerPage } } = useSelector((state) => state)
+    const { shop: { ItemsPerPage } } = useSelector((state) => state)
     const dispatch = useDispatch();
 
 

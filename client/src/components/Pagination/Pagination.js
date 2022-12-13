@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
 import { useDispatch, useSelector } from "react-redux";
-import { setCurPage } from "../../redux-toolkit/features/productsSlice";
+import { setCurPage } from "../../redux-toolkit/features/shopSlice";
 
 export function Page({ pageNum, active }) {
     return <p className={`page accent-bg-hover fw-bold shadow  border-0 mx-2 ${active && "bg-clr-accent text-white"}`}>{pageNum}</p>
@@ -9,7 +9,7 @@ export function Page({ pageNum, active }) {
 
 export default function Pagination({ maxNumOfitems, ItemsPerPage, handleSliding }) {
     const [window, setWindow] = useState([1]);
-    const curPage = useSelector((state) => state.products.curPage);
+    const curPage = useSelector((state) => state.shop.curPage);
 
     const shiftWindowLeft = () => {
         if (!(curPage <= 1)) handleSliding(curPage - 1);
@@ -59,7 +59,6 @@ export default function Pagination({ maxNumOfitems, ItemsPerPage, handleSliding 
     }
 
     useEffect(() => {
-        console.log(Math.ceil(maxNumOfitems / ItemsPerPage) || 1);
         setPaginationWindow();
     }, [ItemsPerPage, maxNumOfitems])
 

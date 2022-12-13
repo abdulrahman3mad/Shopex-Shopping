@@ -5,7 +5,9 @@ import homeSlice from "./features/homeDataSlice";
 import latestProSlice from "./features/latestProSlice";
 import shopexOfferSlice from "./features/shopexOfferSlice";
 import featuredSlice from "./features/FeaturedDataSlice";
-import productsSlice from "./features/productsSlice";
+import shopSlice from "./features/shopSlice";
+import latestBlogSlice from "./features/latestBlogSlice";
+import getBrands from "./features/brandsSlice";
 
 export const store = configureStore({
 	reducer: {
@@ -15,6 +17,8 @@ export const store = configureStore({
 		featuredData: featuredSlice,
 		latestPro: latestProSlice,
 		shopexOffer: shopexOfferSlice,
-		products: productsSlice,
+		shop: shopSlice,
+		latestBlog: latestBlogSlice,
+		brands: getBrands,
 	},
 });

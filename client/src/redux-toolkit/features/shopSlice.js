@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { url_API } from "../../config";
 import axios from "axios";
 
-export const loadProducts = createAsyncThunk("products/loadProducts", async (payload) => {
+export const loadProducts = createAsyncThunk("shop/loadProducts", async (payload) => {
     let res = await axios.get(`${url_API}/products`,);
     return res.data;
 })
@@ -16,8 +16,8 @@ const initialState = {
     curPage: 1,
 }
 
-const productsSlice = createSlice({
-    name: "productsSlice",
+const shopSlice = createSlice({
+    name: "shopSlice",
     initialState,
     reducers: {
         filterProducts: (state, action) => {
@@ -52,5 +52,5 @@ const productsSlice = createSlice({
     }
 })
 
-export const { filterProducts, changeItemsPerPage, setCurPage } = productsSlice.actions;
-export default productsSlice.reducer;
+export const { filterProducts, changeItemsPerPage, setCurPage } = shopSlice.actions;
+export default shopSlice.reducer;

@@ -2,6 +2,7 @@ import FeaProCard from "../../components/FeaturedProCard/FeaProCard"
 
 function ProductsList({ products, start, end }) {
     const productsCards = products.slice(start, end).map((product, index) => {
+        
         return (
             <div className="col-lg-3 col-md-6 col-12" key={product.id}>
                 <FeaProCard

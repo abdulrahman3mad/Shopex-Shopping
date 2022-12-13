@@ -1,0 +1,52 @@
+.footer {
+	.main-footer {
+		background-color: #eeeffb;
+		h2 {
+			color: #112c6b;
+		}
+		form {
+			div {
+				padding: 3px;
+				input {
+					width: calc(100% - 116px);
+					border: none;
+					padding-left: 10px;
+					&:focus {
+						border: none !important;
+					}
+				}
+				button {
+					padding: 5px 30px;
+					border: none;
+					border-radius: 2px;
+					transition: background-color 0.4s ease;
+					&:hover {
+						background-color: $heading-clr;
+					}
+				}
+			}
+		}
+		span {
+			color: #8a8e9b;
+		}
+	}
+	.footer-navbar {
+		background-color: #e7e4f8;
+		.copyright {
+			color: #8a8e9b;
+		}
+
+		.social-media {
+			span {
+				a {
+					transition: color 0.3s ease-in-out;
+				}
+				&:hover {
+					a {
+						color: $accent-clr;
+					}
+				}
+			}
+		}
+	}
+}
