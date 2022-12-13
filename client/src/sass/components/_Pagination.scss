@@ -1,0 +1,25 @@
+.pagination {
+  .page {
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+    border: 0.5px solid #d1d1d6;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 2px;
+    border-radius: 50%;        
+    transition: $trans-duration;
+    &:hover,
+    &:active {
+      color: white;
+      border: 0;
+    }
+  }
+
+  .arrow {
+    font-size: 1.3rem;
+  }
+}

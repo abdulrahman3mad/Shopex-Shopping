@@ -51,7 +51,7 @@ function SignUp() {
 
     return (
         <>
-            <PageHeading heading="My Account" pages={["Home", "Pages", "SignUp"]} />
+            <PageHeading heading="My Account" pages={["Home", "SignUp"]} />
             <AuthForm onSubmit={submitHandler}>
                 {message && <AuthMessage message={message} />}
                 <FormHeading heading="Sign Up" subHeading="Please SignUp using account detail bellow." />

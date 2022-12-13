@@ -1,18 +1,24 @@
+// General
 @import "./base/variables";
 @import "./base/general";
 @import "./base/utilities";
 
+// Components
 @import "./components/Input";
 @import "./components/Link";
-@import "./components/_FeaProCard";
+@import "./components/FeaProCard";
 @import "./components/Price";
 @import "./components/ColorPalette";
 @import "./components/LatProCard";
 @import "./components/OfferCard";
+@import "./components/SelectInput";
+@import "./components/Pagination";
 @import "./components/FooterTab";
 @import "./components/LatBlogCard";
 @import "./components/TopCatCard";
 
+
+// Sections
 @import "./sections/Header";
 @import "./sections/PageHeading";
 @import "./sections/AuthForm";
@@ -22,5 +28,7 @@
 @import "./sections/OfferSE";
 
 @import "./sections/TopCatagoriesSE";
+@import "./sections/product";
 @import "./sections/Newsletter";
 @import "./sections//FooterSE";
+

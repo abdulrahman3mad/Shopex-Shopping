@@ -1,12 +1,14 @@
 import { Routes, Route } from "react-router-dom";
+
 // pages
 import SignUp from "./pages/SignUp/SignUp";
 import LogIn from "./pages/LogIn/LogIn";
-import Home from "./pages/Home/Home";
-
 import NotFound from "./pages/NotFound/NotFound";
+import Home from "./pages/Home/Home"
+import Shop from "./pages/Shop/Shop";
 import HeaderNav from "./sections/UpperBar/UpperBar";
 import FooterSE from "./sections/Footer/FooterSE";
+
 
 function App() {
 	return (
@@ -17,6 +19,7 @@ function App() {
 				<Route path="/login" element={<LogIn />}></Route>
 				<Route path="/signup" element={<SignUp />}></Route>
 				<Route path="*" element={<NotFound />}></Route>
+				<Route path="/shop" element={<Shop />}></Route>
 			</Routes>
 			<FooterSE />
 		</div>

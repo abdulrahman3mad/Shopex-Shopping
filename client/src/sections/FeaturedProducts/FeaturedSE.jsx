@@ -5,14 +5,17 @@ import FeaProCard from "../../components/FeaturedProCard/FeaProCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { getFeaturedData } from "../../redux-toolkit/features/featuredDataSlice";
+import { getFeaturedData } from "../../redux-toolkit/features/FeaturedDataSlice";
 
 function FeaturedSE() {
 	const state = useSelector((state) => state.featuredData);
 	const dispatch = useDispatch();
+
 	useEffect(() => {
 		dispatch(getFeaturedData());
 	}, [dispatch]);
+
+
 	const featuredDataUI = () => {
 		return state.data ? (
 			<div className="slider">
@@ -26,6 +29,7 @@ function FeaturedSE() {
 								price={prod.price}
 								img={prod.img}
 								alt={"plywood arm chair"}
+								classNames="product-shadow"
 								// "alt": "plywood armchair"
 							></FeaProCard>
 						);
@@ -34,6 +38,8 @@ function FeaturedSE() {
 			</div>
 		) : null;
 	};
+
+
 	const settings = {
 		dots: true,
 		arrows: false,
@@ -66,6 +72,7 @@ function FeaturedSE() {
 			},
 		],
 	};
+
 	return (
 		<Fragment>
 			<section className="featured sec section-spacing">

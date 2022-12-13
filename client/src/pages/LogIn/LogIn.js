@@ -49,7 +49,7 @@ function LogIn() {
 
     return (
         <>
-            <PageHeading heading="My Account" pages={["Home", "Pages", "Login"]} />
+            <PageHeading heading="My Account" pages={["Home", "Login"]} />
 
             <AuthForm onSubmit={submitHandler}>
                 {message && <AuthMessage message={message} />}
