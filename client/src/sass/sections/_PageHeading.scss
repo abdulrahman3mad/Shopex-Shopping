@@ -1,5 +1,10 @@
 .page-heading {
-    padding:60px 110px;
+    padding:60px 0;
+
+    .heading{
+        font-size: clamp(1.5rem, 8vw, 3.2rem);
+    }
+
     .page-link{
         padding:0;
         margin:0

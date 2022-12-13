@@ -7,7 +7,6 @@ import OfferSE from "../../sections/ShopexOffer/OfferSE";
 function Home() {
 	return (
 		<>
-			<HeaderNav />
 			<WelcomeSE />
 			<FeaturedSE />
 			<LatestSE />

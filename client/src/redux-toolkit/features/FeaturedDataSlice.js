@@ -14,13 +14,13 @@ export const getFeaturedData = createAsyncThunk(
 	}
 );
 
-export const featuredSlice = createSlice({
+export const FeaturedSlice = createSlice({
 	initialState: {
 		data: null,
 		loading: false,
 		error: false,
 	},
-	name: "featured",
+	name: "Featured",
 	extraReducers: (builder) => {
 		builder.addCase(getFeaturedData.pending, (state, action) => {
 			state.loading = true;
@@ -36,4 +36,4 @@ export const featuredSlice = createSlice({
 	},
 });
 
-export default featuredSlice.reducer;
+export default FeaturedSlice.reducer;
