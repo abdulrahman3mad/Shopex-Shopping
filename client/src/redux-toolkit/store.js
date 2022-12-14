@@ -9,6 +9,7 @@ import shopSlice from "./features/shopSlice";
 import latestBlogSlice from "./features/latestBlogSlice";
 import getBrands from "./features/brandsSlice";
 import topCatagoriesSlice from "./features/topCatagoriesSlice";
+import TrendingProductsSlice from "./features/trendingSlice";
 
 export const store = configureStore({
 	reducer: {
@@ -22,5 +23,6 @@ export const store = configureStore({
 		latestBlog: latestBlogSlice,
 		brands: getBrands,
 		topCatagories: topCatagoriesSlice,
+		trendingPro: TrendingProductsSlice,
 	},
 });

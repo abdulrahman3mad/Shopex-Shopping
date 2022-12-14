@@ -320,5 +320,53 @@
 			"title": "Coffee Wood Chair",
 			"price": "56.00"
 		}
-	]
+	],
+	"trending_products": {
+		"discountPro50": {
+			"id": 1,
+			"title": "50% off in all products",
+			"img": "images/Trending-Products/Mantel-Clock.png",
+			"alt": "Mantel Clock"
+		},
+		"discountPro25": {
+			"id": 1,
+			"title": "23% off in all products",
+			"img": "images/Trending-Products/tv-Table.png",
+			"alt": "tv table"
+		},
+		"cardData": [
+			{
+				"id": 1,
+				"img": "images/Trending-Products/chair-1.jpg",
+				"alt": "wooden outer arm chair",
+				"title": "Wooden outdoor chair",
+				"price": "39.99",
+				"discount": "60.99"
+			},
+			{
+				"id": 2,
+				"img": "images/Trending-Products/chair-2.jpg",
+				"alt": "wooden outer arm chair",
+				"title": "Ladderback chair",
+				"price": "39.99",
+				"discount": "60.99"
+			},
+			{
+				"id": 3,
+				"img": "images/Trending-Products/chair-3.jpg",
+				"alt": "wooden outer arm chair",
+				"title": "Comfort Pillow Sofa",
+				"price": "39.99",
+				"discount": "60.99"
+			},
+			{
+				"id": 4,
+				"img": "images/Trending-Products/chair-4.jpg",
+				"alt": "wooden outer arm chair",
+				"title": "Cantilever chair",
+				"price": "39.99",
+				"discount": "60.99"
+			}
+		]
+	}
 }

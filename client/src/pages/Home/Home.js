@@ -10,6 +10,8 @@ import { getBrands } from "../../redux-toolkit/features/brandsSlice";
 import NewsletterSE from "../../sections/Newsletter/NewsletterSE";
 import TopCatagoriesSE from "../../sections/TopCatagories/TopCatagoriesSE";
 import { getTopCatagories } from "../../redux-toolkit/features/topCatagoriesSlice";
+import TrendingProSE from "../../sections/TrendingPro/TrendingProSE";
+import { getTrendingProducts } from "../../redux-toolkit/features/trendingSlice";
 
 function Home() {
 	const dispatch = useDispatch();
@@ -17,6 +19,7 @@ function Home() {
 	useEffect(() => {
 		dispatch(getBrands());
 		dispatch(getTopCatagories());
+		dispatch(getTrendingProducts());
 	}, [dispatch]);
 
 	return (
@@ -25,6 +28,9 @@ function Home() {
 			<FeaturedSE />
 			<LatestSE />
 			<OfferSE />
+			<TrendingProSE
+				data={state.trendingPro.data ? state.trendingPro.data : null}
+			/>
 
 			<TopCatagoriesSE
 				data={state.topCatagories.data ? state.topCatagories.data : null}
