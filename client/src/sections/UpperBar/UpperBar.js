@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { BiChevronDown } from "react-icons/bi";
-import { BiUser } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
 import Mail from "../../components/Mail/Mail";
 import Telephone from "../../components/Telephone/Telephone";
 import Navbar from "../NavBar/Navbar";
+import MyAccDropdown from "../../components/MyAccDropdown/MyAccDropdown";
 
 function HeaderNav() {
 	return (
@@ -64,11 +64,8 @@ function HeaderNav() {
 											</ul>
 										</div>
 									</div>
-									{/*<!-- login --> */}
-									<div className="item login">
-										<a href="../HTML/Login.html">Login</a>
-										<BiUser className="icon " />
-									</div>
+									{/* my Account dropdown*/}
+									<MyAccDropdown />
 									{/* <!-- wishlist --> */}
 									<div className="item Wishlist">
 										<a href="/">Wishlist</a>
