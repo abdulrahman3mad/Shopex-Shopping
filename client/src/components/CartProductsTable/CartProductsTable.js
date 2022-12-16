@@ -15,7 +15,6 @@ function CartProductsTable({ products }) {
             totalPrice={((product?.quantity || 1) * product.price).toFixed(2)}
         />
 
-        dispatch()
     })
 
     return (
