@@ -32,78 +32,170 @@
       }
     ]
   },
-
+  "carts": [
+    {
+      "userId": 2,
+      "products": [
+        {
+          "id": 3,
+          "title": "Plywood",
+          "code": "Y53201",
+          "price": "59.00",
+          "oldprice": "50.00",
+          "img": "images/Featured-Products-img/plywood-4.webp",
+          "alt": "plywood armchair",
+          "size": "XL",
+          "color": "tan",
+          "quantity": 19
+        },
+        {
+          "id": 1,
+          "title": "arm chair",
+          "code": "D45201",
+          "price": "32.00",
+          "oldprice": "50.00",
+          "img": "images/Featured-Products-img/plywood-2.webp",
+          "alt": "plywood armchair",
+          "size": "XL",
+          "color": "tan",
+          "quantity": 26
+        },
+        {
+          "id": 2,
+          "title": "chair",
+          "code": "C45382",
+          "price": "45.00",
+          "oldprice": "50.00",
+          "img": "images/Featured-Products-img/plywood-3.webp",
+          "alt": "plywood armchair",
+          "size": "XL",
+          "color": "tan",
+          "quantity": 18
+        }
+      ],
+      "id": 1
+    }
+  ],
   "users": [
     {
-      "name": "abdo3mad",
+      "email": "abdo3mad@gmail.com",
+      "password": "$2a$10$tsLCX17m.f2cxbNOKDmXPej7yP4S1uQPD/0DWhxz1ige4dR02aDTq",
+      "name": "abdoemad",
+      "id": 2
+    },
+    {
+      "email": "emad@gmail.com",
+      "password": "$2a$10$CBx63b8eWAHpvTXhXexg/OaVKSA0iWDUwUUg1lro7k8.tV/9QUHSi",
+      "name": "emadselim",
+      "id": 3
+    },
+    {
       "email": "abdo@gmail.com",
-      "password": "Abdo3mad012..",
-      "id": 1
+      "password": "$2a$10$uLTJWbuQES.RvJ1CScxqiuoMd8hOklqTXTO5EQQ4mnJAl0QvOObPK",
+      "id": 4
+    },
+    {
+      "email": "abdomohamed@gmail.com",
+      "password": "$2a$10$9uNKgdIX03zcKohWhnRaleIn/3viGHpSlDR6n.yG.Cgqxhgla3qyG",
+      "name": "abdoemad",
+      "id": 5
+    },
+    {
+      "email": "abdo3mad123@gmail.com",
+      "password": "$2a$10$0mjp0vywadHUIkRyLPnsIuRNhPw.emk2wS0uPK4Sll4yrgazzvK4e",
+      "name": "abdo3mad",
+      "id": 6
+    },
+    {
+      "email": "abdoselim@gmail.com",
+      "password": "$2a$10$5SL2bFG/5p.2vNk3NYYWFOB8r/kuNmYKUFbyJPPUzl3O0gbw6wGzq",
+      "name": "abdoemad",
+      "id": 7
+    },
+    {
+      "email": "abdo3mad4@gmail.com",
+      "password": "$2a$10$bE4d/R4S9G8FM3UcOi9NPuzbvq1G1LWaaL6axkCwkrXs4IXzdHkm2",
+      "name": "abdo3mad",
+      "id": 8
     }
   ],
   "products": [
     {
       "id": 1,
-      "title": "Plywood arm chair",
+      "title": "arm chair",
       "code": "D45201",
       "price": "32.00",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-2.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 2,
-      "title": "Plywood arm chair",
+      "title": "chair",
       "code": "C45382",
       "price": "45.00",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-3.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 3,
-      "title": "Plywood arm chair",
+      "title": "Plywood",
       "code": "Y53201",
       "price": "59.00",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-4.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 4,
-      "title": "Plywood arm chair",
+      "title": "arm",
       "code": "F45681",
       "price": "39.90",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-5.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 5,
-      "title": "Plywood arm chair",
+      "title": "Plywood3",
       "code": "Y53201",
       "price": "59.00",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-4.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 6,
-      "title": "Plywood arm chair",
+      "title": "Ply",
       "code": "D45201",
       "price": "32.00",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-2.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 7,
-      "title": "Awesome Chair",
+      "title": "some Chair",
       "code": "C45382",
       "price": "45.00",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-3.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 8,
@@ -112,9 +204,10 @@
       "price": "39.90",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-5.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
-
     {
       "id": 9,
       "title": "Plywood arm chair",
@@ -122,7 +215,9 @@
       "price": "32.00",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-2.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 10,
@@ -131,7 +226,9 @@
       "price": "45.00",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-3.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 11,
@@ -140,7 +237,9 @@
       "price": "59.00",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-4.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 12,
@@ -149,7 +248,9 @@
       "price": "39.90",
       "oldprice": "50.00",
       "img": "images/Featured-Products-img/plywood-5.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
       "id": 13,
@@ -180,6 +281,60 @@
     },
     {
       "id": 16,
+      "title": "Plywood arm chair",
+      "code": "F45681",
+      "price": "39.90",
+      "oldprice": "50.00",
+      "img": "images/Featured-Products-img/plywood-5.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 17,
+      "title": "Plywood arm chair",
+      "code": "Y53201",
+      "price": "59.00",
+      "oldprice": "50.00",
+      "img": "images/Featured-Products-img/plywood-4.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 18,
+      "title": "Plywood arm chair",
+      "code": "F45681",
+      "price": "39.90",
+      "oldprice": "50.00",
+      "img": "images/Featured-Products-img/plywood-5.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 19,
+      "title": "Plywood arm chair",
+      "code": "Y53201",
+      "price": "59.00",
+      "oldprice": "50.00",
+      "img": "images/Featured-Products-img/plywood-4.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 20,
+      "title": "Plywood arm chair",
+      "code": "D45201",
+      "price": "32.00",
+      "oldprice": "50.00",
+      "img": "images/Featured-Products-img/plywood-2.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 21,
+      "title": "Awesome Chair",
+      "code": "C45382",
+      "price": "45.00",
+      "oldprice": "50.00",
+      "img": "images/Featured-Products-img/plywood-3.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 22,
       "title": "Plywood arm chair",
       "code": "F45681",
       "price": "39.90",
@@ -385,14 +540,30 @@
     }
   ],
   "brands": [
-    { "id": 1, "img": "images/brands/1.png", "alt": "live brand icon" },
-    { "id": 2, "img": "images/brands/2.png", "alt": "Hand Crafted brand icon" },
-    { "id": 3, "img": "images/brands/3.png", "alt": "Mestonix brand icon" },
+    {
+      "id": 1,
+      "img": "images/brands/1.png",
+      "alt": "live brand icon"
+    },
+    {
+      "id": 2,
+      "img": "images/brands/2.png",
+      "alt": "Hand Crafted brand icon"
+    },
+    {
+      "id": 3,
+      "img": "images/brands/3.png",
+      "alt": "Mestonix brand icon"
+    },
     {
       "id": 4,
       "img": "images/brands/4.png",
       "alt": "Hello Sunshine brand icon"
     },
-    { "id": 5, "img": "images/brands/5.png", "alt": "Pure brand icon" }
+    {
+      "id": 5,
+      "img": "images/brands/5.png",
+      "alt": "Pure brand icon"
+    }
   ]
 }
