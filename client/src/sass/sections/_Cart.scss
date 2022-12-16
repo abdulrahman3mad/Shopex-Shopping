@@ -18,8 +18,9 @@
   }
   
   .add-remove-box{
+    max-width:80px;
     overflow: hidden;
-    height:30px;
+    height:25px;
   }
 
   input[type=checkbox]{
@@ -28,5 +29,9 @@
 
   .cheack-btn{
     background-color: #19D16F
+  }
+
+  .empty-cart-img{
+    width:150px
   }
 }

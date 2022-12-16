@@ -3,15 +3,16 @@ import { url_API } from "../../config";
 import axios from "axios";
 
 export const loadProducts = createAsyncThunk("shop/loadProducts", async (payload) => {
-    let res = await axios.get(`${url_API}/products`,);
-    return res.data;
+    let res = await axios.get(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}&q=${payload.searchData}`);
+    return [res.data, res.headers["x-total-count"]]
 })
 
 const initialState = {
     products: [],
-    filteredProducts: null,
+    searchData: "",
     loading: false,
     err: null,
+    maxNumOfitems: 0,
     ItemsPerPage: 10,
     curPage: 1,
 }
@@ -33,6 +34,10 @@ const shopSlice = createSlice({
 
         setCurPage: (state, action) => {
             state.curPage = action.payload
+        },
+
+        setSearchData: (state, action) => {
+            state.searchData = action.payload
         }
     },
 
@@ -42,7 +47,8 @@ const shopSlice = createSlice({
         },
 
         [loadProducts.fulfilled]: (state, action) => {
-            state.products = action.payload;
+            state.products = action.payload[0];
+            state.maxNumOfitems = action.payload[1];
             state.loading = false;
         },
 
@@ -52,5 +58,5 @@ const shopSlice = createSlice({
     }
 })
 
-export const { filterProducts, changeItemsPerPage, setCurPage } = shopSlice.actions;
+export const { filterProducts, changeItemsPerPage, setCurPage, setSearchData } = shopSlice.actions;
 export default shopSlice.reducer;

@@ -1,14 +1,27 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { BiChevronDown, BiSearchAlt } from "react-icons/bi";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { setSearchData } from "../../redux-toolkit/features/shopSlice";
 
 function Navbar() {
+	const dispatch = useDispatch();
+	const navigate = useNavigate()
+	const [inputData, setInputData] = useState("");
+
+	function handleSearchInput(e) {
+		e.preventDefault();
+		dispatch(setSearchData(inputData));
+		navigate("/shop")
+	}
+
 	return (
 		<Fragment>
 			<div className="nav-ctn">
 				<nav className="navbar navbar-expand-lg container">
-					<a className="navbar-brand" href="../HTML/index.html">
+					<Link className="navbar-brand" to="/">
 						Hekto
-					</a>
+					</Link>
 
 					<button
 						className="navbar-toggler"
@@ -25,30 +38,27 @@ function Navbar() {
 					<div className="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul className="navbar-nav me-auto">
 							<li className="nav-item active-home">
-								<a className="nav-link" href="../HTML/index.html">
+								<Link className="nav-link" to="/">
 									Home <span className="sr-only"></span>
 									<BiChevronDown className="icon angel-down" />
-								</a>
-							</li>
-							<li className="nav-item ">
-								<a className="nav-link" href="/">
-									Products
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="../HTML/shop.html">
+								<Link className="nav-link" to="/shop">
 									Shop
-								</a>
+								</Link>
 							</li>
 						</ul>
-						<form className="form-inline d-flex" role="search">
+						<form onSubmit={(e) => handleSearchInput(e)} className="form-inline d-flex" role="search">
 							<input
 								className="form-control"
 								type="search"
 								placeholder="Search products"
 								aria-label="Search"
+								value={inputData}
+								onChange={(e) => setInputData(e.target.value)}
 							/>
-							<button className="btn btn-outline-success" type="submit">
+							<button className="btn btn-outline-success" type="submit" >
 								<BiSearchAlt className="search-icon" />
 							</button>
 						</form>

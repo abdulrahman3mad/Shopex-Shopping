@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authSlice from "./features/authSlice";
+import userSlice from "./features/userSlice";
 import authMessage from "./features/authMessage";
 import homeSlice from "./features/homeDataSlice";
 import latestProSlice from "./features/latestProSlice";
@@ -8,11 +8,12 @@ import featuredSlice from "./features/FeaturedDataSlice";
 import shopSlice from "./features/shopSlice";
 import latestBlogSlice from "./features/latestBlogSlice";
 import getBrands from "./features/brandsSlice";
+import cartSlice from "./features/cartSlice";
 
 export const store = configureStore({
 	reducer: {
 		homeData: homeSlice,
-		user: authSlice,
+		user: userSlice,
 		authMessage: authMessage,
 		featuredData: featuredSlice,
 		latestPro: latestProSlice,
@@ -20,5 +21,6 @@ export const store = configureStore({
 		shop: shopSlice,
 		latestBlog: latestBlogSlice,
 		brands: getBrands,
+		cart: cartSlice
 	},
 });

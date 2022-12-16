@@ -46,7 +46,7 @@
           "alt": "plywood armchair",
           "size": "XL",
           "color": "tan",
-          "quantity": 19
+          "quantity": 21
         },
         {
           "id": 1,
@@ -70,7 +70,31 @@
           "alt": "plywood armchair",
           "size": "XL",
           "color": "tan",
-          "quantity": 18
+          "quantity": 22
+        },
+        {
+          "id": 4,
+          "title": "arm",
+          "code": "F45681",
+          "price": "39.90",
+          "oldprice": "50.00",
+          "img": "images/Featured-Products-img/plywood-5.webp",
+          "alt": "plywood armchair",
+          "size": "XL",
+          "color": "tan",
+          "quantity": 2
+        },
+        {
+          "id": 10,
+          "title": "Plywood arm chair",
+          "code": "C45382",
+          "price": "45.00",
+          "oldprice": "50.00",
+          "img": "images/Featured-Products-img/plywood-3.webp",
+          "alt": "plywood armchair",
+          "size": "XL",
+          "color": "tan",
+          "quantity": 2
         }
       ],
       "id": 1

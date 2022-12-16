@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BiChevronDown } from "react-icons/bi";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -7,8 +7,19 @@ import { BsCart3 } from "react-icons/bs";
 import Mail from "../../components/Mail/Mail";
 import Telephone from "../../components/Telephone/Telephone";
 import Navbar from "../NavBar/Navbar";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux-toolkit/features/userSlice";
 
-function HeaderNav() {
+function HeaderNav({ user, cartProductsCount }) {
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+
+	function handleLogout(e) {
+		e.preventDefault();
+		dispatch(logout());
+		navigate("/");
+	}
+
 	return (
 		<Fragment>
 			<header>
@@ -65,9 +76,10 @@ function HeaderNav() {
 										</div>
 									</div>
 									{/*<!-- login --> */}
-									<div className="item login">
-										<a href="../HTML/Login.html">Login</a>
-										<BiUser className="icon " />
+									<div className="item login d-flex align-items-center text-white">
+										{(user && Object.keys(user).length > 0) ? <Link onClick={(e) => handleLogout(e)}>Logout</Link> : <Link to="/login">Login</Link>}
+										<BiUser className="icon" />
+										{user && <p className="p-0 m-0 fs-9">{user.name}</p>}
 									</div>
 									{/* <!-- wishlist --> */}
 									<div className="item Wishlist">
@@ -76,21 +88,16 @@ function HeaderNav() {
 									</div>
 									{/* <!-- shop Cart --> */}
 									<div className="item cart">
-										<a href="../HTML/Shopping-Cart.html">
-											<BsCart3 className=" icon-cart" />
-										</a>
-										<div className="items-count">
-											<a href="../HTML/Shopping-Cart.html" className="zero">
-												6
-											</a>
-										</div>
+										<Link to="/cart">
+											<BsCart3 className="icon-cart" />
+											{cartProductsCount > 0 && <span className="items-count">{cartProductsCount}</span>}
+										</Link>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
 				<Navbar />
 			</header>
 		</Fragment>

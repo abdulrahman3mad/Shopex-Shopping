@@ -13,18 +13,12 @@ import ProductsList from "../../sections/ProductsList/ProductsList"
 
 function Shop() {
     const dispatch = useDispatch();
-    const { shop: { products, loading, filteredProducts, ItemsPerPage, curPage } } = useSelector((state => state));
-    const [start, setStart] = useState(0);
-    const [end, setEnd] = useState(ItemsPerPage);
+    const { shop: { products, loading, err, ItemsPerPage, curPage, maxNumOfitems, searchData } } = useSelector((state => state));
 
     useEffect(() => {
-        dispatch(loadProducts());
-    }, [])
-
-    useEffect(() => {
-        setStart((curPage - 1) * ItemsPerPage);
-        setEnd(curPage * ItemsPerPage);
-    }, [ItemsPerPage, curPage])
+        if(searchData) dispatch(setCurPage(1));
+        dispatch(loadProducts({ curPage, ItemsPerPage, searchData }))
+    }, [ItemsPerPage, curPage, searchData])
 
     function handleSliding(curPage) {
         dispatch(setCurPage(curPage));
@@ -32,28 +26,25 @@ function Shop() {
 
     return (
         <>
-            <PageHeading heading="Our Shop" pages={["Home", "Products"]} />
+            <PageHeading heading="Our Shop" pages={["Home", "Shop"]} />
             <div className="section-spacing">
                 <div className="container">
                     <div className="d-md-flex  align-content-center justify-content-between">
                         <ProductsSearchForm />
                         <Pagination
-                            maxNumOfitems={filteredProducts ? filteredProducts?.length : products?.length}
+                            maxNumOfitems={maxNumOfitems}
                             ItemsPerPage={ItemsPerPage}
                             handleSliding={handleSliding}
                         />
                     </div>
                     {
-                        loading ? (< div className="text-center"><img src="images/loading.gif"></img></div>)
+                        loading ? (< div className="text-center"><img src="images/loading.gif" alt="loading"></img></div>)
                             : (<ProductsList
-                                products={filteredProducts ? filteredProducts : products}
-                                start={start}
-                                end={end} />)
-
+                                products={products} />)
                     }
 
                     <Pagination
-                        maxNumOfitems={filteredProducts ? filteredProducts?.length : products?.length}
+                        maxNumOfitems={maxNumOfitems}
                         ItemsPerPage={ItemsPerPage}
                         handleSliding={handleSliding}
                     />

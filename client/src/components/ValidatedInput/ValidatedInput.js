@@ -1,8 +1,11 @@
-function ValidatedInput({children, err}) {
+//Components
+import Input from "../Input/Input"
+
+function ValidatedInput({ err, name, type, onChange, value, placeholder, required }) {
     return (
         <>
-            {children}
-            {err && <p className="text-danger text-start mb-4">{err}</p>}
+            <Input type={type} name={name} value={value} placeholder={placeholder} onChange={onChange} required={required} classNames={"mt-0"}/>
+            <p className="text-danger text-start mb-4">{err}</p>
         </>
     )
 }

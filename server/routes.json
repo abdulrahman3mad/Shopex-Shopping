@@ -1,6 +1,6 @@
 {
     "/carts/:userId/":"/600/carts?userId=:userId",    
-    "/carts/:type/:id":"/600/carts/:id",    
+    "/carts/:type/:id":"/600/carts/:id",
     "/carts/":"/600/carts?userId=dasdsa",    
     "/users/:id":"/600/users/:id"
 }   

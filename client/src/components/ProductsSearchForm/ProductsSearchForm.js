@@ -1,25 +1,21 @@
+//Environment
+import { AiOutlineSearch } from "react-icons/ai"
+import { useDispatch, useSelector } from "react-redux";
+
+//Slices
+import {changeItemsPerPage, setSearchData } from "../../redux-toolkit/features/shopSlice";
+
+//Components
 import Input from "../Input/Input";
 import SelectInput from "../SelectInput/SelectInput";
-import { AiOutlineSearch } from "react-icons/ai"
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { filterProducts, changeItemsPerPage } from "../../redux-toolkit/features/shopSlice";
 
 function ProductsSearchForm() {
 
-    const [searchValue, SetSearchValue] = useState("");
-    const { shop: { ItemsPerPage } } = useSelector((state) => state)
+    const { shop: { ItemsPerPage, searchData } } = useSelector((state) => state)
     const dispatch = useDispatch();
 
-
-    function handleSearch(target) {
-        SetSearchValue(target.value);
-        dispatch(filterProducts(target.value))
-    }
-
-    function handleSelect(target) {
-        dispatch(changeItemsPerPage(target.value));
-    }
+    const handleSearch = (target) => dispatch(setSearchData(target.value));
+    const handleSelect = (target) => dispatch(changeItemsPerPage(target.value));
 
     return (
         <>
@@ -30,7 +26,7 @@ function ProductsSearchForm() {
                     </div>
 
                     <div className="input-container product-search position-relative">
-                        <Input classNames={"py-1 px-2 accent-border-focus"} value={searchValue} placeholder="Search" onChange={handleSearch} autoFocus={true}/>
+                        <Input classNames={"py-1 px-2 accent-border-focus"} value={searchData} placeholder="Search" onChange={handleSearch} autoFocus={true} />
                         <div className="search-icon position-absolute end-0 translate-middle-x top-0 opacity-50 fs-5">
                             <AiOutlineSearch />
                         </div>

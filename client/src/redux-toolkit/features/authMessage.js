@@ -1,21 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    message:""
+    authMessage: "",
+    validationMessage: {}
 }
 
 const authMessage = createSlice({
     name: "authMessage",
     initialState,
     reducers: {
-        setMessage: (state, action) => {
-            state.message = action.payload;
+        setValidationMessage: (state, action) => {
+            state.message.validationMessage = action.payload;
         },
+
+        setAuthMessage: (state, action)=>{
+            state.message.authMessage = action.payload;
+        },
+
         clearMessage: (state) => {
-            state.message = "";
+            state.message = {};
         }
     }
 })
 
-export const {setMessage, clearMessage} = authMessage.actions;
+export const { setValidationMessage, setAuthMessage, clearMessage } = authMessage.actions;
 export default authMessage.reducer;

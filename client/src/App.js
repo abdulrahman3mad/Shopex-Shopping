@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 // pages
 import SignUp from "./pages/SignUp/SignUp";
@@ -9,12 +9,27 @@ import Shop from "./pages/Shop/Shop";
 import HeaderNav from "./sections/UpperBar/UpperBar";
 import FooterSE from "./sections/Footer/FooterSE";
 import Cart from "./pages/Cart/Cart";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getUserData } from "./redux-toolkit/features/userSlice";
+import { getCart } from "./redux-toolkit/features/cartSlice";
 
 
 function App() {
+	const { user, cart } = useSelector((state) => state);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getUserData());
+	}, [])
+
+	useEffect(() => {
+		dispatch(getCart())
+	}, [user, dispatch])
+
 	return (
-		<div className="App">
-			<HeaderNav />
+		<div className="App" >
+			<HeaderNav user={user?.user} cartProductsCount={cart.cart?.products?.length} />
 			<Routes>
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/login" element={<LogIn />}></Route>
@@ -24,7 +39,7 @@ function App() {
 				<Route path="/cart" element={<Cart />}></Route>
 			</Routes>
 			<FooterSE />
-		</div>
+		</div >
 	);
 }
 
