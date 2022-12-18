@@ -1,6 +1,8 @@
-function NotFound(){
+function NotFound() {
     return (
-        <p>NotFound</p>
+        <div className="text-center my-5 py-1">
+            <img src="images/NotFound/content.png"></img>
+        </div>
     )
 }
 

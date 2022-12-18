@@ -235,18 +235,6 @@
     {
       "products": [
         {
-          "id": 7,
-          "title": "some Chair",
-          "code": "C45382",
-          "price": 45,
-          "oldprice": 50,
-          "img": "images/Featured-Products-img/plywood-3.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 1
-        },
-        {
           "id": 6,
           "title": "Ply",
           "code": "D45201",
@@ -256,10 +244,10 @@
           "alt": "plywood armchair",
           "size": "XL",
           "color": "tan",
-          "quantity": 1
+          "quantity": 5
         }
       ],
-      "totalPrice": 77,
+      "totalPrice": 160,
       "userId": 7,
       "id": 7
     }
