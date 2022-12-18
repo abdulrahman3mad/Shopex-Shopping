@@ -1,0 +1,29 @@
+.myAccount {
+	margin-right: 19.2px;
+	.myAccount__btn {
+		background-color: transparent;
+		color: #ffffff;
+		&::after {
+			border: none;
+		}
+		&[aria-expanded="true"] {
+			svg {
+				transform: rotate(0deg);
+			}
+		}
+		&:hover {
+			color: #e7e7e7;
+		}
+		svg {
+			transition: transform 0.4s ease;
+			transform: rotate(90deg);
+		}
+	}
+	.logOut {
+		color: #7b68ee;
+		transition: color 0.4s ease;
+		&:hover {
+			color: #2400d8;
+		}
+	}
+}

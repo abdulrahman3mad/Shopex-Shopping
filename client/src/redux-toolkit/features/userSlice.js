@@ -6,7 +6,7 @@ export const register = createAsyncThunk("user-slice/register", async (payload, 
     let user = await userService.register(payload);
     if (user && user.accessToken) {
         thunkAPI.dispatch(setAuthMessage(""));
-        sessionStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("user", JSON.stringify(user));
     }
     else thunkAPI.dispatch(setAuthMessage("This Email is taken. Try another"));
     return user.user;
@@ -17,7 +17,7 @@ export const login = createAsyncThunk("user-slice/login", async (payload, thunkA
     let user = await userService.login(payload);
     if (user && user.accessToken) {
         thunkAPI.dispatch(setAuthMessage(""));
-        sessionStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("user", JSON.stringify(user));
     }
     else thunkAPI.dispatch(setAuthMessage("Email or password is wrong!"));
     return user.user;

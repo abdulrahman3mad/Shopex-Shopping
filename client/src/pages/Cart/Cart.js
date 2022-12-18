@@ -38,7 +38,7 @@ function Cart() {
                                 <div className="col-xl-8 col-12">
                                     <CartProductsTable products={cart.products} />
                                     <div className="d-flex align-items-center justify-content-between">
-                                        <button className="bg-clr-accent accent-bg-hover text-white fs-9 py-1 mt-3 btn px-4 rounded-1" onClick={() => navigate("/")}>Update Cart</button>
+                                        <button className="bg-clr-accent accent-bg-hover text-white fs-9 py-1 mt-3 btn px-4 rounded-1" onClick={() => navigate("/shop")}>Update Cart</button>
                                         <button className="border-accent accent-bg-hover text-white-hover fs-9 py-1 mt-3 btn px-4 rounded-1" onClick={() => dispatch(clearCart())}>Clear Cart</button>
                                     </div>
                                 </div>

@@ -1,20 +1,23 @@
 // Environment
 import React from "react";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
 // Components
 import ColorPalette from "../ColorPalette/ColorPalette";
 import Price from "../Price/Price";
 
 // Slices
-import { addToCart, updateCart } from "../../redux-toolkit/features/cartSlice";
+import { addToCart } from "../../redux-toolkit/features/cartSlice";
 
 function FeaProCard({ classNames, product }) {
   const { title, code, price, img, alt } = product;
+  const {user} = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  function handleAddCart() {
+  function handleAddToCart() {
+    if (!user) navigate("/login");  
     dispatch(addToCart(product));
   }
 
@@ -25,10 +28,7 @@ function FeaProCard({ classNames, product }) {
       >
         <div className="card-img overflow-hidden position-relative">
           <img src={img} className="card-img-top" alt={alt} />
-          <button
-            className="position-absolute"
-            onClick={() => handleAddCart()}
-          >
+          <button className="position-absolute" onClick={() => handleAddToCart()}>
             Add To Cart
           </button>
         </div>

@@ -3,7 +3,8 @@ import { url_API } from "../../config";
 import axios from "axios";
 
 export const loadProducts = createAsyncThunk("shop/loadProducts", async (payload) => {
-    let res = await axios.get(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}&q=${payload.searchData}`);
+    let searchData = payload.searchData ? `title_like=${payload.searchData}` : "";
+    let res = await axios.get(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}&${searchData}`);
     return [res.data, res.headers["x-total-count"]]
 })
 

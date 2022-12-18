@@ -1,0 +1,37 @@
+.TopCatCard {
+	.card-img {
+		max-height: 269px;
+		max-width: 269px;
+		background-color: #f6f7fb;
+		border-radius: 50%;
+		transition: box-shadow 0.4s ease-in-out;
+
+		.btnLink {
+			font-size: 1rem;
+			padding: 4px 15px;
+			background-color: #19d138;
+			bottom: -60px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: background-color 0.4s ease, bottom 0.4s ease-in-out;
+			&:hover {
+				background-color: $heading-clr;
+			}
+		}
+	}
+	.card-title {
+		color: #131b64;
+	}
+	.card-text small {
+		color: #2b3380;
+	}
+	// hover
+	&:hover {
+		.card-img {
+			box-shadow: -5px 5px 0px 0px #6937dca6;
+			.btnLink {
+				bottom: 15px;
+			}
+		}
+	}
+}

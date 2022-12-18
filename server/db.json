@@ -1,157 +1,21 @@
 {
-  "welcome": {
-    "welcome_Chandelier": {
-      "id": 1,
-      "image": "images/Home_img/Chandelier.png"
-    },
-    "welcome_data": [
-      {
-        "id": 1,
-        "active": "active",
-        "subtitle": "Best Furniture For Your Castle.....",
-        "title": "New Furniture Collection Trends in 2020",
-        "description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
-        "image": "/images/Home_img/Grey-Armchair.png",
-        "className": "carousel-item active h-100 "
-      },
-      {
-        "id": 2,
-        "subtitle": "Best Furniture For Your Castle.....",
-        "title": "New Furniture Collection Trends in 2020",
-        "description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
-        "image": "/images/Home_img/Grey-Armchair.png",
-        "className": "carousel-item h-100 "
-      },
-      {
-        "id": 3,
-        "subtitle": "Best Furniture For Your Castle.....",
-        "title": "New Furniture Collection Trends in 2020",
-        "description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
-        "image": "/images/Home_img/Grey-Armchair.png",
-        "className": "carousel-item h-100 "
-      }
-    ]
-  },
-  "carts": [
-    {
-      "userId": 2,
-      "products": [
-        {
-          "id": 3,
-          "title": "Plywood",
-          "code": "Y53201",
-          "price": "59.00",
-          "oldprice": "50.00",
-          "img": "images/Featured-Products-img/plywood-4.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 23
-        },
-        {
-          "id": 1,
-          "title": "arm chair",
-          "code": "D45201",
-          "price": "32.00",
-          "oldprice": "50.00",
-          "img": "images/Featured-Products-img/plywood-2.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 26
-        },
-        {
-          "id": 2,
-          "title": "chair",
-          "code": "C45382",
-          "price": "45.00",
-          "oldprice": "50.00",
-          "img": "images/Featured-Products-img/plywood-3.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 22
-        },
-        {
-          "id": 4,
-          "title": "arm",
-          "code": "F45681",
-          "price": "39.90",
-          "oldprice": "50.00",
-          "img": "images/Featured-Products-img/plywood-5.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 3
-        },
-        {
-          "id": 10,
-          "title": "Plywood arm chair",
-          "code": "C45382",
-          "price": "45.00",
-          "oldprice": "50.00",
-          "img": "images/Featured-Products-img/plywood-3.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 3
-        },
-        {
-          "id": 9,
-          "title": "Plywood arm chair",
-          "code": "D45201",
-          "price": "32.00",
-          "oldprice": "50.00",
-          "img": "images/Featured-Products-img/plywood-2.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 1
-        }
-      ],
-      "id": 1
-    }
-  ],
   "users": [
     {
-      "email": "abdo3mad@gmail.com",
-      "password": "$2a$10$tsLCX17m.f2cxbNOKDmXPej7yP4S1uQPD/0DWhxz1ige4dR02aDTq",
-      "name": "abdoemad",
-      "id": 2
-    },
-    {
-      "email": "emad@gmail.com",
-      "password": "$2a$10$CBx63b8eWAHpvTXhXexg/OaVKSA0iWDUwUUg1lro7k8.tV/9QUHSi",
-      "name": "emadselim",
-      "id": 3
-    },
-    {
-      "email": "abdo@gmail.com",
-      "password": "$2a$10$uLTJWbuQES.RvJ1CScxqiuoMd8hOklqTXTO5EQQ4mnJAl0QvOObPK",
-      "id": 4
-    },
-    {
-      "email": "abdomohamed@gmail.com",
-      "password": "$2a$10$9uNKgdIX03zcKohWhnRaleIn/3viGHpSlDR6n.yG.Cgqxhgla3qyG",
-      "name": "abdoemad",
-      "id": 5
-    },
-    {
-      "email": "abdo3mad123@gmail.com",
-      "password": "$2a$10$0mjp0vywadHUIkRyLPnsIuRNhPw.emk2wS0uPK4Sll4yrgazzvK4e",
-      "name": "abdo3mad",
+      "name": "Hisham",
+      "email": "hishamk1999@gmail.com",
+      "password": "01155307281",
       "id": 6
     },
     {
-      "email": "abdoselim@gmail.com",
-      "password": "$2a$10$5SL2bFG/5p.2vNk3NYYWFOB8r/kuNmYKUFbyJPPUzl3O0gbw6wGzq",
+      "email": "abdo3mad@gmail.com",
+      "password": "$2a$10$VFvQG4QayqYab07x6V5Jj.PNKx/SGtjiOOKxqRUwTp.RPOmVeIPT2",
       "name": "abdoemad",
       "id": 7
     },
     {
-      "email": "abdo3mad4@gmail.com",
-      "password": "$2a$10$bE4d/R4S9G8FM3UcOi9NPuzbvq1G1LWaaL6axkCwkrXs4IXzdHkm2",
-      "name": "abdo3mad",
+      "email": "abdoemadselim@gmail.com",
+      "password": "$2a$10$F3PCyLnPyE6Bq6h4XuqtcesLjkzlVW5uuGXMXwOHvyZ8xk3kHtW4i",
+      "name": "abdoemad",
       "id": 8
     }
   ],
@@ -379,6 +243,59 @@
       "alt": "plywood armchair"
     }
   ],
+  "carts": [
+    {
+      "products": [
+        {
+          "id": 3,
+          "title": "Plywood",
+          "code": "Y53201",
+          "price": "59.00",
+          "oldprice": "50.00",
+          "img": "images/Featured-Products-img/plywood-4.webp",
+          "alt": "plywood armchair",
+          "size": "XL",
+          "color": "tan",
+          "quantity": 1
+        }
+      ],
+      "userId": 8,
+      "id": 8
+    }
+  ],
+  "welcome": {
+    "welcome_Chandelier": {
+      "id": 1,
+      "image": "images/Home_img/Chandelier.png"
+    },
+    "welcome_data": [
+      {
+        "id": 1,
+        "active": "active",
+        "subtitle": "Best Furniture For Your Castle.....",
+        "title": "New Furniture Collection Trends in 2020",
+        "description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
+        "image": "/images/Home_img/Grey-Armchair.png",
+        "className": "carousel-item active h-100 "
+      },
+      {
+        "id": 2,
+        "subtitle": "Best Furniture For Your Castle.....",
+        "title": "New Furniture Collection Trends in 2020",
+        "description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
+        "image": "/images/Home_img/Grey-Armchair.png",
+        "className": "carousel-item h-100 "
+      },
+      {
+        "id": 3,
+        "subtitle": "Best Furniture For Your Castle.....",
+        "title": "New Furniture Collection Trends in 2020",
+        "description": "When it comes to searching for first-rate interior design tips, tricks, and all-around inspiration it's all too easy to get sucked down the rabbit hole of sub-par sites.",
+        "image": "/images/Home_img/Grey-Armchair.png",
+        "className": "carousel-item h-100 "
+      }
+    ]
+  },
   "featured_products": [
     {
       "id": 1,
@@ -601,5 +518,97 @@
       "img": "images/brands/5.png",
       "alt": "Pure brand icon"
     }
-  ]
+  ],
+  "top_catagories": [
+    {
+      "id": 1,
+      "img": "images/Top-Catagories/Plywood-Arm-Chair.png",
+      "alt": "plywood armchair",
+      "title": "Plywood Arm Chair",
+      "price": "56.00"
+    },
+    {
+      "id": 2,
+      "img": "images/Top-Catagories/Modern-coffe-chair.png",
+      "alt": "Modern coffee chair",
+      "title": "Coffee Wood Chair",
+      "price": "56.00"
+    },
+    {
+      "id": 3,
+      "img": "images/Top-Catagories/High-Bar-Stool-Chair.png",
+      "alt": "High Bar Stool Chair",
+      "title": "High Bar Stool Chair",
+      "price": "56.00"
+    },
+    {
+      "id": 4,
+      "img": "images/Top-Catagories/Mini-LCW-Chair-2.png",
+      "alt": "Mini LCW Chair",
+      "title": "Mini LCW Chair",
+      "price": "56.00"
+    },
+    {
+      "id": 5,
+      "img": "images/Top-Catagories/Plywood-Arm-Chair.png",
+      "alt": "plywood armchair",
+      "title": "Plywood Arm Chair",
+      "price": "56.00"
+    },
+    {
+      "id": 6,
+      "img": "images/Top-Catagories/Modern-coffe-chair.png",
+      "alt": "Modern coffee chair",
+      "title": "Coffee Wood Chair",
+      "price": "56.00"
+    }
+  ],
+  "trending_products": {
+    "discountPro50": {
+      "id": 1,
+      "title": "50% off in all products",
+      "img": "images/Trending-Products/Mantel-Clock.png",
+      "alt": "Mantel Clock"
+    },
+    "discountPro25": {
+      "id": 1,
+      "title": "23% off in all products",
+      "img": "images/Trending-Products/tv-Table.png",
+      "alt": "tv table"
+    },
+    "cardData": [
+      {
+        "id": 1,
+        "img": "images/Trending-Products/chair-1.jpg",
+        "alt": "wooden outer arm chair",
+        "title": "Wooden outdoor chair",
+        "price": "39.99",
+        "discount": "60.99"
+      },
+      {
+        "id": 2,
+        "img": "images/Trending-Products/chair-2.jpg",
+        "alt": "wooden outer arm chair",
+        "title": "Ladderback chair",
+        "price": "39.99",
+        "discount": "60.99"
+      },
+      {
+        "id": 3,
+        "img": "images/Trending-Products/chair-3.jpg",
+        "alt": "wooden outer arm chair",
+        "title": "Comfort Pillow Sofa",
+        "price": "39.99",
+        "discount": "60.99"
+      },
+      {
+        "id": 4,
+        "img": "images/Trending-Products/chair-4.jpg",
+        "alt": "wooden outer arm chair",
+        "title": "Cantilever chair",
+        "price": "39.99",
+        "discount": "60.99"
+      }
+    ]
+  }
 }

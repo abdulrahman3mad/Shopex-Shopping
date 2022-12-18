@@ -1,5 +1,5 @@
 // Environment
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { loadProducts, setCurPage } from "../../redux-toolkit/features/shopSlice"
 
@@ -13,10 +13,10 @@ import ProductsList from "../../sections/ProductsList/ProductsList"
 
 function Shop() {
     const dispatch = useDispatch();
-    const { shop: { products, loading, err, ItemsPerPage, curPage, maxNumOfitems, searchData } } = useSelector((state => state));
+    const { shop: { products, loading, ItemsPerPage, curPage, maxNumOfitems, searchData } } = useSelector((state => state));
 
     useEffect(() => {
-        if(searchData) dispatch(setCurPage(1));
+        if (searchData) dispatch(setCurPage(1));
         dispatch(loadProducts({ curPage, ItemsPerPage, searchData }))
     }, [ItemsPerPage, curPage, searchData])
 

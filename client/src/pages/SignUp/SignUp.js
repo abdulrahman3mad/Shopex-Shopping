@@ -27,11 +27,11 @@ function SignUp() {
 
     useEffect(() => {
         dispatch(clearMessage());
-    }, [])
+    }, [dispatch, navigate])
 
     useEffect(() => {
         user && Object.keys(user).length && navigate("/login")
-    }, [user, message])
+    }, [user, message, dispatch, navigate])
 
     function submitHandler(e) {
         e.preventDefault()

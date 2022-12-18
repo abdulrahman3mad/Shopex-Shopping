@@ -25,7 +25,8 @@ function App() {
 
 	useEffect(() => {
 		dispatch(getCart())
-	}, [user, dispatch])
+	}, [user])
+
 
 	return (
 		<div className="App" >

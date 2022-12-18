@@ -3,31 +3,27 @@ import { url_API } from "../config";
 import authHeader from "../helpers/authHeader";
 
 async function getCart(user) {
-    try {
-        let res = await axios.get(`${url_API}/carts/${user.id}`, { headers: authHeader() });
-        return res?.data[0]
-    }
-    catch (err) {
-        console.log(err)
-        return err.response.status
-    }
+    let res = await axios.get(`${url_API}/carts/${user.id}`, {headers:authHeader()})
+    return res.data;
 }
 
-async function addNewCart(product, user) {
+async function addNewCart(cart, user) {
+    console.log(cart, user)
     let res = await axios({
         method: "post",
         url: `${url_API}/carts`,
         headers: authHeader(),
         data: {
-            id:user.id,
+            ...cart,
             userId: user.id,
-            products: [{ ...product, quantity: 1 }]
+            id: user.id
         }
     })
+    console.log(res);
     return res.data
 }
 
-async function updateCart(cart) {
+async function updateCart(cart, user) {
     let res = null;
     try {
         res = await axios({
@@ -52,9 +48,10 @@ async function clearCart(cart) {
     return res.data;
 }
 
-export default {
+const cartService = {
     getCart,
     addNewCart,
     updateCart,
-    clearCart
+    clearCart,
 }
+export default cartService

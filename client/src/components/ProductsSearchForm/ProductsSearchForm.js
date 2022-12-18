@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai"
 import { useDispatch, useSelector } from "react-redux";
 
 //Slices
-import {changeItemsPerPage, setSearchData } from "../../redux-toolkit/features/shopSlice";
+import { changeItemsPerPage, setSearchData } from "../../redux-toolkit/features/shopSlice";
 
 //Components
 import Input from "../Input/Input";
@@ -26,7 +26,7 @@ function ProductsSearchForm() {
                     </div>
 
                     <div className="input-container product-search position-relative">
-                        <Input classNames={"py-1 px-2 accent-border-focus"} value={searchData} placeholder="Search" onChange={handleSearch} autoFocus={true} />
+                        <Input classNames={"py-0 px-2 accent-border-focus"} value={searchData} placeholder="Search" onChange={handleSearch} autoFocus={true} />
                         <div className="search-icon position-absolute end-0 translate-middle-x top-0 opacity-50 fs-5">
                             <AiOutlineSearch />
                         </div>

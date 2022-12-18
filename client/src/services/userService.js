@@ -22,11 +22,11 @@ const register = async (payload) => {
 }
 
 const logout = () => {
-    sessionStorage.removeItem("user");
+    localStorage.removeItem("user");
 }
 
 const getUserData = () => {
-    let user = JSON.parse(sessionStorage.getItem("user"));
+    let user = JSON.parse(localStorage.getItem("user"));
     return user && user.user;
 }
 
