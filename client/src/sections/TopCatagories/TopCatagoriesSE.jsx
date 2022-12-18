@@ -4,59 +4,51 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 function TopCatagoriesSE({ data }) {
-	const TopCatagoriesUI = () => {
-		return data
-			? data.map((ele) => {
-					return (
-						<TopCatCard
-							key={ele.id}
-							img={ele.img}
-							alt={ele.alt}
-							title={ele.title}
-							price={ele.price}
-						/>
-					);
-			  })
-			: null;
-	};
-	const settings = {
-		dots: true,
-		infinite: true,
-		speed: 500,
-		autoplaySpeed: 3000,
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		autoplay: true,
-		responsive: [
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 3,
-				},
-			},
-			{
-				breakpoint: 991,
-				settings: {
-					slidesToShow: 2,
-				},
-			},
-			{
-				breakpoint: 502,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-		],
-	};
-	return (
-		<section className="top-catagories section-spacing text-center">
-			<div className="container">
-				<h2 className="fs-1 fw-bold text-clr-heading mb-5">Top Catagories</h2>
-				<Slider {...settings}>{TopCatagoriesUI()}</Slider>
-			</div>
-		</section>
-	);
+  const TopCatagoriesUI = () => {
+    return data
+      ? data.map((ele) => {
+          return <TopCatCard product={ele} />;
+        })
+      : null;
+  };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 502,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <section className="top-catagories section-spacing text-center">
+      <div className="container">
+        <h2 className="fs-1 fw-bold text-clr-heading mb-5">Top Catagories</h2>
+        <Slider {...settings}>{TopCatagoriesUI()}</Slider>
+      </div>
+    </section>
+  );
 }
 
 export default memo(TopCatagoriesSE);

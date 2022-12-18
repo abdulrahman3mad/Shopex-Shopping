@@ -12,7 +12,7 @@ function CartProduct({ product, totalPrice }) {
         <tr className="border border-1 border-top-0 border-end-0 border-start-0 align-middle">
             <td className="d-flex gap-4 align-items-center">
                 <div className="product-img">
-                    <img src="images/Featured-Products-img/plywood-2.webp" alt="product" />
+                    <img src={product.img} alt="product" />
                 </div>
                 <div className="product-desc">
                     <p className="fw-bold mb-1 product-name">{title}</p>

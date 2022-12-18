@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import { Navigate } from "react-router-dom";
 import isLoggedIn from "../../helpers/isLoggedIn";
 import cartService from "../../services/cartService";
 
@@ -10,7 +9,6 @@ export const getCart = createAsyncThunk("cart-slice/getCart", async (payload, th
 })
 
 export const removeFromCart = createAsyncThunk("cart-slice/removeFromCart", async (payload, thunkAPI) => {
-    let user = isLoggedIn();
     let cart = thunkAPI.getState().cart.cart;
     cart = await updateProductQuantity(cart, payload, -1);
     return cartService.updateCart(cart);
@@ -20,7 +18,7 @@ export const addToCart = createAsyncThunk("cart-slice/addToCart", async (payload
     let user = isLoggedIn();
     let cart = thunkAPI.getState().cart.cart;
     if (!cart) {
-        let cart = { products: [{ ...payload, quantity: 1 }] }
+        let cart = { products: [{ ...payload, quantity: 1 }], totalPrice: payload.price }
         cart = await cartService.addNewCart(cart, user);
         return cart;
     }
@@ -34,7 +32,6 @@ export const addToCart = createAsyncThunk("cart-slice/addToCart", async (payload
 
 export const clearCart = createAsyncThunk("cart-slice/clearCart", async (payload, thunkAPI) => {
     let user = isLoggedIn();
-    if(!user) Navigate("/")
     let cart = thunkAPI.getState().cart.cart;
     cart = await cartService.clearCart(cart);
     return;
@@ -75,8 +72,15 @@ function updateProductQuantity(cart, payload, quantity) {
         return product;
     })
 
-    if (quantity < 0) products = products.filter((product) => product.quantity > 0);
-    cart = { ...cart, products };
+    let totalPrice = cart.totalPrice;
+    if (quantity < 0) {
+        products = products.filter((product) => product.quantity > 0);
+        totalPrice -= payload.price;
+    } else {
+        totalPrice += payload.price;
+    }
+
+    cart = { ...cart, products, totalPrice };
     return cart;
 }
 
@@ -86,7 +90,7 @@ function doesProductExist(cart, payload) {
 }
 
 function addNewProduct(cart, payload) {
-    return { ...cart, products: [...cart.products, { ...payload, quantity: 1 }] };
+    return { ...cart, products: [...cart.products, { ...payload, quantity: 1 }], totalPrice: cart.totalPrice + payload.price };
 }
 
 
