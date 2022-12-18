@@ -30,7 +30,7 @@ export const addToCart = createAsyncThunk("cart-slice/addToCart", async (payload
     }
 })
 
-export const clearCart = createAsyncThunk("cart-slice/clearCart", async (payload, thunkAPI) => {
+export const clearUserCart = createAsyncThunk("cart-slice/clearCart", async (payload, thunkAPI) => {
     let user = isLoggedIn();
     let cart = thunkAPI.getState().cart.cart;
     cart = await cartService.clearCart(cart);
@@ -43,13 +43,16 @@ const cartSlice = createSlice({
     name: "cartSlice",
     initialState,
     reducers: {
+        resetCart: (state, action) => {
+            state.cart = undefined
+        }
     },
     extraReducers: {
         [getCart.fulfilled]: (state, action) => {
             state.cart = action.payload;
         },
 
-        [clearCart.fulfilled]: (state, action) => {
+        [clearUserCart.fulfilled]: (state, action) => {
             state.cart = action.payload;
         },
 
@@ -94,4 +97,5 @@ function addNewProduct(cart, payload) {
 }
 
 
+export const {resetCart} = cartSlice.actions;
 export default cartSlice.reducer

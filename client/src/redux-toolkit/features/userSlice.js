@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import userService from "../../services/userService";
-import { setAuthMessage} from "./authMessage";
+import { setAuthMessage } from "./authMessage";
+import { clearCart, resetCart } from "./cartSlice";
 
 export const register = createAsyncThunk("user-slice/register", async (payload, thunkAPI) => {
     let user = await userService.register(payload);
@@ -23,6 +24,12 @@ export const login = createAsyncThunk("user-slice/login", async (payload, thunkA
     return user.user;
 })
 
+export const logout = createAsyncThunk("user-slice/logout", async (payload, thunkAPI) => {
+    thunkAPI.dispatch(resetCart());
+    localStorage.removeItem("user")
+    return 
+})
+
 const initialState = {
     user: {}
 }
@@ -31,11 +38,6 @@ export const userSlice = createSlice({
     name: "user-slice",
     initialState,
     reducers: {
-        logout: (state, action) => {
-            userService.logout();
-            state.user = {};
-        },
-
         setUser: (state, action) => {
             state.user = action.payload;
         },
@@ -60,8 +62,16 @@ export const userSlice = createSlice({
             state.user = {};
         },
 
+
+        [logout.pending]: (state) => { },
+        [logout.fulfilled]: (state, action) => {
+            state.user = action.payload;
+        },
+        [logout.rejected]: (state) => {
+            state.user = {};
+        },
     }
 })
 
-export const { logout, setUser, getUserData } = userSlice.actions
+export const { setUser, getUserData } = userSlice.actions
 export default userSlice.reducer;

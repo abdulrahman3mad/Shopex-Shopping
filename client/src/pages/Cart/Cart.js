@@ -1,5 +1,4 @@
 // Environment
-import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -12,7 +11,7 @@ import EmptyCart from "../../components/EmptyCart/EmptyCart";
 import { PageHeading } from "../../Imports/authImports";
 
 // Slices
-import { clearCart } from "../../redux-toolkit/features/cartSlice";
+import { clearUserCart } from "../../redux-toolkit/features/cartSlice";
 
 
 function Cart() {
@@ -31,7 +30,7 @@ function Cart() {
                                     <CartProductsTable products={cart?.products} />
                                     <div className="d-flex align-items-center justify-content-between">
                                         <button className="bg-clr-accent accent-bg-hover text-white fs-9 py-1 mt-3 btn px-4 rounded-1" onClick={() => navigate("/shop")}>Update Cart</button>
-                                        <button className="border-accent accent-bg-hover text-white-hover fs-9 py-1 mt-3 btn px-4 rounded-1" onClick={() => dispatch(clearCart())}>Clear Cart</button>
+                                        <button className="border-accent accent-bg-hover text-white-hover fs-9 py-1 mt-3 btn px-4 rounded-1" onClick={() => dispatch(clearUserCart())}>Clear Cart</button>
                                     </div>
                                 </div>
                                 <div className="col-xl-3 offset-xl-1 mt-5 mt-xl-0 pt-xl-0 pt-5 col-12 col-md-9 ">
