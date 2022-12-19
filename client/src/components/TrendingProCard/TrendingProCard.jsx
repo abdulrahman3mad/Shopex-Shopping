@@ -3,7 +3,7 @@ import { BsCartPlusFill } from "react-icons/bs";
 import { BiHeart } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addToCart } from "../../redux-toolkit/features/cartSlice";
+import { addToCart } from "../../redux-toolkit/features/cartSlices/cartSlice";
 import useAddToCart from "../../Hooks/useAddToCart";
 
 function TrendingProCard({product}) {

@@ -13,7 +13,7 @@ function LatestSE() {
   const latestProUI = () => {
     return state.data
       ? state.data.map((pro) => {
-          return <LatProCard product={pro} />;
+          return <LatProCard product={pro} key={pro.id}/>;
         })
       : null;
   };

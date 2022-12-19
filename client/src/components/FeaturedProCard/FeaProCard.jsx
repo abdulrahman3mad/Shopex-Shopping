@@ -40,9 +40,9 @@ function FeaProCard({ classNames, product }) {
             </div>
           )}
           <div className="d-flex justify-content-center align-items-center">
-            <Price val={price} classNames={"text-white-parent-hover"} />
+            <Price val={price.toFixed(2)} classNames={"text-white-parent-hover me-2"} />
             <Price
-              val={price}
+              val={price.toFixed(2)}
               classNames={`text-decoration-line-through ms-2 text-clr-accent old-price`}
             />
           </div>

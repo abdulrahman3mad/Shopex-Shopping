@@ -1,17 +1,18 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import isLoggedIn from "../../helpers/isLoggedIn";
-import cartService from "../../services/cartService";
+import isLoggedIn from "../../../helpers/isLoggedIn";
+import cartService from "../../../services/cartService";
 
-export const getCart = createAsyncThunk("cart-slice/getCart", async (payload, thunkAPI) => {
+export const getCart = createAsyncThunk("cart-slice/getCart", async () => {
     let user = isLoggedIn();
     let data = await cartService.getCart(user);
-    return data;
+    if (data && !data.message) return data
 })
 
 export const removeFromCart = createAsyncThunk("cart-slice/removeFromCart", async (payload, thunkAPI) => {
     let cart = thunkAPI.getState().cart.cart;
-    cart = await updateProductQuantity(cart, payload, -1);
-    return cartService.updateCart(cart);
+    cart = await updateProducts(cart, payload, -1);
+    let data = cartService.updateCart(cart);
+    if (data && !data.message) return cart;
 })
 
 export const addToCart = createAsyncThunk("cart-slice/addToCart", async (payload, thunkAPI) => {
@@ -23,7 +24,7 @@ export const addToCart = createAsyncThunk("cart-slice/addToCart", async (payload
         return cart;
     }
     else {
-        if (doesProductExist(cart, payload)) cart = updateProductQuantity(cart, payload, 1);
+        if (doesProductExist(cart, payload)) cart = updateProducts(cart, payload, 1);
         else cart = addNewProduct(cart, payload);
         let data = await cartService.updateCart(cart);
         return data;
@@ -31,7 +32,6 @@ export const addToCart = createAsyncThunk("cart-slice/addToCart", async (payload
 })
 
 export const clearUserCart = createAsyncThunk("cart-slice/clearCart", async (payload, thunkAPI) => {
-    let user = isLoggedIn();
     let cart = thunkAPI.getState().cart.cart;
     cart = await cartService.clearCart(cart);
     return;
@@ -44,7 +44,7 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         resetCart: (state, action) => {
-            state.cart = undefined
+            state.cart = {};
         }
     },
     extraReducers: {
@@ -67,9 +67,7 @@ const cartSlice = createSlice({
     }
 })
 
-
-
-function updateProductQuantity(cart, payload, quantity) {
+function updateProducts(cart, payload, quantity) {
     let products = cart.products.map((product) => {
         if (product.id === payload.id) return { ...product, quantity: product.quantity + quantity }
         return product;
@@ -93,9 +91,12 @@ function doesProductExist(cart, payload) {
 }
 
 function addNewProduct(cart, payload) {
-    return { ...cart, products: [...cart.products, { ...payload, quantity: 1 }], totalPrice: cart.totalPrice + payload.price };
+    return {
+        ...cart, products: [...cart.products, { ...payload, quantity: 1 }],
+        totalPrice: cart.totalPrice + payload.price
+    };
 }
 
 
-export const {resetCart} = cartSlice.actions;
+export const { resetCart } = cartSlice.actions;
 export default cartSlice.reducer

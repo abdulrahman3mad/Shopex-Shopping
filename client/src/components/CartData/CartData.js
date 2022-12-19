@@ -1,8 +1,6 @@
-import CartProductsTable from "../CartProductsTable/CartProductsTable";
-import CartTotalsCard from "../CartTotalsCard/CartTotalsCard";
+import {CartProductsTable, CartTotalsCard} from "../../components";
 
 function CartData({cart}) {
-    
     return (
         <>
             <div className="col-xl-8 col-12">

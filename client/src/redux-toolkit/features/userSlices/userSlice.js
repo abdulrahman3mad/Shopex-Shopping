@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import userService from "../../services/userService";
+import userService from "../../../services/userService";
 import { setAuthMessage } from "./authMessage";
-import { clearCart, resetCart } from "./cartSlice";
+import { resetCart } from "../cartSlices/cartSlice";
 
 export const register = createAsyncThunk("user-slice/register", async (payload, thunkAPI) => {
     let user = await userService.register(payload);
@@ -20,18 +20,21 @@ export const login = createAsyncThunk("user-slice/login", async (payload, thunkA
         thunkAPI.dispatch(setAuthMessage(""));
         localStorage.setItem("user", JSON.stringify(user));
     }
-    else thunkAPI.dispatch(setAuthMessage("Email or password is wrong!"));
+    else {
+        thunkAPI.dispatch(setAuthMessage("Email or password is wrong!"));
+    }
     return user.user;
 })
 
 export const logout = createAsyncThunk("user-slice/logout", async (payload, thunkAPI) => {
     thunkAPI.dispatch(resetCart());
     localStorage.removeItem("user")
-    return 
+    return {}
 })
 
 const initialState = {
-    user: {}
+    user: {},
+    loading: false,
 }
 
 export const userSlice = createSlice({
@@ -48,27 +51,45 @@ export const userSlice = createSlice({
     },
 
     extraReducers: {
-        [register.pending]: (state) => { },
+        [register.pending]: (state) => { 
+            state.loading = true;
+        },
+
         [register.fulfilled]: (state, action) => {
             state.user = action.payload;
+            state.loading = false
         },
-        [register.rejected]: (state) => { },
 
-        [login.pending]: (state) => { },
+        [register.rejected]: (state) => { 
+            state.loading = false
+        },
+
+        [login.pending]: (state) => { 
+            state.loading = true;
+        },
+
         [login.fulfilled]: (state, action) => {
             state.user = action.payload;
+            state.loading = false;
         },
+
         [login.rejected]: (state) => {
             state.user = {};
+            state.loading = false;
         },
 
+        [logout.pending]: (state) => { 
+            state.loading = true;
+        },
 
-        [logout.pending]: (state) => { },
         [logout.fulfilled]: (state, action) => {
-            state.user = action.payload;
+            state.user = {}
+            state.loading = false;
         },
+
         [logout.rejected]: (state) => {
             state.user = {};
+            state.loading = false;
         },
     }
 })

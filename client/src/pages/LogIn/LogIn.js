@@ -5,18 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom"
 
 // Section && Components 
-import {
-    PageHeading, FormHeading, ValidatedInput, Button,
-    AuthForm, login, clearMessage, validation
-} from "../../Imports/authImports"
-
-import BrandsSE from "../../sections/Brands/BrandsSE"
-
-import AuthMessage from "../../components/AuthMessage/AuthMessage"
+import validation from "../../services/validationService";
+import {AuthMessage, PageHeading, FormHeading, ValidatedInput, Button} from "../../components"
+import {AuthForm, BrandsSE} from "../../sections"
 
 //Slices
-import { setValidationMessage } from "../../redux-toolkit/features/authMessage";
-
+import { setValidationMessage, clearMessage } from "../../redux-toolkit/features/userSlices/authMessage";
+import { login } from "../../redux-toolkit/features/userSlices/userSlice";
 
 function LogIn() {
     const navigate = useNavigate();
@@ -32,7 +27,6 @@ function LogIn() {
     useEffect(() => {
         dispatch(clearMessage());
     }, [])
-
 
     useEffect(() => {
         if (user && Object.keys(user).length) {
@@ -53,7 +47,6 @@ function LogIn() {
             [input.name]: input.value
         })
     }
-
 
     return (
         <>
@@ -90,7 +83,6 @@ function LogIn() {
                 <p className="text-black-50 mt-3 fs-9">Don't Have an Account? <Link to="/signup" className="text-clr-primary accent-clr-hover">Create account</Link>
                 </p>
             </AuthForm>
-
             <BrandsSE />
         </>
     )

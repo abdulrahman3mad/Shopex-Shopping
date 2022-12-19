@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addToCart } from "../redux-toolkit/features/cartSlice";
+import { addToCart } from "../redux-toolkit/features/cartSlices/cartSlice";
 
 function useAddToCart(product) {
     const { user } = useSelector((state) => state.user);

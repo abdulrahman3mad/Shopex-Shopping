@@ -1,5 +1,5 @@
 //Components
-import Input from "../Input/Input"
+import {Input} from "../../components"
 
 function ValidatedInput({ err, name, type, onChange, value, placeholder, required }) {
     return (

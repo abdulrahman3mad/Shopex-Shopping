@@ -3,7 +3,8 @@ import { url_API } from "../../config";
 import axios from "axios";
 
 export const loadProducts = createAsyncThunk("shop/loadProducts", async (payload) => {
-    let searchData = payload.searchData ? `title_like=${payload.searchData}` : "";
+    let searchData = payload.searchData ? `&title_like=${payload.searchData}` : "";
+    console.log(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}${searchData}`)
     let res = await axios.get(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}&${searchData}`);
     return [res.data, res.headers["x-total-count"]]
 })
@@ -38,6 +39,7 @@ const shopSlice = createSlice({
         },
 
         setSearchData: (state, action) => {
+            if(state.searchData == "") state.curPage = 1;
             state.searchData = action.payload
         }
     },

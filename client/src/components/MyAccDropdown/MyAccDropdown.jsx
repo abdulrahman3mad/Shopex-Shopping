@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { BiChevronDown, BiUser } from "react-icons/bi";
-import { logout } from "../../redux-toolkit/features/userSlice";
+import { logout } from "../../redux-toolkit/features/userSlices/userSlice";
 import { Link, useNavigate } from "react-router-dom";
 
-function MyAccDropdown({user}) {
+function MyAccDropdown({ user }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -40,7 +40,7 @@ function MyAccDropdown({user}) {
           <li>
             <button
               className="logOut btn text-center w-100"
-              onClick={() => dispatch(handleLogout())}
+              onClick={() => handleLogout()}
             >
               Sign Out
             </button>
@@ -53,7 +53,7 @@ function MyAccDropdown({user}) {
 
         <Link to="/login" className="item login text-white">
           Login
-          <BiUser className="text-white icon"/>
+          <BiUser className="text-white icon" />
         </Link>
       </>
     );

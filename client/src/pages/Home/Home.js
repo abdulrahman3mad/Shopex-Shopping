@@ -11,7 +11,7 @@ import OfferSE from "../../sections/ShopexOffer/OfferSE";
 import LatestBlogSE from "../../sections/LatestBlog/LatestBlogSE";
 import BrandsSE from "../../sections/Brands/BrandsSE";
 import NewsletterSE from "../../sections/Newsletter/NewsletterSE";
-import TopCatagoriesSE from "../../sections/TopCatagories/TopCatagoriesSE";
+import TopCatagoriesSE from "../../sections/TopCategories/TopCategoriesSE";
 import { getTopCatagories } from "../../redux-toolkit/features/topCatagoriesSlice";
 import TrendingProSE from "../../sections/TrendingPro/TrendingProSE";
 import { getTrendingProducts } from "../../redux-toolkit/features/trendingSlice";

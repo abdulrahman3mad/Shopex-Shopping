@@ -3,24 +3,30 @@ import { url_API } from "../config";
 import authHeader from "../helpers/authHeader";
 
 async function getCart(user) {
-    let res = await axios.get(`${url_API}/carts/${user.id}`, {headers:authHeader()})
-    return res.data;
+    try {
+        let res = await axios.get(`${url_API}/carts/${user.id}`, { headers: authHeader() })
+        return res.data;
+    } catch (err) {
+        return err
+    }
 }
 
 async function addNewCart(cart, user) {
-    console.log(cart, user)
-    let res = await axios({
-        method: "post",
-        url: `${url_API}/carts`,
-        headers: authHeader(),
-        data: {
-            ...cart,
-            userId: user.id,
-            id: user.id
-        }
-    })
-    console.log(res);
-    return res.data
+    try {
+        let res = await axios({
+            method: "post",
+            url: `${url_API}/carts`,
+            headers: authHeader(),
+            data: {
+                ...cart,
+                userId: user.id,
+                id: user.id
+            }
+        })
+        return res.data
+    } catch (err) {
+        return err;
+    }
 }
 
 async function updateCart(cart, user) {
@@ -32,10 +38,10 @@ async function updateCart(cart, user) {
             headers: authHeader(),
             data: cart
         })
+        return res?.data;
     } catch (err) {
-        return err.response.status;
+        return err;
     }
-    return res?.data;
 }
 
 async function clearCart(cart) {

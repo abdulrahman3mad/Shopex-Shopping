@@ -10,6 +10,7 @@ function Input({ type, name, id, value, placeholder, onChange, err, required, cl
             onChange={(e) => onChange(e.target)}
             required={required}
             autoFocus={autoFocus}
+            autoComplete="on"
         />
     )
 }

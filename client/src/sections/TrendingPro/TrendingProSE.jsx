@@ -11,6 +11,7 @@ function TrendingProSE({ data }) {
 						return (
 							<TrendingProCard
 								product={pro}
+								key={pro.id}
 							/>
 						);
 					})}

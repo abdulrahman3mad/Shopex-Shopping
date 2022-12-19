@@ -1,15 +1,15 @@
 // Environment
 import { useDispatch } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // Slices
-import { clearUserCart } from "../../redux-toolkit/features/cartSlice"
+import { clearUserCart } from "../../redux-toolkit/features/cartSlices/cartSlice"
 // Components 
-import CartProduct from "../CartProduct/CartProduct"
-import CartTableHeader from "../CartTableHeader/CartTableHeader"
+import {CartProduct, CartTableHeader} from "../../components"
 
 function CartProductsTable({ products }) {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const productsItems = products.map((product) => {
         return <CartProduct
@@ -32,7 +32,7 @@ function CartProductsTable({ products }) {
             <div className="d-flex align-items-center justify-content-between">
                 <button
                     className="bg-clr-accent accent-bg-hover text-white fs-9 py-1 mt-3 btn px-4 rounded-1"
-                    onClick={() => Navigate("/shop")}>Update Cart
+                    onClick={() => navigate("/shop")}>Update Cart
                 </button>
                 <button
                     className="border-accent accent-bg-hover text-white-hover fs-9 py-1 mt-3 btn px-4 rounded-1"

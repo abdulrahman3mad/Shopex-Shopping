@@ -5,6 +5,24 @@
       "password": "$2a$10$bUBR/bCI/5BO3KRW4rUKT.kTB2wOf6VsE7l1xuQfR.OHFYUpqYjmm",
       "name": "abdoemadselim",
       "id": 1
+    },
+    {
+      "email": "abdoemad@gmail.com",
+      "password": "$2a$10$B8yeTBwAZIHKEhMuQzdhc.eXLYDcft6s45eKuwyoPljDhJoFOwypa",
+      "name": "abdoemad",
+      "id": 2
+    },
+    {
+      "email": "abdoemadselim@gmail.com",
+      "password": "$2a$10$i93swe4KKeHq32EJmWFDTuiYhzZp2kPvMXNS89b5LLq18iOefWQ3S",
+      "name": "abdoemad",
+      "id": 3
+    },
+    {
+      "email": "abdoselim@gmail.com",
+      "password": "$2a$10$Yyk9TR4ZVhd05na.VVv4UuRGKm4cO3UEKZXsnA7xTNOQf5KCsGDEW",
+      "name": "abdoselim",
+      "id": 4
     }
   ],
   "products": [
@@ -375,8 +393,8 @@
     {
       "id": 5,
       "title": "Winder chair Sofa",
-      "price": "52.00",
-      "discount": "72.00",
+      "price": 52,
+      "discount": 72,
       "img": "images/Latest-Products/chair-5.jpg",
       "alt": "Latest Product winder chair sofa",
       "icon": "images/Latest-Products/sale.png",
@@ -385,8 +403,8 @@
     {
       "id": 6,
       "title": "Winder chair Sofa",
-      "price": "65.00",
-      "discount": "38.00",
+      "price": 65,
+      "discount": 38,
       "img": "images/Latest-Products/chair-6.jpg",
       "alt": "Latest Product winder chair sofa",
       "icon": "images/Latest-Products/sale.png",
@@ -494,42 +512,42 @@
       "img": "images/Top-Catagories/Plywood-Arm-Chair.png",
       "alt": "plywood armchair",
       "title": "Plywood Arm Chair",
-      "price": "56.00"
+      "price": 56
     },
     {
       "id": 2,
       "img": "images/Top-Catagories/Modern-coffe-chair.png",
       "alt": "Modern coffee chair",
       "title": "Coffee Wood Chair",
-      "price": "56.00"
+      "price": 56
     },
     {
       "id": 3,
       "img": "images/Top-Catagories/High-Bar-Stool-Chair.png",
       "alt": "High Bar Stool Chair",
       "title": "High Bar Stool Chair",
-      "price": "56.00"
+      "price": 56
     },
     {
       "id": 4,
       "img": "images/Top-Catagories/Mini-LCW-Chair-2.png",
       "alt": "Mini LCW Chair",
       "title": "Mini LCW Chair",
-      "price": "56.00"
+      "price": 56
     },
     {
       "id": 5,
       "img": "images/Top-Catagories/Plywood-Arm-Chair.png",
       "alt": "plywood armchair",
       "title": "Plywood Arm Chair",
-      "price": "56.00"
+      "price": 56
     },
     {
       "id": 6,
       "img": "images/Top-Catagories/Modern-coffe-chair.png",
       "alt": "Modern coffee chair",
       "title": "Coffee Wood Chair",
-      "price": "56.00"
+      "price": 56
     }
   ],
   "trending_products": {
@@ -551,32 +569,32 @@
         "img": "images/Trending-Products/chair-1.jpg",
         "alt": "wooden outer arm chair",
         "title": "Wooden outdoor chair",
-        "price": "39.99",
-        "discount": "60.99"
+        "price": 39.99,
+        "discount": 60.99
       },
       {
         "id": 2,
         "img": "images/Trending-Products/chair-2.jpg",
         "alt": "wooden outer arm chair",
         "title": "Ladderback chair",
-        "price": "39.99",
-        "discount": "60.99"
+        "price": 39.99,
+        "discount": 60.99
       },
       {
         "id": 3,
         "img": "images/Trending-Products/chair-3.jpg",
         "alt": "wooden outer arm chair",
         "title": "Comfort Pillow Sofa",
-        "price": "39.99",
-        "discount": "60.99"
+        "price": 39.99,
+        "discount": 60.99
       },
       {
         "id": 4,
         "img": "images/Trending-Products/chair-4.jpg",
         "alt": "wooden outer arm chair",
         "title": "Cantilever chair",
-        "price": "39.99",
-        "discount": "60.99"
+        "price": 39.99,
+        "discount": 60.99
       }
     ]
   }

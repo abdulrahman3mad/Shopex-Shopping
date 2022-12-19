@@ -2,14 +2,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { loadProducts, setCurPage } from "../../redux-toolkit/features/shopSlice"
-
 // Components
-import PageHeading from "../../components/PageHeading/PageHeading"
-import ProductsSearchForm from "../../components/ProductsSearchForm/ProductsSearchForm"
-import Pagination from "../../components/Pagination/Pagination";
-
+import {PageHeading, ProductsSearchForm, Pagination} from "../../components"
 //Sections
-import ProductsList from "../../sections/ProductsList/ProductsList"
+import {ProductsList} from "../../sections"
+// Hooks
 import useLoading from "../../Hooks/useLoading";
 
 function Shop() {

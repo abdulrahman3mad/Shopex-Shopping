@@ -3,16 +3,13 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-//Sections && Components
-import {
-    PageHeading, FormHeading, ValidatedInput, Button,
-    AuthForm, register, clearMessage, validation
-} from "../../Imports/authImports"
-import AuthMessage from "../../components/AuthMessage/AuthMessage"
+import validation from "../../services/validationService";
+import { AuthMessage, PageHeading, FormHeading, ValidatedInput, Button } from "../../components"
+import { AuthForm, BrandsSE } from "../../sections"
 
 //Slices
-import { setValidationMessage } from "../../redux-toolkit/features/authMessage"
-
+import { setValidationMessage, clearMessage } from "../../redux-toolkit/features/userSlices/authMessage";
+import { register } from "../../redux-toolkit/features/userSlices/userSlice";
 
 function SignUp() {
     const [formState, setFormState] = useState({
@@ -84,6 +81,7 @@ function SignUp() {
                 <Button val="Sign Up" />
                 <p className="text-black-50 mt-3 fs-9">Have an Account? <Link to="/login" className="text-clr-primary accent-clr-hover">Login</Link></p>
             </AuthForm>
+            <BrandsSE />
         </>
     )
 }
