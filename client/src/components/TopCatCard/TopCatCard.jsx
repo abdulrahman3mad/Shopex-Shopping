@@ -1,18 +1,9 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { addToCart } from "../../redux-toolkit/features/cartSlice";
+import useAddToCart from "../../Hooks/useAddToCart";
 
 function TopCatCard({ product }) {
   const { img, alt, title, price } = product;
-  const { user } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  function handleAddToCart() {
-    if (!user) navigate("/login");
-    dispatch(addToCart(product));
-  }
+  const handleAddToCart = useAddToCart();
 
   return (
     <div className="card TopCatCard p-2 border-0 align-items-center">
@@ -20,7 +11,7 @@ function TopCatCard({ product }) {
         <img src={img} className="card-img-top" alt={alt} />
         <button
           className="btn btnLink position-absolute text-white"
-          onClick={() => handleAddToCart()}
+          onClick={() => handleAddToCart(product)}
         >
           Add to cart
         </button>

@@ -4,18 +4,12 @@ import { BiHeart } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addToCart } from "../../redux-toolkit/features/cartSlice";
+import useAddToCart from "../../Hooks/useAddToCart";
 
 function TrendingProCard({product}) {
 	
   const { img, alt, title, price, discount } = product;
-  const { user } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  function handleAddToCart() {
-    if (!user) navigate("/login");
-    dispatch(addToCart(product));
-  }
+  const handleAddToCart = useAddToCart();
 
   return (
     <div className="TrendingProCard col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3 mb-sm-0">
@@ -25,7 +19,7 @@ function TrendingProCard({product}) {
           <div className="icons position-absolute top-0 d-flex flex-column">
             <button
               className="cart d-flex align-items-center justify-content-center mb-3 mt-4 border-0"
-              onClick={() => handleAddToCart()}
+              onClick={() => handleAddToCart(product)}
             >
               <BsCartPlusFill />
             </button>

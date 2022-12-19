@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "name": "Hisham",
-      "email": "hishamk1999@gmail.com",
-      "password": "01155307281",
-      "id": 6
+      "email": "abdo3mad@gmail.com",
+      "password": "$2a$10$bUBR/bCI/5BO3KRW4rUKT.kTB2wOf6VsE7l1xuQfR.OHFYUpqYjmm",
+      "name": "abdoemadselim",
+      "id": 1
     }
   ],
   "products": [
@@ -231,27 +231,7 @@
       "alt": "plywood armchair"
     }
   ],
-  "carts": [
-    {
-      "products": [
-        {
-          "id": 6,
-          "title": "Ply",
-          "code": "D45201",
-          "price": 32,
-          "oldprice": 50,
-          "img": "images/Featured-Products-img/plywood-2.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 5
-        }
-      ],
-      "totalPrice": 160,
-      "userId": 7,
-      "id": 7
-    }
-  ],
+  "carts": [],
   "welcome": {
     "welcome_Chandelier": {
       "id": 1,

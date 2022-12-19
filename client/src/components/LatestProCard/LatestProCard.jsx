@@ -2,20 +2,11 @@ import React from "react";
 import Price from "../Price/Price";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import { BsSuitHeart } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { addToCart } from "../../redux-toolkit/features/cartSlice";
+import useAddToCart from "../../Hooks/useAddToCart";
 
 function LatProCard({product}) {
   const { img, alt, title, icon, altIcon, price, discount } = product;
-  const { user } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  function handleAddToCart() {
-    if (!user) navigate("/login");
-    dispatch(addToCart(product));
-  }
+  const handleAddToCart = useAddToCart();
 
   return (
     <div className="col-xlg-4 col-lg-4 col-md-6 col-sm-12 mb-3 mt-2">
@@ -27,7 +18,7 @@ function LatProCard({product}) {
             <div className="d-flex flex-column align-items-center">
               <button
                 className="icon-btn mb-3"
-                onClick={() => handleAddToCart()}
+                onClick={() => handleAddToCart(product)}
               >
                 <BsFillCartPlusFill />
               </button>
