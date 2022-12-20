@@ -4,8 +4,7 @@ import axios from "axios";
 
 export const loadProducts = createAsyncThunk("shop/loadProducts", async (payload) => {
     let searchData = payload.searchData ? `&title_like=${payload.searchData}` : "";
-    console.log(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}${searchData}`)
-    let res = await axios.get(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}&${searchData}`);
+    let res = await axios.get(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}${searchData}`);
     return [res.data, res.headers["x-total-count"]]
 })
 
@@ -17,6 +16,7 @@ const initialState = {
     maxNumOfitems: 0,
     ItemsPerPage: 10,
     curPage: 1,
+    timer: null
 }
 
 const shopSlice = createSlice({
@@ -39,8 +39,12 @@ const shopSlice = createSlice({
         },
 
         setSearchData: (state, action) => {
-            if(state.searchData == "") state.curPage = 1;
+            if (state.searchData === "") state.curPage = 1;
             state.searchData = action.payload
+        },
+
+        setTimer: (state, action) => {
+            state.timer = action.payload
         }
     },
 
@@ -61,5 +65,5 @@ const shopSlice = createSlice({
     }
 })
 
-export const { filterProducts, changeItemsPerPage, setCurPage, setSearchData } = shopSlice.actions;
+export const { filterProducts, changeItemsPerPage, setCurPage, setSearchData, setTimer } = shopSlice.actions;
 export default shopSlice.reducer;

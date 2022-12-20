@@ -1,11 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import isLoggedIn from "../../../helpers/isLoggedIn";
 import cartService from "../../../services/cartService";
+import { logout } from "../userSlices/userSlice";
 
-export const getCart = createAsyncThunk("cart-slice/getCart", async () => {
+export const getCart = createAsyncThunk("cart-slice/getCart", async (payload, thunkAPI) => {
     let user = isLoggedIn();
-    let data = await cartService.getCart(user);
-    if (data && !data.message) return data
+    let res = await cartService.getCart(user);
+    if (res?.response?.message === "jwt expired") thunkAPI.dispatch(logout())
+    return res.data
+
 })
 
 export const removeFromCart = createAsyncThunk("cart-slice/removeFromCart", async (payload, thunkAPI) => {
@@ -18,22 +21,24 @@ export const removeFromCart = createAsyncThunk("cart-slice/removeFromCart", asyn
 export const addToCart = createAsyncThunk("cart-slice/addToCart", async (payload, thunkAPI) => {
     let user = isLoggedIn();
     let cart = thunkAPI.getState().cart.cart;
+    let res = null;
     if (!cart) {
         let cart = { products: [{ ...payload, quantity: 1 }], totalPrice: payload.price }
-        cart = await cartService.addNewCart(cart, user);
-        return cart;
+        res = await cartService.addNewCart(cart, user);
     }
     else {
         if (doesProductExist(cart, payload)) cart = updateProducts(cart, payload, 1);
         else cart = addNewProduct(cart, payload);
-        let data = await cartService.updateCart(cart);
-        return data;
+        res = await cartService.updateCart(cart);
     }
+    if (res?.response?.message === "jwt expired") thunkAPI.dispatch(logout());
+    return res?.data
 })
 
 export const clearUserCart = createAsyncThunk("cart-slice/clearCart", async (payload, thunkAPI) => {
     let cart = thunkAPI.getState().cart.cart;
-    cart = await cartService.clearCart(cart);
+    let res = await cartService.clearCart(cart);
+    if (res?.response?.message === "jwt expired") thunkAPI.dispatch(logout());
     return;
 })
 

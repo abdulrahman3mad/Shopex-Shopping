@@ -25,7 +25,7 @@ const logout = () => {
     localStorage.removeItem("user");
 }
 
-const getUserData = () => {
+const setUserData = () => {
     let user = JSON.parse(localStorage.getItem("user"));
     return user && user.user;
 }
@@ -34,7 +34,7 @@ const auth = {
     login,
     register,
     logout,
-    getUserData
+    setUserData
 }
 
 export default auth;

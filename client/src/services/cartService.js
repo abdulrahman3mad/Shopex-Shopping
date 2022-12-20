@@ -5,7 +5,7 @@ import authHeader from "../helpers/authHeader";
 async function getCart(user) {
     try {
         let res = await axios.get(`${url_API}/carts/${user.id}`, { headers: authHeader() })
-        return res.data;
+        return res
     } catch (err) {
         return err
     }
@@ -23,7 +23,7 @@ async function addNewCart(cart, user) {
                 id: user.id
             }
         })
-        return res.data
+        return res
     } catch (err) {
         return err;
     }
@@ -38,7 +38,7 @@ async function updateCart(cart, user) {
             headers: authHeader(),
             data: cart
         })
-        return res?.data;
+        return res
     } catch (err) {
         return err;
     }
@@ -51,7 +51,7 @@ async function clearCart(cart) {
         headers: authHeader(),
     })
 
-    return res.data;
+    return res
 }
 
 const cartService = {

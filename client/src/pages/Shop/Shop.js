@@ -1,11 +1,11 @@
 // Environment
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { loadProducts, setCurPage } from "../../redux-toolkit/features/shopSlice"
+import { loadProducts, setCurPage, setTimer } from "../../redux-toolkit/features/shopSlice"
 // Components
-import {PageHeading, ProductsSearchForm, Pagination} from "../../components"
+import { PageHeading, ProductsSearchForm, Pagination } from "../../components"
 //Sections
-import {ProductsList} from "../../sections"
+import { ProductsList } from "../../sections"
 // Hooks
 import useLoading from "../../Hooks/useLoading";
 
@@ -16,9 +16,17 @@ function Shop() {
     const { products, loading, ItemsPerPage, curPage, maxNumOfitems, searchData } = shop;
 
     useEffect(() => {
-        if (searchData) dispatch(setCurPage(1));
         dispatch(loadProducts({ curPage, ItemsPerPage, searchData }))
-    }, [ItemsPerPage, curPage, searchData])
+    }, [ItemsPerPage, curPage])
+
+    useEffect(() => {
+        //Debouncing
+        let timer = setTimeout(() => {
+            dispatch(loadProducts({ curPage, ItemsPerPage, searchData }))
+        }, 500)
+
+        dispatch(setTimer(timer))
+    }, [searchData])
 
     const handleSliding = (curPage) => dispatch(setCurPage(curPage));
 

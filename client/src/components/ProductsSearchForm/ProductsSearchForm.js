@@ -4,13 +4,16 @@ import { useDispatch, useSelector } from "react-redux";
 //Slices
 import { changeItemsPerPage, setSearchData } from "../../redux-toolkit/features/shopSlice";
 //Components
-import {Input, SelectInput} from "../../components";
+import { Input, SelectInput } from "../../components";
 
 function ProductsSearchForm() {
-    const { shop: { ItemsPerPage, searchData } } = useSelector((state) => state)
+    const { shop: { ItemsPerPage, searchData, timer } } = useSelector((state) => state)
     const dispatch = useDispatch();
-    
-    const handleSearch = (target) => dispatch(setSearchData(target.value));
+
+    const handleSearch = (target) => {
+        dispatch(setSearchData(target.value));
+        clearTimeout(timer);
+    }
     const handleSelect = (target) => dispatch(changeItemsPerPage(target.value));
 
     return (

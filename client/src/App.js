@@ -11,7 +11,7 @@ import FooterSE from "./sections/Footer/FooterSE";
 import Cart from "./pages/Cart/Cart";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getUserData } from "./redux-toolkit/features/userSlices/userSlice";
+import { setUserData } from "./redux-toolkit/features/userSlices/userSlice";
 import { getCart } from "./redux-toolkit/features/cartSlices/cartSlice";
 
 
@@ -20,7 +20,7 @@ function App() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(getUserData());
+		dispatch(setUserData());
 	}, [])
 
 	useEffect(() => {

@@ -45,8 +45,8 @@ export const userSlice = createSlice({
             state.user = action.payload;
         },
 
-        getUserData: (state, action) => {
-            state.user = userService.getUserData();
+        setUserData: (state, action) => {
+            state.user = userService.setUserData();
         }
     },
 
@@ -94,5 +94,5 @@ export const userSlice = createSlice({
     }
 })
 
-export const { setUser, getUserData } = userSlice.actions
+export const { setUser, setUserData } = userSlice.actions
 export default userSlice.reducer;

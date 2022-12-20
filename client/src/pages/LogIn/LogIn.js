@@ -6,8 +6,8 @@ import { Link } from "react-router-dom"
 
 // Section && Components 
 import validation from "../../services/validationService";
-import {AuthMessage, PageHeading, FormHeading, ValidatedInput, Button} from "../../components"
-import {AuthForm, BrandsSE} from "../../sections"
+import { AuthMessage, PageHeading, FormHeading, ValidatedInput, Button } from "../../components"
+import { AuthForm, BrandsSE } from "../../sections"
 
 //Slices
 import { setValidationMessage, clearMessage } from "../../redux-toolkit/features/userSlices/authMessage";
@@ -22,7 +22,8 @@ function LogIn() {
         password: "",
     })
 
-    const { user: { user }, authMessage: { message } } = useSelector((state) => state);
+    const { message } = useSelector((state) => state.authMessage);
+    const { user } = useSelector((state) => state.user);
 
     useEffect(() => {
         dispatch(clearMessage());

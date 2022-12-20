@@ -249,7 +249,35 @@
       "alt": "plywood armchair"
     }
   ],
-  "carts": [],
+  "carts": [
+    {
+      "products": [
+        {
+          "id": 14,
+          "title": "Plywood arm chair",
+          "code": "D45201",
+          "price": 32,
+          "oldprice": 50,
+          "img": "images/Featured-Products-img/plywood-2.webp",
+          "alt": "plywood armchair",
+          "quantity": 2
+        },
+        {
+          "id": 13,
+          "title": "Plywood arm chair",
+          "code": "Y53201",
+          "price": 59,
+          "oldprice": 50,
+          "img": "images/Featured-Products-img/plywood-4.webp",
+          "alt": "plywood armchair",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 123,
+      "userId": 3,
+      "id": 3
+    }
+  ],
   "welcome": {
     "welcome_Chandelier": {
       "id": 1,
