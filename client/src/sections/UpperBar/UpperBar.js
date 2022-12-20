@@ -69,7 +69,7 @@ function HeaderNav({ user, cartProductsCount }) {
 									<MyAccDropdown user={user} />
 
 									{/* <!-- wishlist --> */}
-									{user &&
+									{user && Object.keys(user).length > 0 &&
 										<>
 											<div className="item Wishlist">
 												<a href="/">Wishlist</a>

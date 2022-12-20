@@ -23,13 +23,12 @@ import { getBrands } from "../../redux-toolkit/features/brandsSlice";
 function Home() {
 	const dispatch = useDispatch();
 	const state = useSelector((state) => state);
-	
+
 	useEffect(() => {
 		dispatch(getBrands());
 		dispatch(getTopCatagories());
 		dispatch(getTrendingProducts());
 	}, [dispatch]);
-
 
 	return (
 		<>
@@ -44,7 +43,9 @@ function Home() {
 			<TopCatagoriesSE
 				data={state.topCatagories.data ? state.topCatagories.data : null}
 			/>
-			<NewsletterSE />
+			{!state.user.user &&
+				<NewsletterSE />
+			}
 			<BrandsSE data={state.brands.data ? state.brands.data : null} />
 			<LatestBlogSE />
 		</>

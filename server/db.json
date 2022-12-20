@@ -16,13 +16,15 @@
       "email": "abdoemadselim@gmail.com",
       "password": "$2a$10$i93swe4KKeHq32EJmWFDTuiYhzZp2kPvMXNS89b5LLq18iOefWQ3S",
       "name": "abdoemad",
-      "id": 3
+      "id": 3,
+      "admin": true
     },
     {
       "email": "abdoselim@gmail.com",
       "password": "$2a$10$Yyk9TR4ZVhd05na.VVv4UuRGKm4cO3UEKZXsnA7xTNOQf5KCsGDEW",
       "name": "abdoselim",
-      "id": 4
+      "id": 4,
+      "admin": true
     }
   ],
   "products": [
@@ -253,27 +255,19 @@
     {
       "products": [
         {
-          "id": 14,
-          "title": "Plywood arm chair",
-          "code": "D45201",
-          "price": 32,
-          "oldprice": 50,
-          "img": "images/Featured-Products-img/plywood-2.webp",
-          "alt": "plywood armchair",
-          "quantity": 2
-        },
-        {
-          "id": 13,
-          "title": "Plywood arm chair",
+          "id": 3,
+          "title": "Plywood",
           "code": "Y53201",
           "price": 59,
           "oldprice": 50,
           "img": "images/Featured-Products-img/plywood-4.webp",
           "alt": "plywood armchair",
-          "quantity": 1
+          "size": "XL",
+          "color": "tan",
+          "quantity": 9
         }
       ],
-      "totalPrice": 123,
+      "totalPrice": 531,
       "userId": 3,
       "id": 3
     }

@@ -6,16 +6,16 @@ import { logout } from "../userSlices/userSlice";
 export const getCart = createAsyncThunk("cart-slice/getCart", async (payload, thunkAPI) => {
     let user = isLoggedIn();
     let res = await cartService.getCart(user);
-    if (res?.response?.message === "jwt expired") thunkAPI.dispatch(logout())
-    return res.data
-
+    if (res?.response?.data === "jwt expired") thunkAPI.dispatch(logout())
+    else return res.data
 })
 
 export const removeFromCart = createAsyncThunk("cart-slice/removeFromCart", async (payload, thunkAPI) => {
     let cart = thunkAPI.getState().cart.cart;
-    cart = await updateProducts(cart, payload, -1);
-    let data = cartService.updateCart(cart);
-    if (data && !data.message) return cart;
+    cart = updateProducts(cart, payload, -1);
+    let res = await cartService.updateCart(cart);
+    if (res?.response?.data === "jwt expired") thunkAPI.dispatch(logout())
+    else return res.data;
 })
 
 export const addToCart = createAsyncThunk("cart-slice/addToCart", async (payload, thunkAPI) => {
@@ -31,14 +31,14 @@ export const addToCart = createAsyncThunk("cart-slice/addToCart", async (payload
         else cart = addNewProduct(cart, payload);
         res = await cartService.updateCart(cart);
     }
-    if (res?.response?.message === "jwt expired") thunkAPI.dispatch(logout());
+    if (res?.response?.data === "jwt expired") thunkAPI.dispatch(logout());
     return res?.data
 })
 
 export const clearUserCart = createAsyncThunk("cart-slice/clearCart", async (payload, thunkAPI) => {
     let cart = thunkAPI.getState().cart.cart;
     let res = await cartService.clearCart(cart);
-    if (res?.response?.message === "jwt expired") thunkAPI.dispatch(logout());
+    if (res?.response?.data === "jwt expired") thunkAPI.dispatch(logout());
     return;
 })
 

@@ -28,14 +28,16 @@ function MyAccDropdown({ user }) {
         <ul className="dropdown-menu">
           <li>
             <Link className="dropdown-item" to="#">
-              Action
+              Profile
             </Link>
           </li>
-          <li>
-            <Link className="dropdown-item" to="#">
-              Another action
-            </Link>
-          </li>
+          {user.admin && (
+            <li>
+              <Link className="dropdown-item" to="#">
+                Add Product
+              </Link>
+            </li>
+          )}
           <hr className="mt-1 mb-1" />
           <li>
             <button
