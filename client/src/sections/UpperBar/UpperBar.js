@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
