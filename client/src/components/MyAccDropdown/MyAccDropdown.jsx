@@ -5,67 +5,67 @@ import { logout } from "../../redux-toolkit/features/userSlices/userSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 function MyAccDropdown({ user }) {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
-  const handleLogout = () => {
-    dispatch(logout());
-    navigate("/");
-  };
+	const handleLogout = () => {
+		dispatch(logout());
+		navigate("/");
+	};
 
-  const myAccountUI = () => {
-    return user && Object.keys(user).length ? (
-      <>
-        <button
-          className="btn dropdown-toggle myAccount__btn border-0"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Hi {user.name}!
-          <BiChevronDown className="myAccount__icon   angle-down ms-2" />
-        </button>
-        <ul className="dropdown-menu">
-          <li>
-            <Link className="dropdown-item" to="#">
-              Profile
-            </Link>
-          </li>
-          {user.admin && (
-            <li>
-              <Link className="dropdown-item" to="#">
-                Add Product
-              </Link>
-            </li>
-          )}
-          <hr className="mt-1 mb-1" />
-          <li>
-            <button
-              className="logOut btn text-center w-100"
-              onClick={() => handleLogout()}
-            >
-              Sign Out
-            </button>
-          </li>
-        </ul>
-      </>
-    ) : (
-      <>
-        {/*<!-- login --> */}
+	const myAccountUI = () => {
+		return user && Object.keys(user).length ? (
+			<>
+				<button
+					className="btn dropdown-toggle myAccount__btn border-0"
+					type="button"
+					data-bs-toggle="dropdown"
+					aria-expanded="false"
+				>
+					Hi {user.name}!
+					<BiChevronDown className="myAccount__icon   angle-down ms-2" />
+				</button>
+				<ul className="dropdown-menu">
+					<li>
+						<Link className="dropdown-item" to="#">
+							Profile
+						</Link>
+					</li>
+					{user.admin && (
+						<li>
+							<Link className="dropdown-item" to="/dashboard">
+								Dashboard
+							</Link>
+						</li>
+					)}
+					<hr className="mt-1 mb-1" />
+					<li>
+						<button
+							className="logOut btn text-center w-100"
+							onClick={() => handleLogout()}
+						>
+							Sign Out
+						</button>
+					</li>
+				</ul>
+			</>
+		) : (
+			<>
+				{/*<!-- login --> */}
 
-        <Link to="/login" className="item login text-white">
-          Login
-          <BiUser className="text-white icon" />
-        </Link>
-      </>
-    );
-  };
+				<Link to="/login" className="item login text-white">
+					Login
+					<BiUser className="text-white icon" />
+				</Link>
+			</>
+		);
+	};
 
-  return (
-    <div className=" myAccount dropdown pointer-event align-items-center d-flex">
-      {myAccountUI()}
-    </div>
-  );
+	return (
+		<div className=" myAccount dropdown pointer-event align-items-center d-flex">
+			{myAccountUI()}
+		</div>
+	);
 }
 
 export default MyAccDropdown;

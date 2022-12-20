@@ -69,7 +69,7 @@ function HeaderNav({ user, cartProductsCount }) {
 									<MyAccDropdown user={user} />
 
 									{/* <!-- wishlist --> */}
-									{user && Object.keys(user).length > 0 &&
+									{user && Object.keys(user).length > 0 && (
 										<>
 											<div className="item Wishlist">
 												<a href="/">Wishlist</a>
@@ -79,19 +79,23 @@ function HeaderNav({ user, cartProductsCount }) {
 											<div className="item cart">
 												<Link to="/cart">
 													<BsCart3 className="icon-cart" />
-													{cartProductsCount > 0 && <span className="items-count">{cartProductsCount}</span>}
+													{cartProductsCount > 0 && (
+														<span className="items-count">
+															{cartProductsCount}
+														</span>
+													)}
 												</Link>
 											</div>
 										</>
-									}
-								</div >
-							</div >
-						</div >
-					</div >
-				</div >
+									)}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<Navbar />
-			</header >
-		</Fragment >
+			</header>
+		</Fragment>
 	);
 }
 

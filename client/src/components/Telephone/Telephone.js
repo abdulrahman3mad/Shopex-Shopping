@@ -8,7 +8,7 @@ function Telephone() {
 				className="tel-ctn  algin-items-center ms-4 text-white"
 			>
 				<TbPhoneCall className="icon telephone-icon " />
-				<span>(+20) 1011 3034 10</span>
+				<span>(+20) 19 969 996</span>
 			</a>
 		</Fragment>
 	);

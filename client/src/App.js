@@ -4,16 +4,16 @@ import { Routes, Route } from "react-router-dom";
 import SignUp from "./pages/SignUp/SignUp";
 import LogIn from "./pages/LogIn/LogIn";
 import NotFound from "./pages/NotFound/NotFound";
-import Home from "./pages/Home/Home"
+import Home from "./pages/Home/Home";
 import Shop from "./pages/Shop/Shop";
 import HeaderNav from "./sections/UpperBar/UpperBar";
 import FooterSE from "./sections/Footer/FooterSE";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Cart from "./pages/Cart/Cart";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setUserData } from "./redux-toolkit/features/userSlices/userSlice";
 import { getCart } from "./redux-toolkit/features/cartSlices/cartSlice";
-
 
 function App() {
 	const { user, cart } = useSelector((state) => state);
@@ -21,25 +21,30 @@ function App() {
 
 	useEffect(() => {
 		dispatch(setUserData());
-	}, [])
+	}, [dispatch]);
 
 	useEffect(() => {
-		if (user && Object.keys(user).length) dispatch(getCart())
-	}, [user])
+		if (user && Object.keys(user).length) dispatch(getCart());
+	}, [user, dispatch]);
+
 
 	return (
-		<div className="App" >
-			<HeaderNav user={user?.user} cartProductsCount={cart.cart?.products?.length} />
+		<div className="App">
+			<HeaderNav
+				user={user?.user}
+				cartProductsCount={cart.cart?.products?.length}
+			/>
 			<Routes>
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/login" element={<LogIn />}></Route>
 				<Route path="/signup" element={<SignUp />}></Route>
 				<Route path="*" element={<NotFound />}></Route>
 				<Route path="/shop" element={<Shop />}></Route>
+				<Route path="/dashboard" element={<Dashboard />}></Route>
 				<Route path="/cart" element={<Cart />}></Route>
 			</Routes>
 			<FooterSE />
-		</div >
+		</div>
 	);
 }
 
