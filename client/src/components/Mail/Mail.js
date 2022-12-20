@@ -5,11 +5,11 @@ function Mail() {
 	return (
 		<Fragment>
 			<a
-				href="mailto:xyz@abc.com"
+				href="mailto:Shopex@gmail.com"
 				className="mail-ctn  algin-items-center text-white"
 			>
 				<HiOutlineMail className="icon mail-icon" />
-				<span>Hishamk1999@gmail.com</span>
+				<span>Shopex@gmail.com</span>
 			</a>
 		</Fragment>
 	);

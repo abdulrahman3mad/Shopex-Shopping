@@ -1,6 +1,6 @@
 {
   "/carts/:type/:id": "/600/carts/:id",
   "/carts/:id": "/600/carts/:id",
-  "/products/": "/664/products",
+  "/products/": "/660/products",
   "/users/:id": "/600/users/:id"
 }

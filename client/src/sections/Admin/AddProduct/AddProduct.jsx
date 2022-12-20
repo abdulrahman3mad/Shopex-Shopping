@@ -1,13 +1,14 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 import { useState } from "react";
 import { ImImages } from "react-icons/im";
 import ImageUploading from "react-images-uploading";
 import { useDispatch } from "react-redux";
-import { insertProduct } from "../../../redux-toolkit/features/addProduct";
+import { insertProduct } from "../../../redux-toolkit/features/addProductSlice";
 
 function AddProduct() {
 	const maxNumber = 4;
 	let name = "";
+	const [isFinished, setIsFinished] = useState(false);
 	const dispatch = useDispatch();
 	const [images, setImages] = useState([]);
 	const [formData, setFormData] = useState({
@@ -22,10 +23,19 @@ function AddProduct() {
 		subImages: [],
 	});
 
+	if (isFinished) {
+		dispatch(insertProduct(formData));
+		setIsFinished(false);
+	}
+
 	const onChangeHandler = (e) => {
 		name = e.target.name;
+		let value =
+			name === "price" || name === "discount"
+				? +e.target.value
+				: e.target.value;
 		setFormData((prev) => {
-			return { ...prev, [name]: e.target.value };
+			return { ...prev, [name]: value };
 		});
 	};
 
@@ -33,7 +43,6 @@ function AddProduct() {
 		event.preventDefault();
 		event.target.reset();
 		let state = [];
-
 		if (images.length) {
 			for (let i = 0; i < images.length; i++) {
 				state.push({ img: images[i].data_url, alt: images[i].file.name });
@@ -46,8 +55,8 @@ function AddProduct() {
 					subImages: state,
 				};
 			});
+			setIsFinished(true);
 			setImages([]);
-			dispatch(insertProduct(formData));
 		}
 	};
 	/*
