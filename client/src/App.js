@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home"
 import Shop from "./pages/Shop/Shop";
 import HeaderNav from "./sections/UpperBar/UpperBar";
 import FooterSE from "./sections/Footer/FooterSE";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Cart from "./pages/Cart/Cart";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -37,6 +38,7 @@ function App() {
 				<Route path="/signup" element={<SignUp />}></Route>
 				<Route path="*" element={<NotFound />}></Route>
 				<Route path="/shop" element={<Shop />}></Route>
+				<Route path="/dashboard" element={<Dashboard/>}></Route>
 				<Route path="/cart" element={<Cart />}></Route>
 			</Routes>
 			<FooterSE />
