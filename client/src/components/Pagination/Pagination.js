@@ -1,15 +1,19 @@
+// Environment 
 import { useEffect, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
-import { useDispatch, useSelector } from "react-redux";
-import { setCurPage } from "../../redux-toolkit/features/shopSlice";
+import { useSelector } from "react-redux";
 
-export function Page({ pageNum, active }) {
-    return <p className={`page accent-bg-hover fw-bold shadow  border-0 mx-2 ${active && "bg-clr-accent text-white"}`}>{pageNum}</p>
+export function Page({ pageNum, active, handleSliding }) {
+    return <p className={`page accent-bg-hover fw-bold shadow  border-0 mx-2 ${active && "bg-clr-accent text-white"}`} onClick={(e)=> handleSliding(pageNum)} >{pageNum}</p>
 }
 
 export default function Pagination({ maxNumOfitems, ItemsPerPage, handleSliding }) {
     const [window, setWindow] = useState([1]);
     const curPage = useSelector((state) => state.shop.curPage);
+
+    useEffect(()=>{
+        handleSliding(1);
+    }, [])
 
     const shiftWindowLeft = () => {
         if (!(curPage <= 1)) handleSliding(curPage - 1);
@@ -53,6 +57,7 @@ export default function Pagination({ maxNumOfitems, ItemsPerPage, handleSliding 
         setWindow(range(1, numOfPages > 3 ? 3 : numOfPages))
     }
 
+
     const ArrowClickHandler = (target) => {
         if (target.id === "back-arrow") shiftWindowLeft();
         else if (target.id === "forward-arrow") shiftWindowRight();
@@ -70,7 +75,7 @@ export default function Pagination({ maxNumOfitems, ItemsPerPage, handleSliding 
             <div
                 className="pages-container d-flex mx-2"
                 id="pages-container">
-                {window.map((item) => <Page key={item} pageNum={item} active={curPage === item} />)}
+                {window.map((item) => <Page key={item} pageNum={item} active={curPage === item} handleSliding={handleSliding} />)}
             </div>
             <div className="forward-arrow arrow pointer" id="forward-arrow" onClick={(e) => ArrowClickHandler(e.target.closest(".arrow"))}><BsArrowRight className="forward-arrow" /></div>
         </div>

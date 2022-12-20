@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve":"json-server -w db.json --port 5000"
+    "serve": "json-server -w db.json --port 5000 --middlewares node_modules/json-server-auth -r routes.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.17.1"
+  "json-server": "^0.17.1",
+    "json-server-auth": "^2.1.0"
   }
+  
 }

@@ -10,12 +10,8 @@ function TrendingProSE({ data }) {
 					{data.cardData.map((pro) => {
 						return (
 							<TrendingProCard
+								product={pro}
 								key={pro.id}
-								img={pro.img}
-								alt={pro.alt}
-								title={pro.title}
-								price={pro.price}
-								discount={pro.discount}
 							/>
 						);
 					})}

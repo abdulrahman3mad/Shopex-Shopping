@@ -23,14 +23,9 @@ function FeaturedSE() {
 					{state.data.map((prod) => {
 						return (
 							<FeaProCard
+								product={prod}
 								key={prod.id}
-								title={prod.title}
-								code={prod.code}
-								price={prod.price}
-								img={prod.img}
-								alt={"plywood arm chair"}
 								classNames="product-shadow"
-								// "alt": "plywood armchair"
 							></FeaProCard>
 						);
 					})}

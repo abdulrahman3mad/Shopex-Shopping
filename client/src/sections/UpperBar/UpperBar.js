@@ -7,7 +7,7 @@ import Telephone from "../../components/Telephone/Telephone";
 import Navbar from "../NavBar/Navbar";
 import MyAccDropdown from "../../components/MyAccDropdown/MyAccDropdown";
 
-function HeaderNav() {
+function HeaderNav({ user, cartProductsCount }) {
 	return (
 		<Fragment>
 			<header>
@@ -63,33 +63,34 @@ function HeaderNav() {
 											</ul>
 										</div>
 									</div>
-									{/* my Account dropdown*/}
-									<MyAccDropdown />
-									{/* <!-- wishlist --> */}
-									<div className="item Wishlist">
-										<a href="/">Wishlist</a>
-										<AiOutlineHeart className="icon" />
-									</div>
-									{/* <!-- shop Cart --> */}
-									<div className="item cart">
-										<a href="../HTML/Shopping-Cart.html">
-											<BsCart3 className=" icon-cart" />
-										</a>
-										<div className="items-count">
-											<a href="../HTML/Shopping-Cart.html" className="zero">
-												6
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
+									{/* my Account dropdown*/}
+									<MyAccDropdown user={user} />
+
+									{/* <!-- wishlist --> */}
+									{user && Object.keys(user).length > 0 &&
+										<>
+											<div className="item Wishlist">
+												<a href="/">Wishlist</a>
+												<AiOutlineHeart className="icon" />
+											</div>
+											{/* <!-- shop Cart --> */}
+											<div className="item cart">
+												<Link to="/cart">
+													<BsCart3 className="icon-cart" />
+													{cartProductsCount > 0 && <span className="items-count">{cartProductsCount}</span>}
+												</Link>
+											</div>
+										</>
+									}
+								</div >
+							</div >
+						</div >
+					</div >
+				</div >
 				<Navbar />
-			</header>
-		</Fragment>
+			</header >
+		</Fragment >
 	);
 }
 

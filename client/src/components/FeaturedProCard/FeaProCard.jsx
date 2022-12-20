@@ -1,10 +1,18 @@
+// Environment
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
+
+// Custome Hooks
+import useAddToCart from "../../Hooks/useAddToCart";
+
+// Components
 import ColorPalette from "../ColorPalette/ColorPalette";
 import Price from "../Price/Price";
-import LinkComp from "../Link/LinkComp";
 
-function FeaProCard({ title, code, price, img, alt, classNames }) {
+function FeaProCard({ classNames, product }) {
+  const { title, code, price, img, alt } = product;
+  const handleAddToCart = useAddToCart();
+
   return (
     <>
       <div
@@ -12,11 +20,9 @@ function FeaProCard({ title, code, price, img, alt, classNames }) {
       >
         <div className="card-img overflow-hidden position-relative">
           <img src={img} className="card-img-top" alt={alt} />
-          <LinkComp
-            to={"/productDetails"}
-            val={"View Details"}
-            className={"position-absolute"}
-          />
+          <button className="position-absolute" onClick={() => handleAddToCart(product)}>
+            Add To Cart
+          </button>
         </div>
         <div className="card-body">
           <h4 className="fw-semibold">{title}</h4>
@@ -34,10 +40,10 @@ function FeaProCard({ title, code, price, img, alt, classNames }) {
             </div>
           )}
           <div className="d-flex justify-content-center align-items-center">
-            <Price val={price} />
+            <Price val={price.toFixed(2)} classNames={"text-white-parent-hover me-2"} />
             <Price
-              val={price}
-              classNames={`text-decoration-line-through ms-2 text-clr-accent`}
+              val={price.toFixed(2)}
+              classNames={`text-decoration-line-through ms-2 text-clr-accent old-price`}
             />
           </div>
         </div>

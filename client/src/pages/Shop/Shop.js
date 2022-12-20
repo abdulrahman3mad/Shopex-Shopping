@@ -1,62 +1,53 @@
 // Environment
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { loadProducts, setCurPage } from "../../redux-toolkit/features/shopSlice"
-
+import { loadProducts, setCurPage, setTimer } from "../../redux-toolkit/features/shopSlice"
 // Components
-import PageHeading from "../../components/PageHeading/PageHeading"
-import ProductsSearchForm from "../../components/ProductsSearchForm/ProductsSearchForm"
-import Pagination from "../../components/Pagination/Pagination";
-
+import { PageHeading, ProductsSearchForm, Pagination } from "../../components"
 //Sections
-import ProductsList from "../../sections/ProductsList/ProductsList"
+import { ProductsList } from "../../sections"
+// Hooks
+import useLoading from "../../Hooks/useLoading";
 
 function Shop() {
+
     const dispatch = useDispatch();
-    const { shop: { products, loading, filteredProducts, ItemsPerPage, curPage } } = useSelector((state => state));
-    const [start, setStart] = useState(0);
-    const [end, setEnd] = useState(ItemsPerPage);
+    const shop = useSelector((state => state.shop));
+    const { products, loading, ItemsPerPage, curPage, maxNumOfitems, searchData } = shop;
 
     useEffect(() => {
-        dispatch(loadProducts());
-    }, [])
-
-    useEffect(() => {
-        setStart((curPage - 1) * ItemsPerPage);
-        setEnd(curPage * ItemsPerPage);
+        dispatch(loadProducts({ curPage, ItemsPerPage, searchData }))
     }, [ItemsPerPage, curPage])
 
-    function handleSliding(curPage) {
-        dispatch(setCurPage(curPage));
-    }
+    useEffect(() => {
+        //Debouncing
+        let timer = setTimeout(() => {
+            dispatch(loadProducts({ curPage, ItemsPerPage, searchData }))
+        }, 500)
+
+        dispatch(setTimer(timer))
+    }, [searchData])
+
+    const handleSliding = (curPage) => dispatch(setCurPage(curPage));
+
+    const getPagination = () => (
+        <Pagination
+            maxNumOfitems={maxNumOfitems}
+            ItemsPerPage={ItemsPerPage}
+            handleSliding={handleSliding}
+        />)
 
     return (
         <>
-            <PageHeading heading="Our Shop" pages={["Home", "Products"]} />
+            <PageHeading heading="Our Shop" pages={["Home", "Shop"]} />
             <div className="section-spacing">
                 <div className="container">
-                    <div className="d-md-flex  align-content-center justify-content-between">
+                    <div className="d-md-flex align-content-center justify-content-between">
                         <ProductsSearchForm />
-                        <Pagination
-                            maxNumOfitems={filteredProducts ? filteredProducts?.length : products?.length}
-                            ItemsPerPage={ItemsPerPage}
-                            handleSliding={handleSliding}
-                        />
+                        {getPagination()}
                     </div>
-                    {
-                        loading ? (< div className="text-center"><img src="images/loading.gif"></img></div>)
-                            : (<ProductsList
-                                products={filteredProducts ? filteredProducts : products}
-                                start={start}
-                                end={end} />)
-
-                    }
-
-                    <Pagination
-                        maxNumOfitems={filteredProducts ? filteredProducts?.length : products?.length}
-                        ItemsPerPage={ItemsPerPage}
-                        handleSliding={handleSliding}
-                    />
+                    {useLoading(loading, () => <ProductsList products={products} />)}
+                    {getPagination()}
                 </div>
             </div>
         </>

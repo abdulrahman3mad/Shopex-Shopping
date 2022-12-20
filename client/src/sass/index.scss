@@ -15,6 +15,7 @@
 @import "./components/Pagination";
 @import "./components/FooterTab";
 @import "./components/LatBlogCard";
+@import "./components/loader";
 @import "./components/TopCatCard";
 @import "./components/TrendingProCard";
 @import "./components/MyAccDropdown";
@@ -28,10 +29,11 @@
 @import "./sections/LatestSE";
 @import "./sections/OfferSE";
 @import "./sections/TrendingProSE";
-
 @import "./sections/TopCatagoriesSE";
 @import "./sections/product";
 @import "./sections/Newsletter";
+@import "./sections/FooterSE";
+@import "./sections/Cart";
 @import "./sections//FooterSE";
 //AdminSE
 @import "./sections/Admin/AddProduct";

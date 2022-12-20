@@ -3,17 +3,20 @@ import { url_API } from "../../config";
 import axios from "axios";
 
 export const loadProducts = createAsyncThunk("shop/loadProducts", async (payload) => {
-    let res = await axios.get(`${url_API}/products`,);
-    return res.data;
+    let searchData = payload.searchData ? `&title_like=${payload.searchData}` : "";
+    let res = await axios.get(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}${searchData}`);
+    return [res.data, res.headers["x-total-count"]]
 })
 
 const initialState = {
     products: [],
-    filteredProducts: null,
+    searchData: "",
     loading: false,
     err: null,
+    maxNumOfitems: 0,
     ItemsPerPage: 10,
     curPage: 1,
+    timer: null
 }
 
 const shopSlice = createSlice({
@@ -33,6 +36,15 @@ const shopSlice = createSlice({
 
         setCurPage: (state, action) => {
             state.curPage = action.payload
+        },
+
+        setSearchData: (state, action) => {
+            if (state.searchData === "") state.curPage = 1;
+            state.searchData = action.payload
+        },
+
+        setTimer: (state, action) => {
+            state.timer = action.payload
         }
     },
 
@@ -42,7 +54,8 @@ const shopSlice = createSlice({
         },
 
         [loadProducts.fulfilled]: (state, action) => {
-            state.products = action.payload;
+            state.products = action.payload[0];
+            state.maxNumOfitems = action.payload[1];
             state.loading = false;
         },
 
@@ -52,5 +65,5 @@ const shopSlice = createSlice({
     }
 })
 
-export const { filterProducts, changeItemsPerPage, setCurPage } = shopSlice.actions;
+export const { filterProducts, changeItemsPerPage, setCurPage, setSearchData, setTimer } = shopSlice.actions;
 export default shopSlice.reducer;

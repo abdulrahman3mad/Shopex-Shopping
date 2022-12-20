@@ -1,20 +1,16 @@
-import FeaProCard from "../../components/FeaturedProCard/FeaProCard"
+import { FeaProCard } from "../../components"
 
-function ProductsList({ products, start, end }) {
-    const productsCards = products.slice(start, end).map((product, index) => {
-        
+function ProductsList({ products }) {
+    const productsCards = products.map((product) => {
         return (
             <div className="col-lg-3 col-md-6 col-12" key={product.id}>
                 <FeaProCard
+                    product={product}
                     classNames="shadow-0 circled"
-                    title={`${product.title}`}
-                    price={`${product.price}`}
-                    oldPrice={`${product.oldprice}`}
-                    img={`${product.img}`}
                 />
             </div>
         )
-    }) 
+    })
 
     return (
         <div className="products mt-5 pt-4">
