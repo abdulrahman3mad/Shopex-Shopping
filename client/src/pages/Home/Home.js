@@ -43,9 +43,7 @@ function Home() {
 			<TopCatagoriesSE
 				data={state.topCatagories.data ? state.topCatagories.data : null}
 			/>
-			{!state.user.user &&
-				<NewsletterSE />
-			}
+			<NewsletterSE />
 			<BrandsSE data={state.brands.data ? state.brands.data : null} />
 			<LatestBlogSE />
 		</>

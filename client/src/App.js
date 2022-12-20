@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // pages
 import SignUp from "./pages/SignUp/SignUp";
@@ -26,7 +26,6 @@ function App() {
 	useEffect(() => {
 		if (user && Object.keys(user).length) dispatch(getCart())
 	}, [user])
-
 
 	return (
 		<div className="App" >
