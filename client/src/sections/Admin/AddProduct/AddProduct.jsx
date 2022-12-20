@@ -2,13 +2,13 @@ import React, { memo } from "react";
 import { useState } from "react";
 import { ImImages } from "react-icons/im";
 import ImageUploading from "react-images-uploading";
+import { useDispatch } from "react-redux";
+import { insertProduct } from "../../../redux-toolkit/features/addProduct";
 
 function AddProduct() {
 	const maxNumber = 4;
-	const img = "img";
-	const alt = "alt";
-	const subImages = "subImages";
 	let name = "";
+	const dispatch = useDispatch();
 	const [images, setImages] = useState([]);
 	const [formData, setFormData] = useState({
 		title: "",
@@ -36,23 +36,19 @@ function AddProduct() {
 
 		if (images.length) {
 			for (let i = 0; i < images.length; i++) {
-				state = [
-					...state,
-					{ img: images[i].data_url, alt: images[i].file.name },
-				];
+				state.push({ img: images[i].data_url, alt: images[i].file.name });
 			}
 			setFormData((prev) => {
 				return {
 					...prev,
-					[img]: images[0].data_url,
-					[alt]: images[0].file.name,
-					[subImages]: images,
+					img: images[0].data_url,
+					alt: images[0].file.name,
+					subImages: state,
 				};
 			});
-			state = [];
-			// setImages([]);
+			setImages([]);
+			dispatch(insertProduct(formData));
 		}
-		console.log(formData);
 	};
 	/*
 	Library React-images-uploading
@@ -260,14 +256,12 @@ function AddProduct() {
 																		<button
 																			onClick={() => onImageUpdate(index)}
 																			className="btn btn-primary me-2"
-																			type="button"
 																		>
 																			Update
 																		</button>
 																		<button
 																			onClick={() => onImageRemove(index)}
 																			className="btn btn-danger ms-2"
-																			type="button"
 																		>
 																			Remove
 																		</button>
@@ -280,7 +274,6 @@ function AddProduct() {
 														<button
 															onClick={onImageRemoveAll}
 															className={"btn btn-danger"}
-															type="button"
 														>
 															Remove all images
 														</button>
