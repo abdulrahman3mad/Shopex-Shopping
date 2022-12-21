@@ -28,7 +28,7 @@ function App() {
 	useEffect(() => {
 		if (user && Object.keys(user).length) dispatch(getCart());
 	}, [user, dispatch]);
-
+  
 	return (
 		<div className="App">
 			<UpperBar

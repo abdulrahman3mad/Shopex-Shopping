@@ -1,8 +1,8 @@
 import React from "react";
-import Price from "../Price/Price";
+import {Price} from "components";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import { BsSuitHeart } from "react-icons/bs";
-import useAddToCart from "../../Hooks/useAddToCart";
+import useAddToCart from "Hooks/useAddToCart";
 
 function LatProCard({product}) {
   const { img, alt, title, icon, altIcon, price, discount } = product;

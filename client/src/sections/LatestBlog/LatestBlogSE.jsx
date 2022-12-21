@@ -1,8 +1,8 @@
 import React from "react";
-import LatBlogCard from "../../components/LatBlogCard/LatBlogCard";
+import {LatBlogCard} from "components";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getLatestBlogData } from "../../redux-toolkit/features/latestBlogSlice";
+import { getLatestBlogData } from "redux-toolkit/features/latestBlogSlice";
 
 function LatestBlogSE() {
 	const dispatch = useDispatch();

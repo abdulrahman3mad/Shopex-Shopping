@@ -2,9 +2,9 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 // Slices
-import { clearUserCart } from "../../redux-toolkit/features/cartSlices/cartSlice"
+import { clearUserCart } from "../../../redux-toolkit/features/cartSlices/cartSlice";
 // Components 
-import {CartProduct, CartTableHeader} from "../../components"
+import {CartProduct, CartTableHeader} from "../../../components"
 
 function CartProductsTable({ products }) {
 

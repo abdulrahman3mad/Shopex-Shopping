@@ -3,11 +3,11 @@ import React from "react";
 import { Link} from "react-router-dom";
 
 // Custome Hooks
-import useAddToCart from "../../Hooks/useAddToCart";
+import useAddToCart from "Hooks/useAddToCart";
 
 // Components
-import ColorPalette from "../ColorPalette/ColorPalette";
-import Price from "../Price/Price";
+import {ColorPalette} from "components"
+import {Price} from "components";
 
 function FeaProCard({ classNames, product }) {
   const { title, code, price, img, alt } = product;

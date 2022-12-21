@@ -2,7 +2,7 @@ import React from "react";
 import { ImFacebook, ImTwitter } from "react-icons/im";
 import { RiInstagramLine } from "react-icons/ri";
 import { FaPinterestSquare } from "react-icons/fa";
-import FooterTab from "../../components/FooterTab/FooterTab";
+import {FooterTab} from "components";
 
 function FooterSE() {
 	const date = new Date();

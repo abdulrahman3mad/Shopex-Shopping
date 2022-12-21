@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { BiChevronDown, BiUser } from "react-icons/bi";
-import { logout } from "../../redux-toolkit/features/userSlices/userSlice";
+import { logout } from "redux-toolkit/features/userSlices/userSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 function MyAccDropdown({ user }) {

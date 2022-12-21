@@ -2,7 +2,7 @@
 import { useDispatch } from "react-redux";
 
 // Slices
-import { addToCart, removeFromCart } from "../../redux-toolkit/features/cartSlices/cartSlice";
+import { addToCart, removeFromCart } from "../../../redux-toolkit/features/cartSlices/cartSlice";
 
 function CartProduct({ product, totalPrice }) {
     const { title, price, color, size, quantity } = product;

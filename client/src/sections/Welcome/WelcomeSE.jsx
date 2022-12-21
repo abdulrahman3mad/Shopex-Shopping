@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getData } from "../../redux-toolkit/features/homeDataSlice";
-import LinkComp from "../../components/Link/LinkComp";
+import { getData } from "redux-toolkit/features/homeDataSlice";
+import { LinkComp } from "components";
 
 function HomeSection({ data }) {
 	const WelcomeUI = () => {
@@ -87,16 +87,15 @@ function HomeSection({ data }) {
 			</>
 		) : null;
 	};
-
-	return (
-		<Fragment>
-			{/* <!-- Home section --> */}
-			<section className="home-section1 position-relative overflow-hidden">
-				{WelcomeUI()}
-			</section>
-			{/* <!-- End Home section --> */}
-		</Fragment>
-	);
+  return (
+    <Fragment>
+      {/* <!-- Home section --> */}
+      <section className="home-section1 position-relative overflow-hidden">
+        {WelcomeUI()}
+      </section>
+      {/* <!-- End Home section --> */}
+    </Fragment>
+  );
 }
 
 export default HomeSection;

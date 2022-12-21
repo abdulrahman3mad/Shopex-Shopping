@@ -1,11 +1,12 @@
 // Environment
 import { useSelector } from "react-redux";
-import CartData from "../../components/CartData/CartData";
-import EmptyCart from "../../components/EmptyCart/EmptyCart";
+
 // Hooks
-import useConditionalRender from "../../Hooks/useConditionalRender";
-// Imports
-import { PageHeading } from "../../components";
+import useConditionalRender from "Hooks/useConditionalRender";
+
+// components 
+import { PageHeading, CartData, EmptyCart } from "components";
+
 
 function Cart() {
     const { cart: { cart } } = useSelector((state) => state);

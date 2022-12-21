@@ -56,19 +56,18 @@ function FeaturedSE({ data }) {
 			},
 		],
 	};
-
-	return (
-		<Fragment>
-			<section className="featured sec section-spacing">
-				<div className="container">
-					<h2 className="text-clr-heading fw-bold fs-1 text-center mb-5">
-						Featured Products
-					</h2>
-					{featuredDataUI()}
-				</div>
-			</section>
-		</Fragment>
-	);
+  return (
+    <Fragment>
+      <section className="featured sec section-spacing">
+        <div className="container">
+          <h2 className="text-clr-heading fw-bold fs-1 text-center mb-5">
+            Featured Products
+          </h2>
+          {featuredDataUI()}
+        </div>
+      </section>
+    </Fragment>
+  );
 }
 
 export default FeaturedSE;
