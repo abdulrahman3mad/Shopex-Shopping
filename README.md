@@ -17,6 +17,13 @@ authentication & authorization flow for your prototyping.
 - Dashboard
 
 
+## Tech Stack
+
+**Client:** React, Redux Toolkit, Bootstrap, Sass,
+ React Router Dom, React Slick, Axios, React Image Uploading, React Icons, EmailJS/browser
+
+**Server:** JSON Server, JSON Server Auth
+
 ## Installation
 
 Install Shopex with npm
