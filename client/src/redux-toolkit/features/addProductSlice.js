@@ -18,7 +18,6 @@ export const insertProduct = createAsyncThunk(
 				headers: authHeader(),
 				data: data,
 			});
-			console.log(res);
 		} catch (error) {
 			if (error?.response?.data === "jwt expired") thunkAPI.dispatch(logout());
 			return rejectWithValue(error.massage);

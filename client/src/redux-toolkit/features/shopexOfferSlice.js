@@ -13,22 +13,22 @@ export const getShopexOffer = createAsyncThunk(
 export const shopexOfferSlice = createSlice({
 	initialState: {
 		data: null,
-		loading: false,
+		isLoading: false,
 		error: false,
 	},
 	name: "shopexOffer",
 	extraReducers: (builder) => {
 		builder.addCase(getShopexOffer.pending, (state, action) => {
-			state.loading = true;
+			state.isLoading = true;
 			state.error = false;
 		});
 		builder.addCase(getShopexOffer.fulfilled, (state, action) => {
 			state.data = action.payload;
 			state.error = false;
-			state.loading = false;
+			state.isLoading = false;
 		});
 		builder.addCase(getShopexOffer.rejected, (state, action) => {
-			state.loading = false;
+			state.isLoading = false;
 			state.error = true;
 		});
 	},
