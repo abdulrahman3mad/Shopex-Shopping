@@ -1,0 +1,62 @@
+.custom-muted-contact {
+	color: #aab2d2;
+}
+
+.contact {
+	.in-touch_top {
+		.social {
+			display: flex;
+			align-items: center;
+			a {
+        width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				margin-right: 14px;
+			}
+			a.insta {
+				background-color: #37daf3;
+			}
+		}
+		.colum {
+			display: flex;
+			align-items: center;
+			margin-bottom: 30px;
+			img {
+				margin-right: 16px;
+			}
+			.data {
+				p {
+					margin-bottom: 8px;
+				}
+			}
+		}
+	}
+	//
+	.in-touch__bottom {
+		.left {
+			form {
+				input {
+					border: 1px solid #c4c5d5;
+					padding: 13px 0 13px 12px;
+					&::placeholder {
+						color: #aab2d2;
+					}
+					&:focus-visible {
+						outline: 1px solid $accent-clr;
+					}
+				}
+				textarea {
+					border: 1px solid #c4c5d5;
+					padding: 13px 0 13px 12px;
+					&::placeholder {
+						color: #aab2d2;
+					}
+					&:focus-visible {
+						outline: 1px solid $accent-clr;
+					}
+				}
+			}
+		}
+	}
+}

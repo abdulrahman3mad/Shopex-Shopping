@@ -3,15 +3,19 @@ import { Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 // pages
-import SignUp from "pages/SignUp/SignUp";
-import LogIn from "pages/LogIn/LogIn";
-import NotFound from "pages/NotFound/NotFound";
-import Home from "pages/Home/Home";
-import Shop from "pages/Shop/Shop";
-import HeaderNav from "sections/UpperBar/UpperBar";
-import FooterSE from "sections/Footer/FooterSE";
-import Dashboard from "pages/Dashboard/Dashboard";
-import Cart from "pages/Cart/Cart";
+import {
+	Contact,
+	SignUp,
+	LogIn,
+	NotFound,
+	Home,
+	Shop,
+	FooterSE,
+	Dashboard,
+	Cart,
+} from "pages";
+//sections
+import { Navbar, UpperBar } from "sections";
 import { setUserData } from "redux-toolkit/features/userSlices/userSlice";
 import { getCart } from "redux-toolkit/features/cartSlices/cartSlice";
 
@@ -26,13 +30,13 @@ function App() {
 	useEffect(() => {
 		if (user && Object.keys(user).length) dispatch(getCart());
 	}, [user, dispatch]);
-
 	return (
 		<div className="App">
-			<HeaderNav
+			<UpperBar
 				user={user?.user}
 				cartProductsCount={cart.cart?.products?.length}
 			/>
+			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/login" element={<LogIn />}></Route>
@@ -41,6 +45,7 @@ function App() {
 				<Route path="/shop" element={<Shop />}></Route>
 				<Route path="/dashboard" element={<Dashboard />}></Route>
 				<Route path="/cart" element={<Cart />}></Route>
+				<Route path="/contact" element={<Contact />}></Route>
 			</Routes>
 			<FooterSE />
 		</div>

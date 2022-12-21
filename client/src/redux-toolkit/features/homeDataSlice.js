@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { url_API } from "../../config/index";
 import axios from "axios";
 
-export const getData = createAsyncThunk(
+export const getWelcomeData = createAsyncThunk(
 	"homeData/fetchData",
 	async (arg, thunkAPI) => {
 		try {
@@ -19,14 +19,14 @@ export const homeSlice = createSlice({
 	name: "homeData",
 	reducers: {},
 	extraReducers: (builder) => {
-		builder.addCase(getData.pending, (state, action) => {
+		builder.addCase(getWelcomeData.pending, (state, action) => {
 			state.isLoading = true;
 		});
-		builder.addCase(getData.fulfilled, (state, action) => {
+		builder.addCase(getWelcomeData.fulfilled, (state, action) => {
 			state.isLoading = false;
 			state.data = action.payload;
 		});
-		builder.addCase(getData.rejected, (state, action) => {
+		builder.addCase(getWelcomeData.rejected, (state, action) => {
 			state.isLoading = false;
 		});
 	},
