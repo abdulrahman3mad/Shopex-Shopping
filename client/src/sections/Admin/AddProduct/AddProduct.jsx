@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from "react";
+import React, { memo } from "react";
 import { useState } from "react";
 import { ImImages } from "react-icons/im";
 import ImageUploading from "react-images-uploading";
@@ -41,7 +41,7 @@ function AddProduct() {
 
 	const onSubmitHandler = (event) => {
 		event.preventDefault();
-		event.target.reset();
+
 		let state = [];
 		if (images.length) {
 			for (let i = 0; i < images.length; i++) {
@@ -57,6 +57,9 @@ function AddProduct() {
 			});
 			setIsFinished(true);
 			setImages([]);
+			event.target.reset();
+		} else {
+			alert("Images not loaded");
 		}
 	};
 	/*
@@ -265,12 +268,14 @@ function AddProduct() {
 																		<button
 																			onClick={() => onImageUpdate(index)}
 																			className="btn btn-primary me-2"
+																			type="button"
 																		>
 																			Update
 																		</button>
 																		<button
 																			onClick={() => onImageRemove(index)}
 																			className="btn btn-danger ms-2"
+																			type="button"
 																		>
 																			Remove
 																		</button>

@@ -55,14 +55,14 @@ function FooterSE() {
 							<FooterTab title={"Discount"} to={"/Discount"} />
 							<FooterTab title={"Returns"} to={"/Returns"} />
 							<FooterTab title={"Orders History"} to={"/Orders-History"} />
-							<FooterTab title={"Order Tracking"} to={"Order-Tracking"} />
+							<FooterTab title={"Order Tracking"} to={"/Order-Tracking"} />
 						</div>
 						<div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-xs-0">
 							<h4 className="text-clr-heading mb-5">Pages</h4>
 							<FooterTab title={"Blog"} to={"/Blog"} />
-							<FooterTab title={"Browse the Shop"} to={"/Browse-the-Shop"} />
+							<FooterTab title={"Browse the Shop"} to={"/shop"} />
 							<FooterTab title={"category"} to={"/category"} />
-							<FooterTab title={"Pre-Built Pages"} to={"/Pre-Built-Pages"} />
+							<FooterTab title={"Contact Us"} to={"/contact"} />
 							<FooterTab
 								title={"Visual Composer Elements"}
 								to={"/Visual-Composer-Elements"}

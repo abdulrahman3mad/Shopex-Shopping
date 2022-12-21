@@ -1,23 +1,17 @@
 import React, { Fragment } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getData } from "../../redux-toolkit/features/homeDataSlice";
 import LinkComp from "../../components/Link/LinkComp";
 
-function HomeSection() {
-	const dispatch = useDispatch();
-	const data = useSelector((state) => state.homeData);
-	useEffect(() => {
-		dispatch(getData());
-	}, [dispatch]);
-
+function HomeSection({ data }) {
 	const WelcomeUI = () => {
-		return data.data ? (
+		return data ? (
 			<>
 				<div className="chandeliers position-absolute">
 					<img
 						className="w-25"
-						src={data.data.welcome_Chandelier.image}
+						src={data.welcome_Chandelier.image}
 						alt="chandeliers light lamp"
 					/>
 				</div>
@@ -52,7 +46,7 @@ function HomeSection() {
 						</div>
 						{/* Carousal cards */}
 						<div className="carousel-inner h-100">
-							{data.data.welcome_data.map((ele) => {
+							{data.welcome_data.map((ele) => {
 								return (
 									<div className={ele.className} key={ele.id}>
 										<div className="row h-100">

@@ -1,17 +1,10 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import OfferCard from "../../components/OfferCard/OfferCard";
-import { getShopexOffer } from "../../redux-toolkit/features/shopexOfferSlice";
 
-function OfferSE() {
-	const state = useSelector((state) => state.shopexOffer);
-	const dispatch = useDispatch();
-	useEffect(() => {
-		dispatch(getShopexOffer());
-	}, [dispatch]);
+function OfferSE({ data }) {
 	const ShopexOfferUI = () => {
-		return state.data
-			? state.data.map((ele) => {
+		return data
+			? data.map((ele) => {
 					return (
 						<OfferCard
 							key={ele.id}
