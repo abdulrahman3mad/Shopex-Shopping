@@ -1,4 +1,4 @@
-import {CartProductsTable, CartTotalsCard} from "../../components";
+import {CartProductsTable, CartTotalsCard} from "components";
 
 function CartData({cart}) {
     return (

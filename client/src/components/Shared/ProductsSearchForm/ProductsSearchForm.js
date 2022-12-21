@@ -2,9 +2,9 @@
 import { AiOutlineSearch } from "react-icons/ai"
 import { useDispatch, useSelector } from "react-redux";
 //Slices
-import { changeItemsPerPage, setSearchData } from "../../redux-toolkit/features/shopSlice";
+import { changeItemsPerPage, setSearchData } from "redux-toolkit/features/shopSlice";
 //Components
-import { Input, SelectInput } from "../../components";
+import { Input, SelectInput } from "components";
 
 function ProductsSearchForm() {
     const { shop: { ItemsPerPage, searchData, timer } } = useSelector((state) => state)

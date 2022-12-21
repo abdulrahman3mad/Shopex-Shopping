@@ -1,5 +1,5 @@
 import React from "react";
-import useAddToCart from "../../Hooks/useAddToCart";
+import useAddToCart from "Hooks/useAddToCart";
 
 function TopCatCard({ product }) {
   const { img, alt, title, price } = product;

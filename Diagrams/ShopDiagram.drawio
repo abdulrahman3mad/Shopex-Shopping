@@ -1,0 +1,78 @@
+<mxfile host="65bd71144e">
+    <diagram id="aEItdYVHfJ4c7F0dbzAS" name="Page-1">
+        <mxGraphModel dx="732" dy="609" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="10" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="380" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;fontSize=12;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;span style=&quot;font-size: 18px&quot;&gt;Shop&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="250" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Pagination" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="450" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="190" as="sourcePoint"/>
+                        <mxPoint x="350" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="Search Form" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="450" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="350" y="370" as="sourcePoint"/>
+                        <mxPoint x="400" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;fontSize=12;" edge="1" parent="1" source="12" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Title Search&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;entryX=0.923;entryY=0.987;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;" edge="1" parent="1" source="13" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Items Per Page" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="GET&amp;nbsp; server/_page={page}&amp;amp;_limit={limit}&amp;amp;search={searc}" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="190" width="380" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;span style=&quot;font-size: 18px&quot;&gt;Server&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="100" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=classic;html=1;fontSize=12;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="17" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="480" y="380" as="sourcePoint"/>
+                        <mxPoint x="530" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="SEND Products" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="180" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Title" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="520" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="number" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="520" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="370" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&amp;nbsp; &amp;nbsp; &amp;nbsp;1- Max Num Of Items&lt;br&gt;2-Items Per Page&lt;br&gt;3- Handle Sliding" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="410" width="150" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

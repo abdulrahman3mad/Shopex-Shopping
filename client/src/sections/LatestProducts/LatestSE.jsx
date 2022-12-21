@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import LatProCard from "../../components/LatestProCard/LatestProCard";
+import { LatProCard } from "components";
 import { useDispatch, useSelector } from "react-redux";
-import { getLatestProData } from "../../redux-toolkit/features/latestProSlice";
+import { getLatestProData } from "redux-toolkit/features/latestProSlice";
 
 function LatestSE() {
   const state = useSelector((state) => state.latestPro);
@@ -13,7 +13,7 @@ function LatestSE() {
   const latestProUI = () => {
     return state.data
       ? state.data.map((pro) => {
-          return <LatProCard product={pro} key={pro.id}/>;
+          return <LatProCard product={pro} key={pro.id} />;
         })
       : null;
   };

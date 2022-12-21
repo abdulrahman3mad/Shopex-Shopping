@@ -1,5 +1,5 @@
 import React from "react";
-import LinkComp from "../../components/Link/LinkComp";
+import {LinkComp} from "components";
 
 function NewsletterSE() {
 	return (
