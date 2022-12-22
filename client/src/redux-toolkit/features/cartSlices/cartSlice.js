@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import isLoggedIn from "../../../helpers/isLoggedIn";
-import cartService from "../../../services/cartService";
+import isLoggedIn from "helpers/isLoggedIn";
+import cartService from "services/cartService";
 import { logout } from "../userSlices/userSlice";
 
 export const getCart = createAsyncThunk("cart-slice/getCart", async (payload, thunkAPI) => {

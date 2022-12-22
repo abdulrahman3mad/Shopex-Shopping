@@ -1,19 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 
 // pages
-import SignUp from "./pages/SignUp/SignUp";
-import LogIn from "./pages/LogIn/LogIn";
-import NotFound from "./pages/NotFound/NotFound";
-import Home from "./pages/Home/Home";
-import Shop from "./pages/Shop/Shop";
-import HeaderNav from "./sections/UpperBar/UpperBar";
-import FooterSE from "./sections/Footer/FooterSE";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import Cart from "./pages/Cart/Cart";
+import SignUp from "pages/SignUp/SignUp";
+import LogIn from "pages/LogIn/LogIn";
+import NotFound from "pages/NotFound/NotFound";
+import Home from "pages/Home/Home";
+import Shop from "pages/Shop/Shop";
+import HeaderNav from "sections/UpperBar/UpperBar";
+import FooterSE from "sections/Footer/FooterSE";
+import Dashboard from "pages/Dashboard/Dashboard";
+import Cart from "pages/Cart/Cart";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { setUserData } from "./redux-toolkit/features/userSlices/userSlice";
-import { getCart } from "./redux-toolkit/features/cartSlices/cartSlice";
+import { setUserData } from "redux-toolkit/features/userSlices/userSlice";
+import { getCart } from "redux-toolkit/features/cartSlices/cartSlice";
 
 function App() {
 	const { user, cart } = useSelector((state) => state);
