@@ -1,19 +1,21 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 // pages
-import SignUp from "pages/SignUp/SignUp";
-import LogIn from "pages/LogIn/LogIn";
-import NotFound from "pages/NotFound/NotFound";
-import Home from "pages/Home/Home";
-import Shop from "pages/Shop/Shop";
-import Dashboard from "pages/Dashboard/Dashboard";
-import Cart from "pages/Cart/Cart";
-import Contact from "pages/Contact/Contact";
+import {
+	Contact,
+	SignUp,
+	LogIn,
+	NotFound,
+	Home,
+	Shop,
+	Dashboard,
+	Cart,
+} from "pages";
 
-// Sections
-import { UpperBar, Navbar, FooterSE } from "sections";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+//sections
+import { Navbar, UpperBar, FooterSE } from "sections";
 import { setUserData } from "redux-toolkit/features/userSlices/userSlice";
 import { getCart } from "redux-toolkit/features/cartSlices/cartSlice";
 
@@ -28,7 +30,6 @@ function App() {
 	useEffect(() => {
 		if (user && Object.keys(user).length) dispatch(getCart());
 	}, [user, dispatch]);
-
 	return (
 		<div className="App">
 			<UpperBar

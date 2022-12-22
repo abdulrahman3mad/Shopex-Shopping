@@ -258,39 +258,7 @@
       "alt": "plywood armchair"
     }
   ],
-  "carts": [
-    {
-      "products": [
-        {
-          "id": 3,
-          "title": "Plywood",
-          "code": "Y53201",
-          "price": 59,
-          "oldprice": 50,
-          "img": "images/Featured-Products-img/plywood-4.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 1
-        },
-        {
-          "id": 4,
-          "title": "arm",
-          "code": "F45681",
-          "price": 39.9,
-          "oldprice": 50,
-          "img": "images/Featured-Products-img/plywood-5.webp",
-          "alt": "plywood armchair",
-          "size": "XL",
-          "color": "tan",
-          "quantity": 1
-        }
-      ],
-      "totalPrice": 98.9,
-      "userId": 3,
-      "id": 3
-    }
-  ],
+  "carts": [],
   "welcome": {
     "welcome_Chandelier": {
       "id": 1,
