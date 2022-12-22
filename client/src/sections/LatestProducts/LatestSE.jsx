@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { LatProCard } from "components";
+=======
+import {LatProCard} from "components";
+>>>>>>> moreEnhans
 
 function LatestSE({ data }) {
   const latestProUI = () => {
