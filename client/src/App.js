@@ -10,12 +10,11 @@ import {
 	NotFound,
 	Home,
 	Shop,
-	FooterSE,
 	Dashboard,
 	Cart,
 } from "pages";
 //sections
-import { Navbar, UpperBar } from "sections";
+import { Navbar, UpperBar, FooterSE } from "sections";
 import { setUserData } from "redux-toolkit/features/userSlices/userSlice";
 import { getCart } from "redux-toolkit/features/cartSlices/cartSlice";
 

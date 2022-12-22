@@ -1,5 +1,5 @@
 import React from "react";
-import LatProCard from "../../components/LatestProCard/LatestProCard";
+import {LatProCard} from "components";
 
 function LatestSE({ data }) {
 	const latestProUI = () => {

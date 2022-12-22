@@ -5,3 +5,4 @@ export { default as SignUp } from "./SignUp/SignUp";
 export { default as NotFound } from "./NotFound/NotFound";
 export { default as Shop } from "./Shop/Shop";
 export { default as Contact } from "./Contact/Contact";
+export { default as Dashboard } from "./Dashboard/Dashboard";
