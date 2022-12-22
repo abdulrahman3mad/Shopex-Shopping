@@ -1,7 +1,9 @@
+
 import React, { useRef } from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import { PageHeading, Button } from "../../components";
+import { PageHeading, Button } from "components";
 import emailjs from "@emailjs/browser";
+
 function Contact() {
 	const form = useRef();
 

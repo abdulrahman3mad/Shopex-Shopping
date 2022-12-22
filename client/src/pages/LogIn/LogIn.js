@@ -84,7 +84,6 @@ function LogIn() {
                 <p className="text-black-50 mt-3 fs-9">Don't Have an Account? <Link to="/signup" className="text-clr-primary accent-clr-hover">Create account</Link>
                 </p>
             </AuthForm>
-            <BrandsSE />
         </>
     )
 }

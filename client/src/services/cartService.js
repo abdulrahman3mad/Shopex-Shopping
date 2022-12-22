@@ -1,10 +1,10 @@
 import axios from "axios";
-import { url_API } from "../config";
-import authHeader from "../helpers/authHeader";
+import { CART_API } from "../config";
+import authHeader from "helpers/authHeader";
 
 async function getCart(user) {
     try {
-        let res = await axios.get(`${url_API}/carts/${user.id}`, { headers: authHeader() })
+        let res = await axios.get(`${CART_API}/${user.id}`, { headers: authHeader() })
         return res
     } catch (err) {
         return err
@@ -15,7 +15,7 @@ async function addNewCart(cart, user) {
     try {
         let res = await axios({
             method: "post",
-            url: `${url_API}/carts`,
+            url: `${CART_API}`,
             headers: authHeader(),
             data: {
                 ...cart,
@@ -34,7 +34,7 @@ async function updateCart(cart, user) {
     try {
         res = await axios({
             method: "patch",
-            url: `${url_API}/carts/update/${cart.id}`,
+            url: `${CART_API}/update/${cart.id}`,
             headers: authHeader(),
             data: cart
         })
@@ -47,7 +47,7 @@ async function updateCart(cart, user) {
 async function clearCart(cart) {
     let res = await axios({
         method: "delete",
-        url: `${url_API}/carts/delete/${cart.id}`,
+        url: `${CART_API}/delete/${cart.id}`,
         headers: authHeader(),
     })
 

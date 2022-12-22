@@ -6,8 +6,7 @@ import { Link} from "react-router-dom";
 import useAddToCart from "Hooks/useAddToCart";
 
 // Components
-import {ColorPalette} from "components"
-import {Price} from "components";
+import {ColorPalette, Price} from "components"
 
 function FeaProCard({ classNames, product }) {
   const { title, code, price, img, alt } = product;
