@@ -32,6 +32,12 @@
       "name": "Hisham",
       "id": 5,
       "admin": true
+    },
+    {
+      "email": "abdo_emad1@gmail.com",
+      "password": "$2a$10$M1iXE7fmWDiHanIhh2oGju6W/ehLh6IksrFmrgYX4GZHDFO9zmrOq",
+      "name": "abdoemad",
+      "id": 6
     }
   ],
   "products": [
@@ -258,7 +264,27 @@
       "alt": "plywood armchair"
     }
   ],
-  "carts": [],
+  "carts": [
+    {
+      "products": [
+        {
+          "id": 4,
+          "title": "arm",
+          "code": "F45681",
+          "price": 39.9,
+          "oldprice": 50,
+          "img": "images/Featured-Products-img/plywood-5.webp",
+          "alt": "plywood armchair",
+          "size": "XL",
+          "color": "tan",
+          "quantity": 3
+        }
+      ],
+      "totalPrice": 119.69999999999999,
+      "userId": 3,
+      "id": 3
+    }
+  ],
   "welcome": {
     "welcome_Chandelier": {
       "id": 1,

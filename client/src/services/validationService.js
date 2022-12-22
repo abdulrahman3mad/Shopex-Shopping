@@ -1,6 +1,6 @@
 const formRegex = {
     name: [/^[a-zA-Z][a-zA-Z0-9]{3,13}[a-zA-Z]$/, "must contain 5 to 15 char and only start and end with a letter"],
-    email: [/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+/, "must be a valid email address. ex: example@gmail.com"],
+    email: [/^[a-zA-Z0-9_\-\.!#$%&'*^]+@[a-zA-Z0-9]+\.[a-zA-Z]+/, "must be a valid email address. ex: example@gmail.com"],
     password: [/[a-zA-Z0-9]{8,}/, "password must contain at least 8 char"],
 }
 
