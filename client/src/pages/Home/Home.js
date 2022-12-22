@@ -13,10 +13,10 @@ import {
 	NewsletterSE,
 	BrandsSE,
 	LatestBlogSE,
-} from "../../sections";
+} from "sections";
 
 //component
-import Loader from "../../components/Loader/Loader";
+import { Loader } from "components";
 
 //Slices AsyncThunk
 import {

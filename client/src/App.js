@@ -8,14 +8,14 @@ import Home from "pages/Home/Home";
 import Shop from "pages/Shop/Shop";
 import Dashboard from "pages/Dashboard/Dashboard";
 import Cart from "pages/Cart/Cart";
+import Contact from "pages/Contact/Contact";
 
 // Sections
 import { UpperBar, Navbar, FooterSE } from "sections";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { setUserData } from "./redux-toolkit/features/userSlices/userSlice";
-import { getCart } from "./redux-toolkit/features/cartSlices/cartSlice";
-import { Contact } from "./pages";
+import { setUserData } from "redux-toolkit/features/userSlices/userSlice";
+import { getCart } from "redux-toolkit/features/cartSlices/cartSlice";
 
 function App() {
 	const { user, cart } = useSelector((state) => state);

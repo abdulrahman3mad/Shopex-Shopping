@@ -5,13 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom"
 
 // Section && Components 
-import validation from "../../services/validationService";
-import { AuthMessage, PageHeading, FormHeading, ValidatedInput, Button } from "../../components"
-import { AuthForm, BrandsSE } from "../../sections"
+import validation from "services/validationService";
+import { AuthMessage, PageHeading, FormHeading, ValidatedInput, Button } from "components"
+import { AuthForm } from "sections"
 
 //Slices
-import { setValidationMessage, clearMessage } from "../../redux-toolkit/features/userSlices/authMessage";
-import { login } from "../../redux-toolkit/features/userSlices/userSlice";
+import { setValidationMessage, clearMessage } from "redux-toolkit/features/userSlices/authMessage";
+import { login } from "redux-toolkit/features/userSlices/userSlice";
 
 function LogIn() {
     const navigate = useNavigate();
