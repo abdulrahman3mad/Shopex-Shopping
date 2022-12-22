@@ -1,4 +1,4 @@
-import { FeaProCard } from "../../components"
+import { FeaProCard } from "../../../components"
 
 function ProductsList({ products }) {
     const productsCards = products.map((product) => {

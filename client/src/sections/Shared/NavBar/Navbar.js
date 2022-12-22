@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { BiChevronDown, BiSearchAlt } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { setSearchData } from "../../redux-toolkit/features/shopSlice";
+import { setSearchData } from "../../../redux-toolkit/features/shopSlice";
 
 function Navbar() {
 	const dispatch = useDispatch();
