@@ -1,7 +1,4 @@
 import React, { Fragment } from "react";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { getData } from "redux-toolkit/features/homeDataSlice";
 import { LinkComp } from "components";
 
 function HomeSection({ data }) {
