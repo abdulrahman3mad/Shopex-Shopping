@@ -17,21 +17,21 @@ export const getLatestProData = createAsyncThunk(
 export const latestProSlice = createSlice({
 	initialState: {
 		data: null,
-		loading: false,
+		isLoading: false,
 		error: false,
 	},
 	name: "latestPro",
 	extraReducers: (builder) => {
 		builder.addCase(getLatestProData.pending, (state, action) => {
-			state.loading = true;
+			state.isLoading = true;
 		});
 		builder.addCase(getLatestProData.fulfilled, (state, action) => {
 			state.data = action.payload;
-			state.loading = false;
+			state.isLoading = false;
 		});
 		builder.addCase(getLatestProData.rejected, (state, action) => {
 			state.error = true;
-			state.loading = false;
+			state.isLoading = false;
 		});
 	},
 });

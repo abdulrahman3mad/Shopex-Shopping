@@ -1,26 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Fragment } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { FeaProCard } from "components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { FeaProCard } from "components";
-import { getFeaturedData } from "redux-toolkit/features/FeaturedDataSlice";
-
-function FeaturedSE() {
-  const state = useSelector((state) => state.featuredData);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getFeaturedData());
-  }, [dispatch]);
-
+function FeaturedSE({ data }) {
   const featuredDataUI = () => {
-    return state.data ? (
+    return data ? (
       <div className="slider">
         <Slider {...settings}>
-          {state.data.map((prod) => {
+          {data.map((prod) => {
             return (
               <FeaProCard
                 product={prod}
@@ -66,7 +56,6 @@ function FeaturedSE() {
       },
     ],
   };
-
   return (
     <Fragment>
       <section className="featured sec section-spacing">

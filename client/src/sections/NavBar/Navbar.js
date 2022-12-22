@@ -17,7 +17,7 @@ function Navbar() {
 
 	return (
 		<Fragment>
-			<div className="nav-ctn">
+			<div className="nav-ctn shadow-sm position-sticky top-0">
 				<nav className="navbar navbar-expand-lg container">
 					<Link className="navbar-brand" to="/">
 						Hekto
@@ -49,7 +49,11 @@ function Navbar() {
 								</Link>
 							</li>
 						</ul>
-						<form onSubmit={(e) => handleSearchInput(e)} className="form-inline d-flex" role="search">
+						<form
+							onSubmit={(e) => handleSearchInput(e)}
+							className="form-inline d-flex"
+							role="search"
+						>
 							<input
 								className="form-control"
 								type="search"
@@ -58,7 +62,7 @@ function Navbar() {
 								value={inputData}
 								onChange={(e) => setInputData(e.target.value)}
 							/>
-							<button className="btn btn-outline-success" type="submit" >
+							<button className="btn btn-outline-success" type="submit">
 								<BiSearchAlt className="search-icon" />
 							</button>
 						</form>

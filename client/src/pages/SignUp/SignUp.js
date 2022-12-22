@@ -81,7 +81,6 @@ function SignUp() {
                 <Button val="Sign Up" />
                 <p className="text-black-50 mt-3 fs-9">Have an Account? <Link to="/login" className="text-clr-primary accent-clr-hover">Login</Link></p>
             </AuthForm>
-            <BrandsSE />
         </>
     )
 }
