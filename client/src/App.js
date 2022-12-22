@@ -30,14 +30,14 @@ function App() {
 	useEffect(() => {
 		if (user && Object.keys(user).length) dispatch(getCart());
 	}, [user, dispatch]);
-	
+
 	return (
 		<div className="App">
 			<UpperBar
 				user={user?.user}
 				cartProductsCount={cart.cart?.products?.length}
 			/>
-			<Navbar />
+			<Navbar user={user?.user} />
 			<Routes>
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/login" element={<LogIn />}></Route>

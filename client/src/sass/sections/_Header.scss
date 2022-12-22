@@ -53,7 +53,7 @@
 			}
 			.menu-drop {
 				position: absolute;
-				z-index: 5;
+				z-index: 101;
 				top: 150%;
 				left: -5px;
 				text-align: center;
@@ -131,10 +131,24 @@
 	.nav-item {
 		.nav-link {
 			color: #1f176d;
-			line-height: 28.2px;
 			padding: 17.5px 16px;
 			&:hover {
 				color: #fb2e86;
+			}
+		}
+	}
+	.my-acc-drop {
+		display: none;
+		.myAccount {
+			.myAccount__btn {
+				color: #0d0e43 !important;
+			}
+			a {
+				color: #1f176d !important;
+				padding: 17.5px 16px;
+				&:hover {
+					color: #fb2e86 !important;
+				}
 			}
 		}
 	}
@@ -190,6 +204,16 @@
 @media (max-width: 576px) {
 	.header__top {
 		display: none;
+	}
+	.nav-ctn {
+		.my-acc-drop {
+			display: block;
+				.myAccount {
+					flex-direction: column;
+					align-items: flex-start;
+					margin-bottom: 20px;
+				}
+		}
 	}
 }
 @media (max-width: 767px) {

@@ -1,24 +1,25 @@
+import { MyAccDropdown } from "components";
 import React, { Fragment, useState } from "react";
 import { BiChevronDown, BiSearchAlt } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { setSearchData } from "../../../redux-toolkit/features/shopSlice";
 
-function Navbar() {
+function Navbar({ user}) {
 	const dispatch = useDispatch();
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 	const [inputData, setInputData] = useState("");
 
 	function handleSearchInput(e) {
 		e.preventDefault();
 		dispatch(setSearchData(inputData));
-		navigate("/shop")
+		navigate("/shop");
 	}
 
 	return (
 		<Fragment>
 			<div className="nav-ctn shadow-sm position-sticky top-0">
-				<nav className="navbar navbar-expand-lg container">
+				<nav className="navbar navbar-expand-lg container ps-3 pe-3 ps-sm-0 pe-sm-0">
 					<Link className="navbar-brand" to="/">
 						Hekto
 					</Link>
@@ -43,15 +44,20 @@ function Navbar() {
 									<BiChevronDown className="icon angel-down" />
 								</Link>
 							</li>
+							{/* Shop */}
 							<li className="nav-item">
 								<Link className="nav-link" to="/shop">
 									Shop
 								</Link>
 							</li>
+							{/* my Account dropdown*/}
+							<li className="nav-item my-acc-drop">
+								<MyAccDropdown user={user} />
+							</li>
 						</ul>
 						<form
 							onSubmit={(e) => handleSearchInput(e)}
-							className="form-inline d-flex"
+							className="form-inline d-flex mb-3 mb-md-0"
 							role="search"
 						>
 							<input
