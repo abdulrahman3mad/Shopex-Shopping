@@ -25,6 +25,8 @@ authentication & authorization flow for your prototyping.
 **Server:** JSON Server, JSON Server Auth
 
 ## Installation
+> **Note**
+> When you open the project in visual studio code, it should automatically run all of these line commands if not do it manually.
 
 Install Shopex with npm
 
