@@ -62,7 +62,7 @@ function MyAccDropdown({ user }) {
 	};
 
 	return (
-		<div className=" myAccount dropdown pointer-event align-items-center d-flex">
+		<div className=" myAccount dropdown pointer-event d-flex">
 			{myAccountUI()}
 		</div>
 	);

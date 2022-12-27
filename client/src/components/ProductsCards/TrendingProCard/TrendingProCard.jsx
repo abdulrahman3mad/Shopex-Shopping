@@ -9,7 +9,7 @@ function TrendingProCard({product}) {
   const handleAddToCart = useAddToCart();
 
   return (
-    <div className="TrendingProCard col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3 mb-sm-0">
+    <div className="TrendingProCard col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-lg-0">
       <div className="card border-0">
         <div className="card-img position-relative overflow-hidden">
           <img src={img} alt={alt} className={"card-img-top"} />

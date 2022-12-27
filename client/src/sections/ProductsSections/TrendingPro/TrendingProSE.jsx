@@ -12,7 +12,7 @@ function TrendingProSE({ data }) {
           })}
         </div>
         <div className="trending-products__bottom mt-4 row">
-          <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-0 mb-sm-4">
+          <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-4 mb-lg-0">
             {
               <div className="left-ctn p-4 rounded-2">
                 <h4 className="fw-bold mb-3">{data.discountPro50.title}</h4>

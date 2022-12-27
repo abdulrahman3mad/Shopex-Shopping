@@ -39,7 +39,7 @@ function App() {
 				user={user?.user}
 				cartProductsCount={cart.cart?.products?.length}
 			/>
-			<Navbar />
+			<Navbar user={user?.user} />
 			<Routes>
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/login" element={<LogIn />}></Route>
