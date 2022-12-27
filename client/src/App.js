@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
+
 // pages
 import {
 	Contact,
@@ -12,6 +13,7 @@ import {
 	Shop,
 	Dashboard,
 	Cart,
+	AddBlog
 } from "pages";
 
 //sections
@@ -30,7 +32,7 @@ function App() {
 	useEffect(() => {
 		if (user && Object.keys(user).length) dispatch(getCart());
 	}, [user, dispatch]);
-	
+
 	return (
 		<div className="App">
 			<UpperBar
@@ -47,6 +49,7 @@ function App() {
 				<Route path="/dashboard" element={<Dashboard />}></Route>
 				<Route path="/cart" element={<Cart />}></Route>
 				<Route path="/contact" element={<Contact />}></Route>
+				<Route path="/blog/add" element={<AddBlog />}></Route>
 			</Routes>
 			<FooterSE />
 		</div>

@@ -6,3 +6,4 @@ export { default as NotFound } from "pages/NotFound/NotFound";
 export { default as Shop } from "pages/Shop/Shop";
 export { default as Contact } from "pages/Contact/Contact";
 export { default as Dashboard } from "pages/Dashboard/Dashboard";
+export { default as AddBlog } from "pages/AddBlog/AddBlog";

@@ -1,0 +1,16 @@
+@mixin layout {
+  height: 400px;
+  width:100%;
+}
+
+textarea {
+  @include layout;
+  overflow-y: auto;
+  &:focus {
+    outline: none;
+  }
+}
+
+.viewArea {
+  @include layout;
+}
