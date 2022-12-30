@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import userService from "../../../services/userService";
+import userService from "services/userService";
 import { setAuthMessage } from "./authMessage";
 import { resetCart } from "../cartSlices/cartSlice";
 
@@ -20,9 +20,7 @@ export const login = createAsyncThunk("user-slice/login", async (payload, thunkA
         thunkAPI.dispatch(setAuthMessage(""));
         localStorage.setItem("user", JSON.stringify(user));
     }
-    else {
-        thunkAPI.dispatch(setAuthMessage("Email or password is wrong!"));
-    }
+    else  thunkAPI.dispatch(setAuthMessage("Email or password is wrong!"));
     return user.user;
 })
 

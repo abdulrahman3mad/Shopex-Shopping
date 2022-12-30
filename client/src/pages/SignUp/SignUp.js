@@ -3,32 +3,35 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-import validation from "../../services/validationService";
-import { AuthMessage, PageHeading, FormHeading, ValidatedInput, Button } from "../../components"
-import { AuthForm, BrandsSE } from "../../sections"
+// Components & Sections 
+import { AuthMessage, PageHeading, FormHeading, ValidatedInput, Button } from "components"
+import { AuthForm } from "sections"
 
-//Slices
-import { setValidationMessage, clearMessage } from "../../redux-toolkit/features/userSlices/authMessage";
-import { register } from "../../redux-toolkit/features/userSlices/userSlice";
+//Slices && Services
+import validation from "services/validationService";
+import { setValidationMessage, clearMessage } from "redux-toolkit/features/userSlices/authMessage";
+import { register } from "redux-toolkit/features/userSlices/userSlice";
 
 function SignUp() {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const { message } = useSelector((state) => state.authMessage);
+    const { user } = useSelector((state) => state.user);
+
     const [formState, setFormState] = useState({
         name: "",
         email: "",
         password: "",
     })
 
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const { user: { user }, authMessage: { message } } = useSelector((state) => state);
-
     useEffect(() => {
         dispatch(clearMessage());
-    }, [dispatch, navigate])
+    }, [])
 
     useEffect(() => {
         user && Object.keys(user).length && navigate("/login")
-    }, [user, message, dispatch, navigate])
+    }, [user])
 
     function submitHandler(e) {
         e.preventDefault()
@@ -48,7 +51,7 @@ function SignUp() {
         <>
             <PageHeading heading="My Account" pages={["Home", "SignUp"]} />
             <AuthForm onSubmit={submitHandler}>
-                {message && message.authMessage && <AuthMessage message={message.authMessage} />}
+                {message?.authMessage && <AuthMessage message={message.authMessage} />}
                 <FormHeading heading="Sign Up" subHeading="Please SignUp using account detail bellow." />
                 <div className="mt-5">
                     <ValidatedInput
@@ -79,7 +82,9 @@ function SignUp() {
                     />
                 </div>
                 <Button val="Sign Up" />
-                <p className="text-black-50 mt-3 fs-9">Have an Account? <Link to="/login" className="text-clr-primary accent-clr-hover">Login</Link></p>
+                <p className="text-black-50 mt-3 fs-9">Have an Account?
+                    <Link to="/login" className="text-clr-primary accent-clr-hover"> Login</Link>
+                </p>
             </AuthForm>
         </>
     )

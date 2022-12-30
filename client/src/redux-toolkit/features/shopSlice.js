@@ -2,23 +2,30 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { url_API } from "../../config";
 import axios from "axios";
 
+// loadProducts is an action creater that will run first the promise call back 
+// and based on the returned promised state, will dispatch a the suitable promise action 
 export const loadProducts = createAsyncThunk("shop/loadProducts", async (payload) => {
     let searchData = payload.searchData ? `&title_like=${payload.searchData}` : "";
     let res = await axios.get(`${url_API}/products?_page=${payload.curPage}&_limit=${payload.ItemsPerPage}${searchData}`);
     return [res.data, res.headers["x-total-count"]]
 })
 
+// console.log(loadProducts.pending()) // return action with (type:shop/loadProducts/pending, payload:undefined, meta)
+// console.log(loadProducts.fulfilled())
+// console.log(loadProducts.rejected()) // return action with (type:shop/loadProducts/pending, payload:undefined, meta, error)
+
 const initialState = {
     products: [],
-    searchData: "",
-    loading: false,
+    isLoading: false,
     err: null,
+    searchData: "",
     maxNumOfitems: 0,
     ItemsPerPage: 10,
     curPage: 1,
     timer: null
 }
 
+// FilterProducts, setCurPage, etc. are all reducers, and the action is auto generated with the same name of reducer 
 const shopSlice = createSlice({
     name: "shopSlice",
     initialState,
@@ -44,23 +51,24 @@ const shopSlice = createSlice({
         },
 
         setTimer: (state, action) => {
+            // action type: slicename/action name (same name of reducer) 
             state.timer = action.payload
         }
     },
 
     extraReducers: {
-        [loadProducts.pending]: (state, action) => {
-            state.loading = true;
+        [loadProducts.pending]: (state) => {
+            state.isLoading = true;
         },
 
         [loadProducts.fulfilled]: (state, action) => {
             state.products = action.payload[0];
             state.maxNumOfitems = action.payload[1];
-            state.loading = false;
+            state.isLoading = false;
         },
 
-        [loadProducts.rejected]: (state, action) => {
-            state.loading = false;
+        [loadProducts.rejected]: (state) => {
+            state.isLoading = false;
         },
     }
 })

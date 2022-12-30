@@ -1,9 +1,7 @@
 // Environment
 import { useSelector } from "react-redux";
-
 // Hooks
 import useConditionalRender from "Hooks/useConditionalRender";
-
 // components 
 import { PageHeading, CartData, EmptyCart } from "components";
 

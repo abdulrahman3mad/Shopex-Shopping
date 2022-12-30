@@ -1,26 +1,26 @@
 // Environment
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { loadProducts, setCurPage, setTimer } from "../../redux-toolkit/features/shopSlice"
+//Slices 
+import { loadProducts, setCurPage, setTimer } from "redux-toolkit/features/shopSlice"
 // Components
-import { PageHeading, ProductsSearchForm, Pagination } from "../../components"
+import { PageHeading, ProductsSearchForm, Pagination } from "components"
 //Sections
-import { ProductsList } from "../../sections"
+import { ProductsList } from "sections"
 // Hooks
-import useLoading from "../../Hooks/useLoading";
+import { useLoading } from "Hooks";
 
 function Shop() {
-
     const dispatch = useDispatch();
     const shop = useSelector((state => state.shop));
-    const { products, loading, ItemsPerPage, curPage, maxNumOfitems, searchData } = shop;
+    const { products, isLoading, ItemsPerPage, curPage, maxNumOfitems, searchData } = shop;
 
     useEffect(() => {
         dispatch(loadProducts({ curPage, ItemsPerPage, searchData }))
     }, [ItemsPerPage, curPage])
 
+    //Debouncing (Performance Issue)
     useEffect(() => {
-        //Debouncing
         let timer = setTimeout(() => {
             dispatch(loadProducts({ curPage, ItemsPerPage, searchData }))
         }, 500)
@@ -35,7 +35,8 @@ function Shop() {
             maxNumOfitems={maxNumOfitems}
             ItemsPerPage={ItemsPerPage}
             handleSliding={handleSliding}
-        />)
+        />
+    )
 
     return (
         <>
@@ -46,7 +47,7 @@ function Shop() {
                         <ProductsSearchForm />
                         {getPagination()}
                     </div>
-                    {useLoading(loading, () => <ProductsList products={products} />)}
+                    {useLoading(isLoading, <ProductsList products={products} />)}
                     {getPagination()}
                 </div>
             </div>

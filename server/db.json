@@ -44,11 +44,17 @@
       "password": "$2a$10$FZ.AG5wsAWb4w5OhbMxRXuwQaRc.1CcLWab3unHIewonblDI7wGNe",
       "name": "abdoemad",
       "id": 7
+    },
+    {
+      "email": "abdo@gmail.com",
+      "password": "$2a$10$G/vQiWRcZT7tgzbvtXtipePaxksHtQ5nbozFyNtQIAesWI3Yrc0P6",
+      "name": "abdoemad",
+      "id": 8
     }
   ],
   "products": [
     {
-      "id": 1,
+      "id": 35,
       "title": "arm chair",
       "code": "D45201",
       "price": 32,
@@ -59,7 +65,7 @@
       "color": "tan"
     },
     {
-      "id": 2,
+      "id": 154,
       "title": "chair",
       "code": "C45382",
       "price": 45,
@@ -70,7 +76,7 @@
       "color": "tan"
     },
     {
-      "id": 3,
+      "id": 12,
       "title": "Plywood",
       "code": "Y53201",
       "price": 59,
@@ -81,7 +87,7 @@
       "color": "tan"
     },
     {
-      "id": 4,
+      "id": 102,
       "title": "arm",
       "code": "F45681",
       "price": 39.9,
@@ -92,7 +98,7 @@
       "color": "tan"
     },
     {
-      "id": 5,
+      "id": 13,
       "title": "Plywood3",
       "code": "Y53201",
       "price": 59,
@@ -103,7 +109,7 @@
       "color": "tan"
     },
     {
-      "id": 6,
+      "id": 614,
       "title": "Ply",
       "code": "D45201",
       "price": 32,
@@ -114,7 +120,7 @@
       "color": "tan"
     },
     {
-      "id": 7,
+      "id": 15,
       "title": "some Chair",
       "code": "C45382",
       "price": 45,
@@ -125,116 +131,62 @@
       "color": "tan"
     },
     {
-      "id": 8,
-      "title": "Plywood arm chair",
-      "code": "F45681",
-      "price": 39.9,
-      "oldprice": 50,
-      "img": "images/Featured-Products-img/plywood-5.webp",
-      "alt": "plywood armchair",
-      "size": "XL",
-      "color": "tan"
-    },
-    {
-      "id": 9,
-      "title": "Plywood arm chair",
-      "code": "D45201",
-      "price": 32,
-      "oldprice": 50,
-      "img": "images/Featured-Products-img/plywood-2.webp",
-      "alt": "plywood armchair",
-      "size": "XL",
-      "color": "tan"
-    },
-    {
-      "id": 10,
-      "title": "Plywood arm chair",
-      "code": "C45382",
-      "price": 45,
-      "oldprice": 50,
-      "img": "images/Featured-Products-img/plywood-3.webp",
-      "alt": "plywood armchair",
-      "size": "XL",
-      "color": "tan"
-    },
-    {
-      "id": 11,
-      "title": "Plywood arm chair",
-      "code": "Y53201",
-      "price": 59,
-      "oldprice": 50,
-      "img": "images/Featured-Products-img/plywood-4.webp",
-      "alt": "plywood armchair",
-      "size": "XL",
-      "color": "tan"
-    },
-    {
-      "id": 12,
-      "title": "Plywood arm chair",
-      "code": "F45681",
-      "price": 39.9,
-      "oldprice": 50,
-      "img": "images/Featured-Products-img/plywood-5.webp",
-      "alt": "plywood armchair",
-      "size": "XL",
-      "color": "tan"
-    },
-    {
-      "id": 13,
-      "title": "Plywood arm chair",
-      "code": "Y53201",
-      "price": 59,
-      "oldprice": 50,
-      "img": "images/Featured-Products-img/plywood-4.webp",
-      "alt": "plywood armchair"
-    },
-    {
-      "id": 14,
-      "title": "Plywood arm chair",
-      "code": "D45201",
-      "price": 32,
-      "oldprice": 50,
-      "img": "images/Featured-Products-img/plywood-2.webp",
-      "alt": "plywood armchair"
-    },
-    {
-      "id": 15,
-      "title": "Awesome Chair",
-      "code": "C45382",
-      "price": 45,
-      "oldprice": 50,
-      "img": "images/Featured-Products-img/plywood-3.webp",
-      "alt": "plywood armchair"
-    },
-    {
       "id": 16,
       "title": "Plywood arm chair",
       "code": "F45681",
       "price": 39.9,
       "oldprice": 50,
       "img": "images/Featured-Products-img/plywood-5.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
-      "id": 17,
+      "id": 917,
+      "title": "Plywood arm chair",
+      "code": "D45201",
+      "price": 32,
+      "oldprice": 50,
+      "img": "images/Featured-Products-img/plywood-2.webp",
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
+    },
+    {
+      "id": 189,
+      "title": "Plywood arm chair",
+      "code": "C45382",
+      "price": 45,
+      "oldprice": 50,
+      "img": "images/Featured-Products-img/plywood-3.webp",
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
+    },
+    {
+      "id": 115,
       "title": "Plywood arm chair",
       "code": "Y53201",
       "price": 59,
       "oldprice": 50,
       "img": "images/Featured-Products-img/plywood-4.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
-      "id": 18,
+      "id": 1224,
       "title": "Plywood arm chair",
       "code": "F45681",
       "price": 39.9,
       "oldprice": 50,
       "img": "images/Featured-Products-img/plywood-5.webp",
-      "alt": "plywood armchair"
+      "alt": "plywood armchair",
+      "size": "XL",
+      "color": "tan"
     },
     {
-      "id": 19,
+      "id": 5151,
       "title": "Plywood arm chair",
       "code": "Y53201",
       "price": 59,
@@ -243,7 +195,7 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 20,
+      "id": 1242,
       "title": "Plywood arm chair",
       "code": "D45201",
       "price": 32,
@@ -252,7 +204,7 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 21,
+      "id": 1422,
       "title": "Awesome Chair",
       "code": "C45382",
       "price": 45,
@@ -261,7 +213,61 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 22,
+      "id": 1451,
+      "title": "Plywood arm chair",
+      "code": "F45681",
+      "price": 39.9,
+      "oldprice": 50,
+      "img": "images/Featured-Products-img/plywood-5.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 111,
+      "title": "Plywood arm chair",
+      "code": "Y53201",
+      "price": 59,
+      "oldprice": 50,
+      "img": "images/Featured-Products-img/plywood-4.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 14441,
+      "title": "Plywood arm chair",
+      "code": "F45681",
+      "price": 39.9,
+      "oldprice": 50,
+      "img": "images/Featured-Products-img/plywood-5.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 154,
+      "title": "Plywood arm chair",
+      "code": "Y53201",
+      "price": 59,
+      "oldprice": 50,
+      "img": "images/Featured-Products-img/plywood-4.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 55562,
+      "title": "Plywood arm chair",
+      "code": "D45201",
+      "price": 32,
+      "oldprice": 50,
+      "img": "images/Featured-Products-img/plywood-2.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 23,
+      "title": "Awesome Chair",
+      "code": "C45382",
+      "price": 45,
+      "oldprice": 50,
+      "img": "images/Featured-Products-img/plywood-3.webp",
+      "alt": "plywood armchair"
+    },
+    {
+      "id": 24,
       "title": "Plywood arm chair",
       "code": "F45681",
       "price": 39.9,
@@ -274,21 +280,21 @@
     {
       "products": [
         {
-          "id": 4,
-          "title": "arm",
-          "code": "F45681",
-          "price": 39.9,
+          "id": 12,
+          "title": "Plywood",
+          "code": "Y53201",
+          "price": 59,
           "oldprice": 50,
-          "img": "images/Featured-Products-img/plywood-5.webp",
+          "img": "images/Featured-Products-img/plywood-4.webp",
           "alt": "plywood armchair",
           "size": "XL",
           "color": "tan",
-          "quantity": 3
+          "quantity": 1
         }
       ],
-      "totalPrice": 119.69999999999999,
-      "userId": 3,
-      "id": 3
+      "totalPrice": 59.00000000000001,
+      "userId": 6,
+      "id": 6
     }
   ],
   "welcome": {
@@ -326,7 +332,7 @@
   },
   "featured_products": [
     {
-      "id": 1,
+      "id": 1120,
       "title": "Plywood arm chair",
       "code": "D45201",
       "price": 32,
@@ -334,7 +340,7 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 2,
+      "id": 1121,
       "title": "Plywood arm chair",
       "code": "C45382",
       "price": 45,
@@ -342,7 +348,7 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 3,
+      "id": 11204,
       "title": "Plywood arm chair",
       "code": "Y53201",
       "price": 59,
@@ -350,7 +356,7 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 4,
+      "id": 11205,
       "title": "Plywood arm chair",
       "code": "F45681",
       "price": 39.9,
@@ -358,7 +364,7 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 5,
+      "id": 11206,
       "title": "Plywood arm chair",
       "code": "Y53201",
       "price": 59,
@@ -366,7 +372,7 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 6,
+      "id": 11207,
       "title": "Plywood arm chair",
       "code": "D45201",
       "price": 32,
@@ -374,7 +380,7 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 7,
+      "id": 11208,
       "title": "Plywood arm chair",
       "code": "C45382",
       "price": 45,
@@ -382,7 +388,7 @@
       "alt": "plywood armchair"
     },
     {
-      "id": 8,
+      "id": 11209,
       "title": "Plywood arm chair",
       "code": "F45681",
       "price": 39.9,
@@ -392,7 +398,7 @@
   ],
   "latest_products": [
     {
-      "id": 1,
+      "id": 112010,
       "title": "Winder chair Sofa",
       "price": 32,
       "discount": 58,
@@ -402,7 +408,7 @@
       "altIcon": "Sale product icon"
     },
     {
-      "id": 2,
+      "id": 1120911,
       "title": "Winder chair Sofa",
       "price": 38,
       "discount": 45,
@@ -412,7 +418,7 @@
       "altIcon": "Sale product icon"
     },
     {
-      "id": 3,
+      "id": 112012,
       "title": "Winder chair Sofa",
       "price": 42,
       "discount": 65,
@@ -422,7 +428,7 @@
       "altIcon": "Sale product icon"
     },
     {
-      "id": 4,
+      "id": 112013,
       "title": "Winder chair Sofa",
       "price": 48,
       "discount": 53,
@@ -432,7 +438,7 @@
       "altIcon": "Sale product icon"
     },
     {
-      "id": 5,
+      "id": 1120914,
       "title": "Winder chair Sofa",
       "price": 52,
       "discount": 72,
@@ -442,7 +448,7 @@
       "altIcon": "Sale product icon"
     },
     {
-      "id": 6,
+      "id": 112015,
       "title": "Winder chair Sofa",
       "price": 65,
       "discount": 38,
@@ -454,28 +460,28 @@
   ],
   "shopex-offer": [
     {
-      "id": 1,
+      "id": 112051,
       "title": "Quality Products",
       "img": "images/Shopex-Offer/icon-1.png",
       "alt": "Quality Products icon",
       "description": "Lorem Ipsum is simply dummy of the printings and typesetting industry. Simply Dummy"
     },
     {
-      "id": 2,
+      "id": 112017,
       "title": "Quick Delivery",
       "img": "images/Shopex-Offer/icon-2.png",
       "alt": "Quick Delivery icon",
       "description": "Lorem Ipsum is simply dummy of the printings and typesetting industry. Simply Dummy"
     },
     {
-      "id": 3,
+      "id": 112018,
       "title": "Reasonable Pricing",
       "img": "images/Shopex-Offer/icon-3.png",
       "alt": "Reasonable Pricing icon",
       "description": "Lorem Ipsum is simply dummy of the printings and typesetting industry. Simply Dummy"
     },
     {
-      "id": 4,
+      "id": 112019,
       "title": "24/7 Support",
       "img": "images/Shopex-Offer/icon-4.png",
       "alt": "24/7 Support icon",
@@ -484,7 +490,7 @@
   ],
   "latest_blog": [
     {
-      "id": 1,
+      "id": 112020,
       "to": "#",
       "img": "images/Latest-Blog/Interior-1.jpg",
       "alt": "Room interior with sofa floor lamps",
@@ -549,42 +555,42 @@
   ],
   "top_catagories": [
     {
-      "id": 1,
+      "id": 112023,
       "img": "images/Top-Catagories/Plywood-Arm-Chair.png",
       "alt": "plywood armchair",
       "title": "Plywood Arm Chair",
       "price": 56
     },
     {
-      "id": 2,
+      "id": 112024,
       "img": "images/Top-Catagories/Modern-coffe-chair.png",
       "alt": "Modern coffee chair",
       "title": "Coffee Wood Chair",
       "price": 56
     },
     {
-      "id": 3,
+      "id": 112025,
       "img": "images/Top-Catagories/High-Bar-Stool-Chair.png",
       "alt": "High Bar Stool Chair",
       "title": "High Bar Stool Chair",
       "price": 56
     },
     {
-      "id": 4,
+      "id": 112026,
       "img": "images/Top-Catagories/Mini-LCW-Chair-2.png",
       "alt": "Mini LCW Chair",
       "title": "Mini LCW Chair",
       "price": 56
     },
     {
-      "id": 5,
+      "id": 112028,
       "img": "images/Top-Catagories/Plywood-Arm-Chair.png",
       "alt": "plywood armchair",
       "title": "Plywood Arm Chair",
       "price": 56
     },
     {
-      "id": 6,
+      "id": 112029,
       "img": "images/Top-Catagories/Modern-coffe-chair.png",
       "alt": "Modern coffee chair",
       "title": "Coffee Wood Chair",
@@ -606,7 +612,7 @@
     },
     "cardData": [
       {
-        "id": 1,
+        "id": 103,
         "img": "images/Trending-Products/chair-1.jpg",
         "alt": "wooden outer arm chair",
         "title": "Wooden outdoor chair",
@@ -614,7 +620,7 @@
         "discount": 60.99
       },
       {
-        "id": 2,
+        "id": 104,
         "img": "images/Trending-Products/chair-2.jpg",
         "alt": "wooden outer arm chair",
         "title": "Ladderback chair",
@@ -622,7 +628,7 @@
         "discount": 60.99
       },
       {
-        "id": 3,
+        "id": 102,
         "img": "images/Trending-Products/chair-3.jpg",
         "alt": "wooden outer arm chair",
         "title": "Comfort Pillow Sofa",
@@ -630,7 +636,7 @@
         "discount": 60.99
       },
       {
-        "id": 4,
+        "id": 101,
         "img": "images/Trending-Products/chair-4.jpg",
         "alt": "wooden outer arm chair",
         "title": "Cantilever chair",

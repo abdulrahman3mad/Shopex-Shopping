@@ -14,6 +14,7 @@ function ProductsSearchForm() {
         dispatch(setSearchData(target.value));
         clearTimeout(timer);
     }
+    
     const handleSelect = (target) => dispatch(changeItemsPerPage(target.value));
 
     return (
