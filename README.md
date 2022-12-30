@@ -45,4 +45,5 @@ Install Shopex with npm
 ## Presentation
 You can also look at the presentation in here which presents the project tools, pages, organizing and structuring approaches taken before and while going through the project, and also some diagrams for some of its key features.
 
-[ShopexPresentation.pptx](https://github.com/abdulrahman3mad/Shopex-Shopping/files/10304632/ShopexPresentation.pptx)
+[Shopex Presentation.pptx](https://github.com/abdulrahman3mad/Shopex-Shopping/files/10324961/Shopex.Presentation.pptx)
+
