@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Shopex-Shopping/static/css/main.a754dc05.css",
-    "main.js": "/Shopex-Shopping/static/js/main.b5b05a50.js",
+    "main.js": "/Shopex-Shopping/static/js/main.b8aa8a08.js",
     "static/media/shape.png": "/Shopex-Shopping/static/media/shape.662b09f3a461608c2c35.png",
     "static/media/slick.svg": "/Shopex-Shopping/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/Shopex-Shopping/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,10 +9,10 @@
     "index.html": "/Shopex-Shopping/index.html",
     "static/media/slick.woff": "/Shopex-Shopping/static/media/slick.295183786cd8a1389865.woff",
     "main.a754dc05.css.map": "/Shopex-Shopping/static/css/main.a754dc05.css.map",
-    "main.b5b05a50.js.map": "/Shopex-Shopping/static/js/main.b5b05a50.js.map"
+    "main.b8aa8a08.js.map": "/Shopex-Shopping/static/js/main.b8aa8a08.js.map"
   },
   "entrypoints": [
     "static/css/main.a754dc05.css",
-    "static/js/main.b5b05a50.js"
+    "static/js/main.b8aa8a08.js"
   ]
 }
