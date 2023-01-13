@@ -8,7 +8,7 @@ for JWT authentication middleware for JSON Server Because you also need a fake
 authentication & authorization flow for your prototyping.
 
 You can watch it from here:
-https://shopexfurniture.netlify.app/shop
+[https://shopexfurniture.netlify.app/shop](https://shopexfurniture.netlify.app/)
 
 
 ## Features
